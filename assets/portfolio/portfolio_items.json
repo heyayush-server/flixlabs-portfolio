@@ -1,0 +1,795 @@
+[
+  {
+    "file": "1003016778_1791789378443713.mp4",
+    "title": "Royal Heritage Bridal Lehenga & Emerald Choker",
+    "category": "fashion",
+    "industry": "Fashion & Luxury",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Bridal",
+      "Couture",
+      "Jewellery",
+      "Heritage",
+      "Indian Wedding"
+    ],
+    "desc": "Cinematic royal bridal campaign featuring handcrafted velvet embroidery, emerald jewellery, and palace ambiance.",
+    "thumb": "assets/portfolio/thumbs/1003016778_1791789378443713.jpg",
+    "src": "assets/portfolio/1003016778_1791789378443713.mp4"
+  },
+  {
+    "file": "1005987106_1791789407532581.mp4",
+    "title": "Ivory Gold Couture & Maang Tikka Ritual",
+    "category": "fashion",
+    "industry": "Fashion & Luxury",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Bridal",
+      "Ivory Couture",
+      "Gold Jewellery",
+      "Wedding Story"
+    ],
+    "desc": "Intimate wedding preparation visual showing bridal jewellery placement in soft architectural morning light.",
+    "thumb": "assets/portfolio/thumbs/1005987106_1791789407532581.jpg",
+    "src": "assets/portfolio/1005987106_1791789407532581.mp4"
+  },
+  {
+    "file": "1015025976_1791789375735186.mp4",
+    "title": "Aura Flow Activewear Movement",
+    "category": "fashion",
+    "industry": "Fitness & Apparel",
+    "format": "Product Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Activewear",
+      "Athleisure",
+      "Fitness",
+      "Movement"
+    ],
+    "desc": "Seamless studio athletic wear showcase emphasizing contour fit, breathability, and mindful posture.",
+    "thumb": "assets/portfolio/thumbs/1015025976_1791789375735186.jpg",
+    "src": "assets/portfolio/1015025976_1791789375735186.mp4"
+  },
+  {
+    "file": "1025116091_1791789373210638.mp4",
+    "title": "Handcrafted Kundan Pearl Nath Close-Up",
+    "category": "jewellery",
+    "industry": "Jewellery & Luxury",
+    "format": "Macro Product Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Nath",
+      "Pearl Jewellery",
+      "Macro Focus",
+      "Bridal Detail"
+    ],
+    "desc": "High-definition macro detail of traditional bridal nose ring with pearls and ruby floral settings.",
+    "thumb": "assets/portfolio/thumbs/1025116091_1791789373210638.jpg",
+    "src": "assets/portfolio/1025116091_1791789373210638.mp4"
+  },
+  {
+    "file": "1038197401_1791789431663923.mp4",
+    "title": "Morning Routine Dewy Serum Application",
+    "category": "beauty",
+    "industry": "Beauty & Skincare",
+    "format": "UGC Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Skincare Routine",
+      "Serum Bottle",
+      "Bathrobe Aesthetic",
+      "D2C"
+    ],
+    "desc": "Creator-led skincare morning regimen demo showcasing product texture, hydration barrier, and skin glow.",
+    "thumb": "assets/portfolio/thumbs/1038197401_1791789431663923.jpg",
+    "src": "assets/portfolio/1038197401_1791789431663923.mp4"
+  },
+  {
+    "file": "1062639834_1791789379429436.mp4",
+    "title": "Effortless Linen Loungewear Everyday Look",
+    "category": "fashion",
+    "industry": "Fashion & Lifestyle",
+    "format": "UGC Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Linen Wear",
+      "Lifestyle",
+      "Casual Chic",
+      "Summer Drop"
+    ],
+    "desc": "Natural lifestyle creator showcasing relaxed linen coordinates in daylight modern apartment.",
+    "thumb": "assets/portfolio/thumbs/1062639834_1791789379429436.jpg",
+    "src": "assets/portfolio/1062639834_1791789379429436.mp4"
+  },
+  {
+    "file": "128668584_1791789398079868.mp4",
+    "title": "Banarasi Royal Blue Silk Brocade Weave",
+    "category": "fashion",
+    "industry": "Textiles & Couture",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Silk Saree",
+      "Textile Macro",
+      "Zari Embroidery",
+      "Handloom"
+    ],
+    "desc": "Slow-motion macro texture film of royal sapphire silk featuring intricate gold zari floral motifs.",
+    "thumb": "assets/portfolio/thumbs/128668584_1791789398079868.jpg",
+    "src": "assets/portfolio/128668584_1791789398079868.mp4"
+  },
+  {
+    "file": "150052268_1791789406341517.mp4",
+    "title": "Minimalist Trenchcoat Architectural Runway",
+    "category": "fashion",
+    "industry": "High Fashion",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Outerwear",
+      "Trenchcoat",
+      "Architectural",
+      "Minimalist"
+    ],
+    "desc": "Monochrome architectural editorial showing draped structured trenchcoat walking through glass modern spaces.",
+    "thumb": "assets/portfolio/thumbs/150052268_1791789406341517.jpg",
+    "src": "assets/portfolio/150052268_1791789406341517.mp4"
+  },
+  {
+    "file": "18532995_1791789426382838.mp4",
+    "title": "Skyline Executive AI Presenter Pitch",
+    "category": "avatar",
+    "industry": "Corporate & Tech",
+    "format": "AI Avatar",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "AI Presenter",
+      "Corporate",
+      "Financial Tech",
+      "Spokesperson"
+    ],
+    "desc": "Hyper-realistic executive spokesperson presenting enterprise solutions with downtown skyscraper view.",
+    "thumb": "assets/portfolio/thumbs/18532995_1791789426382838.jpg",
+    "src": "assets/portfolio/18532995_1791789426382838.mp4"
+  },
+  {
+    "file": "189895571_1791789387284318.mp4",
+    "title": "Native Phone-Camera Selfie Review",
+    "category": "ugc",
+    "industry": "Consumer D2C",
+    "format": "UGC Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Selfie Hook",
+      "TikTok Format",
+      "Native Feed",
+      "Authentic Review"
+    ],
+    "desc": "Raw native UI phone-camera hook creating instant authenticity for high-converting social paid ads.",
+    "thumb": "assets/portfolio/thumbs/189895571_1791789387284318.jpg",
+    "src": "assets/portfolio/189895571_1791789387284318.mp4"
+  },
+  {
+    "file": "192186587_1791789392692329.mp4",
+    "title": "Golden Hour Satin Evening Gowns Trio",
+    "category": "fashion",
+    "industry": "Evening Wear",
+    "format": "Brand Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Evening Gowns",
+      "Satin",
+      "Golden Hour",
+      "Party Collection"
+    ],
+    "desc": "Glamorous trio of emerald, champagne and black satin slips walking into sunset rooftop party.",
+    "thumb": "assets/portfolio/thumbs/192186587_1791789392692329.jpg",
+    "src": "assets/portfolio/192186587_1791789392692329.mp4"
+  },
+  {
+    "file": "229779830_1791789415179319.mp4",
+    "title": "Executive AI Talent Modern Office Story",
+    "category": "avatar",
+    "industry": "Corporate & Tech",
+    "format": "AI Avatar",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "AI Presenter",
+      "Virtual Spokesperson",
+      "B2B SaaS",
+      "Corporate"
+    ],
+    "desc": "Natural delivery female presenter in tailored suit delivering product introduction for B2B brands.",
+    "thumb": "assets/portfolio/thumbs/229779830_1791789415179319.jpg",
+    "src": "assets/portfolio/229779830_1791789415179319.mp4"
+  },
+  {
+    "file": "233234970_1791789400399066.mp4",
+    "title": "Crimson Palace Arch Bridal Portrait",
+    "category": "fashion",
+    "industry": "Fashion & Luxury",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Bridal",
+      "Heritage Arch",
+      "Red Lehenga",
+      "Luxury Couture"
+    ],
+    "desc": "Framed architectural composition of bride in crimson bridal wear standing under carved sandstone archways.",
+    "thumb": "assets/portfolio/thumbs/233234970_1791789400399066.jpg",
+    "src": "assets/portfolio/233234970_1791789400399066.mp4"
+  },
+  {
+    "file": "338689278_1791789370672910.mp4",
+    "title": "Mirrored Reflection Bridal Gold Reveal",
+    "category": "jewellery",
+    "industry": "Jewellery & Luxury",
+    "format": "Brand Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Gold Jewellery",
+      "Mirror Shot",
+      "Traditional Bride",
+      "Heritage"
+    ],
+    "desc": "Artistic double-mirror reflection focusing on ornate gold temple jewellery layers and red Banarasi drape.",
+    "thumb": "assets/portfolio/thumbs/338689278_1791789370672910.jpg",
+    "src": "assets/portfolio/338689278_1791789370672910.mp4"
+  },
+  {
+    "file": "356774144_1791789421910696.mp4",
+    "title": "Polki Kundan Gold Kada Bangle Fitting",
+    "category": "jewellery",
+    "industry": "Jewellery & Luxury",
+    "format": "Macro Product Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Kada Bangle",
+      "Kundan Jewellery",
+      "Macro Detail",
+      "Handmade"
+    ],
+    "desc": "Tender close-up of ceremonial gold bangle fitting illuminated by soft candlelight.",
+    "thumb": "assets/portfolio/thumbs/356774144_1791789421910696.jpg",
+    "src": "assets/portfolio/356774144_1791789421910696.mp4"
+  },
+  {
+    "file": "392036597_1791782731131649.mp4",
+    "title": "Studio Skincare Presenter Mastercut",
+    "category": "brand",
+    "industry": "Beauty & Skincare",
+    "format": "Product Commercial",
+    "aspect": "16:9",
+    "duration": "4s",
+    "tags": [
+      "Commercial",
+      "Serum",
+      "Studio Lighting",
+      "Presenter"
+    ],
+    "desc": "Clean wide commercial master shot of presenter holding skincare product with soft studio interior.",
+    "thumb": "assets/portfolio/thumbs/392036597_1791782731131649.jpg",
+    "src": "assets/portfolio/392036597_1791782731131649.mp4"
+  },
+  {
+    "file": "398255620_1791789390811645.mp4",
+    "title": "Full-Length Mirror Outfit Of The Day Check",
+    "category": "ugc",
+    "industry": "Fashion & Lifestyle",
+    "format": "UGC Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "OOTD",
+      "Mirror Selfie",
+      "Summer Fit",
+      "Casual Wear"
+    ],
+    "desc": "Viral TikTok style mirror outfit check displaying styling versatility of minimalist wardrobe essentials.",
+    "thumb": "assets/portfolio/thumbs/398255620_1791789390811645.jpg",
+    "src": "assets/portfolio/398255620_1791789390811645.mp4"
+  },
+  {
+    "file": "448484360_1791789430789662.mp4",
+    "title": "Hydra-Dew Glass Skin Dropper Application",
+    "category": "beauty",
+    "industry": "Beauty & Skincare",
+    "format": "Macro Product Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Glass Skin",
+      "Serum Dropper",
+      "Hydration",
+      "Beauty Close-Up"
+    ],
+    "desc": "Ultra-macro beauty shot demonstrating glass skin radiance and viscous serum glide across the cheek.",
+    "thumb": "assets/portfolio/thumbs/448484360_1791789430789662.jpg",
+    "src": "assets/portfolio/448484360_1791789430789662.mp4"
+  },
+  {
+    "file": "465091365_1791789389101710.mp4",
+    "title": "Knit Cardigan Daily Dressing Morning Ritual",
+    "category": "ugc",
+    "industry": "Apparel & Lifestyle",
+    "format": "UGC Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Knitwear",
+      "Earring Hook",
+      "Cosy Aesthetic",
+      "Lifestyle D2C"
+    ],
+    "desc": "Warm relatable creator getting ready at mirror putting on delicate gold earrings in cream knit cardigan.",
+    "thumb": "assets/portfolio/thumbs/465091365_1791789389101710.jpg",
+    "src": "assets/portfolio/465091365_1791789389101710.mp4"
+  },
+  {
+    "file": "486994959_1791789383239799.mp4",
+    "title": "Luxury Perfume Mist Floral Fragrance Hook",
+    "category": "beauty",
+    "industry": "Fragrance & Beauty",
+    "format": "Product Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Perfume",
+      "Fragrance Mist",
+      "Sensory Visual",
+      "D2C Luxury"
+    ],
+    "desc": "Sensory visual capturing fine atomized perfume mist sprayed in slow motion with warm room lighting.",
+    "thumb": "assets/portfolio/thumbs/486994959_1791789383239799.jpg",
+    "src": "assets/portfolio/486994959_1791789383239799.mp4"
+  },
+  {
+    "file": "522375655_1791789394439578.mp4",
+    "title": "Handcrafted Silk Kurta Groom Elegance",
+    "category": "fashion",
+    "industry": "Menswear & Wedding",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Menswear",
+      "Sherwani",
+      "Groom Wear",
+      "Heritage Palace"
+    ],
+    "desc": "Refined royal groom portrait in ivory silk kurta with delicate tone-on-tone thread embroidery.",
+    "thumb": "assets/portfolio/thumbs/522375655_1791789394439578.jpg",
+    "src": "assets/portfolio/522375655_1791789394439578.mp4"
+  },
+  {
+    "file": "529060394_1791780680947632.mp4",
+    "title": "Modern Living Room Creator Video Ad",
+    "category": "ugc",
+    "industry": "Home & Lifestyle",
+    "format": "UGC Ad",
+    "aspect": "16:9",
+    "duration": "4s",
+    "tags": [
+      "Living Room",
+      "Lifestyle Creator",
+      "UGC Video",
+      "Storytelling"
+    ],
+    "desc": "Conversational wide creator ad setup with warm interior shelving and organic houseplants.",
+    "thumb": "assets/portfolio/thumbs/529060394_1791780680947632.jpg",
+    "src": "assets/portfolio/529060394_1791780680947632.mp4"
+  },
+  {
+    "file": "536621126_1791789409361664.mp4",
+    "title": "Charcoal Power Suit Confident Runway Walk",
+    "category": "fashion",
+    "industry": "Women's Workwear",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Power Suit",
+      "Tailoring",
+      "Workwear",
+      "Street Runway"
+    ],
+    "desc": "Dynamic low-angle runway strut of tailored charcoal two-piece pant suit outside corporate glass headquarters.",
+    "thumb": "assets/portfolio/thumbs/536621126_1791789409361664.jpg",
+    "src": "assets/portfolio/536621126_1791789409361664.mp4"
+  },
+  {
+    "file": "538006068_1791789428405320.mp4",
+    "title": "Avant-Garde Cyber Couture Runway Showcase",
+    "category": "fashion",
+    "industry": "High Fashion",
+    "format": "Runway Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Runway",
+      "Avant-Garde",
+      "Futuristic",
+      "High Fashion"
+    ],
+    "desc": "Futuristic iridescent runway presentation exploring geometric silhouettes and ambient lavender runway lights.",
+    "thumb": "assets/portfolio/thumbs/538006068_1791789428405320.jpg",
+    "src": "assets/portfolio/538006068_1791789428405320.mp4"
+  },
+  {
+    "file": "609586045_1791789416239583.mp4",
+    "title": "Bespoke Corporate AI Spokesperson",
+    "category": "avatar",
+    "industry": "Corporate & Tech",
+    "format": "AI Avatar",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "AI Spokesperson",
+      "Corporate",
+      "Finance",
+      "Leadership"
+    ],
+    "desc": "Professional executive in bespoke dark navy suit communicating brand trust and financial stability.",
+    "thumb": "assets/portfolio/thumbs/609586045_1791789416239583.jpg",
+    "src": "assets/portfolio/609586045_1791789416239583.mp4"
+  },
+  {
+    "file": "6140405_1791789385631044.mp4",
+    "title": "Berry Lip Souffle Vanity Swatch Demo",
+    "category": "beauty",
+    "industry": "Cosmetics & Makeup",
+    "format": "UGC Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Lip Tint",
+      "Makeup Vanity",
+      "Product Swatch",
+      "D2C Cosmetics"
+    ],
+    "desc": "Backstage vanity mirror product demonstration applying velvet berry lip balm directly to camera.",
+    "thumb": "assets/portfolio/thumbs/6140405_1791789385631044.jpg",
+    "src": "assets/portfolio/6140405_1791789385631044.mp4"
+  },
+  {
+    "file": "630911033_1791789369902570.mp4",
+    "title": "Pearl Choker Layering & Chikankari Kurta",
+    "category": "fashion",
+    "industry": "Fashion & Jewellery",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Pearl Haar",
+      "Chikankari",
+      "Ivory Kurta",
+      "Luxury Festive"
+    ],
+    "desc": "Multi-strand freshwater pearl necklace showcased against delicate ivory Chikankari embroidered festive kurta.",
+    "thumb": "assets/portfolio/thumbs/630911033_1791789369902570.jpg",
+    "src": "assets/portfolio/630911033_1791789369902570.mp4"
+  },
+  {
+    "file": "648304148_1791789423902849.mp4",
+    "title": "Solitaire Diamond Engagement Ring Macro",
+    "category": "jewellery",
+    "industry": "Fine Jewellery",
+    "format": "Macro Product Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Diamond Ring",
+      "Macro Refraction",
+      "Fine Jewellery",
+      "Bridal"
+    ],
+    "desc": "360-degree rotation of brilliant-cut solitaire diamond ring revealing fire, symmetry, and platinum prong detail.",
+    "thumb": "assets/portfolio/thumbs/648304148_1791789423902849.jpg",
+    "src": "assets/portfolio/648304148_1791789423902849.mp4"
+  },
+  {
+    "file": "690444140_1791789380325076.mp4",
+    "title": "Mindful Morning Awakening & Soft Loungewear",
+    "category": "ugc",
+    "industry": "Wellness & Loungewear",
+    "format": "UGC Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Morning Routine",
+      "Wellness",
+      "Loungewear",
+      "Self Care"
+    ],
+    "desc": "Calm bedroom morning awakening sequence featuring breathable organic cotton co-ords in natural daylight.",
+    "thumb": "assets/portfolio/thumbs/690444140_1791789380325076.jpg",
+    "src": "assets/portfolio/690444140_1791789380325076.mp4"
+  },
+  {
+    "file": "711838982_1791789367204598.mp4",
+    "title": "Traditional South Indian Kasavu Gold Temple Mala",
+    "category": "jewellery",
+    "industry": "Jewellery & Luxury",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Temple Jewellery",
+      "Kasavu Saree",
+      "Gold Mala",
+      "South Indian"
+    ],
+    "desc": "Intricate Lakshmi coin necklace and antique temple gold mala worn on classic crimson Kanjivaram silk saree.",
+    "thumb": "assets/portfolio/thumbs/711838982_1791789367204598.jpg",
+    "src": "assets/portfolio/711838982_1791789367204598.mp4"
+  },
+  {
+    "file": "714108181_1791780684906371.mp4",
+    "title": "Brand Spokesperson Product Explainer Master",
+    "category": "avatar",
+    "industry": "Consumer Health",
+    "format": "Product Commercial",
+    "aspect": "16:9",
+    "duration": "6s",
+    "tags": [
+      "Commercial",
+      "Healthcare",
+      "Explainer",
+      "Studio"
+    ],
+    "desc": "Wide commercial shot of trusted spokesperson communicating key product differentiation in home setting.",
+    "thumb": "assets/portfolio/thumbs/714108181_1791780684906371.jpg",
+    "src": "assets/portfolio/714108181_1791780684906371.mp4"
+  },
+  {
+    "file": "738473110_1791789404622041.mp4",
+    "title": "Antique Gold Goddess Choker & Ruby Pearls",
+    "category": "jewellery",
+    "industry": "Fine Jewellery",
+    "format": "Macro Product Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Temple Jewellery",
+      "Antique Gold",
+      "Ruby Pearl",
+      "Macro Focus"
+    ],
+    "desc": "Museum-grade close-up of antique gold choker featuring sculptured deity figures and suspended natural pearls.",
+    "thumb": "assets/portfolio/thumbs/738473110_1791789404622041.jpg",
+    "src": "assets/portfolio/738473110_1791789404622041.mp4"
+  },
+  {
+    "file": "765383045_1791789402513133.mp4",
+    "title": "Crimson Kanjivaram Saree Temple Corridor Walk",
+    "category": "fashion",
+    "industry": "Textiles & Luxury",
+    "format": "Brand Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Kanjivaram Silk",
+      "Temple Corridor",
+      "Royal Saree",
+      "Traditional"
+    ],
+    "desc": "Majestic full-length slow walk down stone temple pillars showcasing rich gold pallu and flowing crimson silk.",
+    "thumb": "assets/portfolio/thumbs/765383045_1791789402513133.jpg",
+    "src": "assets/portfolio/765383045_1791789402513133.mp4"
+  },
+  {
+    "file": "786722950_1791789434018747.mp4",
+    "title": "Wool Overcoat Back Silhouette & Movement",
+    "category": "fashion",
+    "industry": "High Fashion",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Overcoat",
+      "Tailoring",
+      "Architectural",
+      "Brutalist"
+    ],
+    "desc": "Sleek back silhouette and walking movement of tailored charcoal wool coat set against minimalist concrete.",
+    "thumb": "assets/portfolio/thumbs/786722950_1791789434018747.jpg",
+    "src": "assets/portfolio/786722950_1791789434018747.mp4"
+  },
+  {
+    "file": "792453715_1791782728364995.mp4",
+    "title": "Split-Screen Skincare Creator & Dropper Hook",
+    "category": "beauty",
+    "industry": "Beauty & Skincare",
+    "format": "UGC Ad",
+    "aspect": "16:9",
+    "duration": "4s",
+    "tags": [
+      "Split Screen",
+      "Serum Dropper",
+      "UGC Hook",
+      "Performance Ad"
+    ],
+    "desc": "High-converting split-screen layout pairing creator reaction with macro golden serum dropper on bare skin.",
+    "thumb": "assets/portfolio/thumbs/792453715_1791782728364995.jpg",
+    "src": "assets/portfolio/792453715_1791782728364995.mp4"
+  },
+  {
+    "file": "796929918_1791789420206695.mp4",
+    "title": "FLIX LABS 3D Holographic Agency Showreel",
+    "category": "brand",
+    "industry": "Creative Studio",
+    "format": "Brand Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Showreel",
+      "3D Motion",
+      "Holographic",
+      "Agency Branding"
+    ],
+    "desc": "Metallic bronze 3D Flix Labs emblem surrounded by glowing performance data, ticker charts and particles.",
+    "thumb": "assets/portfolio/thumbs/796929918_1791789420206695.jpg",
+    "src": "assets/portfolio/796929918_1791789420206695.mp4"
+  },
+  {
+    "file": "827158599_1791789413672069.mp4",
+    "title": "Cinema Camera Robotic Rig Behind-The-Scenes",
+    "category": "brand",
+    "industry": "Production Studio",
+    "format": "Brand Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "BTS",
+      "Camera Rig",
+      "Studio Tech",
+      "Cinematic Setup"
+    ],
+    "desc": "Behind-the-scenes look at high-precision cinema camera rig and professional studio lighting in motion.",
+    "thumb": "assets/portfolio/thumbs/827158599_1791789413672069.jpg",
+    "src": "assets/portfolio/827158599_1791789413672069.mp4"
+  },
+  {
+    "file": "834108934_1791789417473357.mp4",
+    "title": "Glass Bottle Peptide Serum Radiant Glow",
+    "category": "beauty",
+    "industry": "Beauty & Skincare",
+    "format": "UGC Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Glass Skin",
+      "Serum Bottle",
+      "Radiance",
+      "Skincare Demo"
+    ],
+    "desc": "Beaming natural skincare model presenting frosted glass peptide serum bottle with dewy skin finish.",
+    "thumb": "assets/portfolio/thumbs/834108934_1791789417473357.jpg",
+    "src": "assets/portfolio/834108934_1791789417473357.mp4"
+  },
+  {
+    "file": "914785054_1791789438141531.mp4",
+    "title": "Pear-Cut Diamond Tennis Bracelet Macro Sparkle",
+    "category": "jewellery",
+    "industry": "Fine Jewellery",
+    "format": "Macro Product Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Tennis Bracelet",
+      "Pear Diamond",
+      "Macro Sparkle",
+      "Fine Jewellery"
+    ],
+    "desc": "Macro lighting sweep across pear-shaped bezel-set diamond bracelet showing optical brilliance and fire.",
+    "thumb": "assets/portfolio/thumbs/914785054_1791789438141531.jpg",
+    "src": "assets/portfolio/914785054_1791789438141531.mp4"
+  },
+  {
+    "file": "934423229_1791789434994533.mp4",
+    "title": "Architectural Concrete Trenchcoat Model Walk",
+    "category": "fashion",
+    "industry": "High Fashion",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Trenchcoat",
+      "Architectural",
+      "Editorial",
+      "Modernism"
+    ],
+    "desc": "Full-figure editorial model walk in stone trenchcoat through brutalist concrete geometry.",
+    "thumb": "assets/portfolio/thumbs/934423229_1791789434994533.jpg",
+    "src": "assets/portfolio/934423229_1791789434994533.mp4"
+  },
+  {
+    "file": "955111829_1791789410733995.mp4",
+    "title": "Botanical Wellness Unboxing & Creator Hook",
+    "category": "ugc",
+    "industry": "Organic & Wellness",
+    "format": "UGC Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Unboxing",
+      "Organic Botanical",
+      "Creator Hook",
+      "D2C Packaging"
+    ],
+    "desc": "Warm smiling creator in organic linen dress presenting botanical herbal packaging directly to customer.",
+    "thumb": "assets/portfolio/thumbs/955111829_1791789410733995.jpg",
+    "src": "assets/portfolio/955111829_1791789410733995.mp4"
+  },
+  {
+    "file": "988024536_1791789436841629.mp4",
+    "title": "Emerald Green Festive Silk Saree & Jhumkas",
+    "category": "fashion",
+    "industry": "Festive Couture",
+    "format": "Editorial Ad",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Silk Saree",
+      "Emerald Green",
+      "Jhumkas",
+      "Festive Campaign"
+    ],
+    "desc": "Palace courtyard portrait of model in emerald green handwoven silk saree with traditional jhumka earrings.",
+    "thumb": "assets/portfolio/thumbs/988024536_1791789436841629.jpg",
+    "src": "assets/portfolio/988024536_1791789436841629.mp4"
+  },
+  {
+    "file": "998761038_1791789395783025.mp4",
+    "title": "Oversized Boyfriend Blazer Contemporary Walk",
+    "category": "fashion",
+    "industry": "Contemporary Apparel",
+    "format": "Brand Film",
+    "aspect": "9:16",
+    "duration": "8s",
+    "tags": [
+      "Oversized Blazer",
+      "Street Style",
+      "Contemporary",
+      "Loft Studio"
+    ],
+    "desc": "City loft studio shoot of model in relaxed oversized black blazer paired with tailored shorts.",
+    "thumb": "assets/portfolio/thumbs/998761038_1791789395783025.jpg",
+    "src": "assets/portfolio/998761038_1791789395783025.mp4"
+  },
+  {
+    "file": "VN20261012_111529.mp4",
+    "title": "Flix Labs Hero Commercial: The Serum Story",
+    "category": "brand",
+    "industry": "Beauty Commercial",
+    "format": "Hero Showreel",
+    "aspect": "16:9",
+    "duration": "34s",
+    "tags": [
+      "Hero Commercial",
+      "Presenter-led",
+      "Macro Dropper",
+      "Flix Showreel"
+    ],
+    "desc": "Flagship 34-second studio commercial combining presenter storytelling with macro product cinematography.",
+    "thumb": "assets/portfolio/thumbs/VN20261012_111529.jpg",
+    "src": "assets/portfolio/VN20261012_111529.mp4"
+  }
+]

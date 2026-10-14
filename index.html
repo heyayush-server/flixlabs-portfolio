@@ -1,0 +1,4486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; media-src 'self' data: blob:; connect-src 'self' https://wa.me; frame-src 'self'; object-src 'none'; base-uri 'self';">
+<meta name="description" content="Ayush Singh — Independent AI Creative Studio & Performance Video Ad Director. High-impact video ads, creator-style UGC, and cinematic product films.">
+<title>Ayush Singh — Independent AI Creative Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0b1118;
+  --teal: #10b981;
+  --teal-dark: #065f46;
+  --teal-light: #ecfdf5;
+  --coral: #ff5c47;
+  --coral-light: #fff0ed;
+  --purple: #8b5cf6;
+  --purple-light: #f5f3ff;
+  --blue: #0284c7;
+  --blue-light: #f0f9ff;
+  --slate: #475569;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --soft: #f8fafc;
+  --paper: #ffffff;
+  --radius: 16px;
+  --max: 1300px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  background: #ffffff;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img, video { max-width: 100%; display: block; content-visibility: auto; }
+.wrap { width: min(var(--max), calc(100% - 48px)); margin: auto; }
+
+/* CINEMATIC FILM INTRO CURTAIN */
+.film-intro-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #0b1118;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+  pointer-events: none;
+}
+.film-intro-curtain.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+.intro-brand-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.intro-aperture {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px dashed #10b981;
+  display: grid;
+  place-items: center;
+  animation: spinAperture 4s linear infinite;
+}
+@keyframes spinAperture {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.intro-logo-text strong {
+  display: block;
+  font: 800 22px 'Manrope', sans-serif;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+.intro-logo-text span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #10b981;
+}
+.intro-film-bar {
+  width: 160px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.intro-film-fill {
+  width: 0%;
+  height: 100%;
+  background: #10b981;
+  animation: loadBar 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes loadBar {
+  to { width: 100%; }
+}
+
+/* SCROLL REVEAL ANIMATIONS */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-init.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* NAVIGATION (COMPACT 64px) */
+.nav {
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand-ayush {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0b1118 0%, #1e293b 100%);
+  color: #10b981;
+  display: grid;
+  place-items: center;
+  font: 800 14px 'Manrope', sans-serif;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.brand-text strong {
+  display: block;
+  font: 800 16px/1.2 'Manrope', sans-serif;
+  color: var(--ink);
+}
+.brand-text span {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav-links a {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #475569;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a:hover {
+  color: var(--ink);
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-nav-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #ecfdf5;
+  color: #065f46;
+  font-size: 12.5px;
+  font-weight: 700;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  transition: all .2s;
+}
+.btn-nav-wa:hover {
+  background: #d1fae5;
+  transform: translateY(-1px);
+}
+.btn-nav-book {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--ink);
+  color: #ffffff;
+  font-size: 12.5px;
+  font-weight: 700;
+  border: 1px solid var(--ink);
+  transition: all .2s;
+}
+.btn-nav-book:hover {
+  background: var(--coral);
+  border-color: var(--coral);
+  transform: translateY(-1px);
+}
+
+/* ===================================================
+   HERO SECTION MATCHING REFERENCE IMAGE
+   =================================================== */
+.hero-showcase {
+  padding: 56px 0 44px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-showcase-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+.hero-badge-mint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #047857;
+  margin-bottom: 18px;
+}
+.dot-mint {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+}
+.hero-h1 {
+  font: 900 clamp(44px, 5.8vw, 76px)/1.02 'Manrope', sans-serif;
+  letter-spacing: -0.055em;
+  color: #0b1118;
+  margin-bottom: 22px;
+  position: relative;
+}
+.hero-underline-brush {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+.brush-svg-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 12px;
+  pointer-events: none;
+}
+.hero-tagline {
+  font-size: 17.5px;
+  line-height: 1.55;
+  color: #475569;
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+.hero-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.btn-hero-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 10px;
+  background: #0b1118;
+  color: #ffffff;
+  font: 700 14px 'DM Sans', sans-serif;
+  transition: all .25s ease;
+}
+.btn-hero-dark:hover {
+  background: #10b981;
+  color: #0b1118;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(16, 185, 129, 0.3);
+}
+.btn-hero-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0b1118;
+  font: 700 14px 'DM Sans', sans-serif;
+  border: 1px solid #cbd5e1;
+  transition: all .25s ease;
+}
+.btn-hero-light:hover {
+  border-color: #0b1118;
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+.hero-footer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+.hero-footer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ecfdf5;
+  color: #047857;
+  padding: 4px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* 3D FANNED-OUT MOBILE REELS (RIGHT HERO) */
+.hero-fanned-cards {
+  position: relative;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+.fanned-card {
+  position: absolute;
+  width: 210px;
+  height: 380px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #0b1118;
+  box-shadow: 0 20px 45px rgba(11, 17, 24, 0.22);
+  border: 3px solid #ffffff;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  contain: paint layout;
+}
+.fanned-card:hover {
+  z-index: 10 !important;
+  transform: translateY(-16px) scale(1.06) !important;
+  box-shadow: 0 30px 60px rgba(11, 17, 24, 0.32);
+}
+.fanned-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  background: #0b1118;
+  opacity: 1;
+}
+.fanned-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fanned-live-badge {
+  margin-left: auto;
+  font: 800 8.5px/1 'Manrope', sans-serif;
+  letter-spacing: 0.06em;
+  background: rgba(16, 185, 129, 0.22);
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  color: #34d399;
+  padding: 3px 6px;
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.fanned-live-badge::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+.fanned-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.85) 100%);
+  pointer-events: none;
+}
+.fanned-header {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+.fanned-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  overflow: hidden;
+  background: #fff;
+}
+.fanned-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.fanned-category strong {
+  display: block;
+  font: 800 11px/1.1 'Manrope', sans-serif;
+  color: #ffffff;
+}
+.fanned-category span {
+  display: block;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.fanned-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 14px;
+  right: 14px;
+  color: #ffffff;
+  z-index: 2;
+}
+.fanned-caption strong {
+  display: block;
+  font: 800 13px/1.25 'Manrope', sans-serif;
+  margin-bottom: 2px;
+}
+.fanned-caption span {
+  display: block;
+  font-size: 10.5px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Positioning the 3 fanned cards */
+.fanned-left {
+  left: 8%;
+  transform: rotate(-10deg) translateY(18px);
+  z-index: 1;
+}
+.fanned-center {
+  left: 32%;
+  transform: rotate(0deg) translateY(-8px);
+  z-index: 3;
+  width: 220px;
+  height: 400px;
+  border-color: #ffffff;
+}
+.fanned-right {
+  left: 56%;
+  transform: rotate(12deg) translateY(24px);
+  z-index: 2;
+}
+
+/* Decorative curls */
+.curl-mint {
+  position: absolute;
+  pointer-events: none;
+  stroke: #10b981;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+.curl-1 { top: 30px; left: 18%; width: 28px; height: 28px; }
+.curl-2 { bottom: 40px; right: 12%; width: 34px; height: 34px; }
+
+/* ===================================================
+   RUNNING NUMBER / LIVE COUNTER BANNER SECTION
+   =================================================== */
+.live-counter-section {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fcfdfd;
+}
+.live-counter-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+.counter-box {
+  padding: 8px 12px;
+  border-right: 1px solid var(--line);
+}
+.counter-box:last-child { border-right: none; }
+.counter-number {
+  font: 800 clamp(28px, 3.2vw, 42px)/1 'Manrope', sans-serif;
+  letter-spacing: -0.04em;
+  color: #0b1118;
+  margin-bottom: 4px;
+}
+.counter-number .counter-accent {
+  color: #10b981;
+}
+.counter-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ===================================================
+   COMPACT & COLORFUL PACKAGES (MINIMAL, ZERO FLUFF)
+   =================================================== */
+.packages-section {
+  padding: 48px 0 36px;
+}
+.section-header-compact {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sec-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coral);
+  background: var(--coral-light);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+.sec-title {
+  font: 800 clamp(26px, 3.2vw, 38px)/1.2 'Manrope', sans-serif;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.sec-desc {
+  font-size: 15px;
+  color: #64748b;
+}
+
+.packages-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+.pkg-card-clean {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid #f1f5f9;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.pkg-card-clean:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(11, 17, 24, 0.07);
+}
+.pkg-card-clean.pkg-starter { border-color: #fed7aa; }
+.pkg-card-clean.pkg-growth {
+  border-color: #6ee7b7;
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+  transform: scale(1.02);
+  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.12);
+}
+.pkg-card-clean.pkg-growth:hover {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+}
+.pkg-card-clean.pkg-scale { border-color: #ddd6fe; }
+
+.pkg-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.pkg-badge-compact {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.pkg-badge-compact.coral { background: #ffedd5; color: #c2410c; }
+.pkg-badge-compact.green { background: #d1fae5; color: #047857; }
+.pkg-badge-compact.purple { background: #ede9fe; color: #6d28d9; }
+
+.pkg-title-clean {
+  font: 800 21px/1.2 'Manrope', sans-serif;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.pkg-price-clean {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.pkg-price-clean .curr { font: 700 20px 'Manrope', sans-serif; }
+.pkg-price-clean .val { font: 800 36px/1 'Manrope', sans-serif; letter-spacing: -0.04em; }
+.pkg-price-clean .sub { font-size: 12.5px; color: #64748b; font-weight: 600; margin-left: 4px; }
+
+.pkg-volume-clean {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.pkg-starter .pkg-volume-clean { background: #ffedd5; color: #9a3412; }
+.pkg-growth .pkg-volume-clean { background: #dcfce7; color: #065f46; }
+.pkg-scale .pkg-volume-clean { background: #f3e8ff; color: #5b21b6; }
+
+.pkg-bullets-clean {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  flex: 1;
+}
+.pkg-bullets-clean li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.pkg-check-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.pkg-starter .pkg-check-dot { background: #fed7aa; color: #9a3412; }
+.pkg-growth .pkg-check-dot { background: #a7f3d0; color: #065f46; }
+.pkg-scale .pkg-check-dot { background: #ddd6fe; color: #5b21b6; }
+
+.pkg-btn-clean {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font: 700 13px 'DM Sans', sans-serif;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: #ffffff;
+  transition: all .2s;
+  display: block;
+}
+.pkg-btn-clean:hover {
+  background: var(--coral);
+  border-color: var(--coral);
+  transform: translateY(-2px);
+}
+.pkg-growth .pkg-btn-clean { background: #10b981; border-color: #10b981; }
+.pkg-growth .pkg-btn-clean:hover { background: #059669; border-color: #059669; }
+
+/* ===================================================
+   UGC CONVERSION BENTO GRID
+   =================================================== */
+.attract-section {
+  padding: 48px 0 40px;
+  background: #f8fafc;
+  border-radius: 24px;
+  margin: 28px 0;
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+.attract-inner {
+  width: min(var(--max), calc(100% - 48px));
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+.ugc-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff0ed;
+  color: #ff5c47;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+.ugc-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff5c47;
+}
+.ugc-convert-title {
+  font: 800 clamp(28px, 3.6vw, 42px)/1.15 'Manrope', sans-serif;
+  letter-spacing: -0.04em;
+  color: #0b1118;
+  margin-bottom: 8px;
+}
+.ugc-convert-sub {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+.ugc-green-dash {
+  width: 36px;
+  height: 3px;
+  background: #10b981;
+  border-radius: 4px;
+  margin: 0 auto 32px;
+}
+
+.ugc-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.ugc-bento-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.ugc-bento-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(11, 17, 24, 0.05);
+}
+.ugc-card-left { flex: 1; }
+.ugc-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+}
+.ugc-icon-box.pink { background: #ffe8e5; color: #0b1118; }
+.ugc-icon-box.green { background: #dcfce7; color: #0b1118; }
+.ugc-icon-box.blue { background: #e0f2fe; color: #0b1118; }
+.ugc-icon-box.peach { background: #ffedd5; color: #0b1118; }
+.ugc-icon-box svg { width: 22px; height: 22px; }
+
+.ugc-card-title {
+  font: 800 18px/1.25 'Manrope', sans-serif;
+  color: #0b1118;
+  margin-bottom: 4px;
+}
+.ugc-card-desc {
+  font-size: 13.5px;
+  color: #64748b;
+}
+
+.ugc-card-visual {
+  flex-shrink: 0;
+  width: 150px;
+  height: 125px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ugc-phone-wrap {
+  position: relative;
+  width: 95px;
+  height: 120px;
+}
+.ugc-phone-bg {
+  position: absolute;
+  top: 4px;
+  left: -10px;
+  width: 82px;
+  height: 112px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transform: rotate(-7deg);
+}
+.ugc-phone-main {
+  position: relative;
+  z-index: 2;
+  width: 86px;
+  height: 118px;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  border: 2px solid #ffffff;
+  background: #000;
+}
+.ugc-phone-main img { width: 100%; height: 100%; object-fit: cover; }
+.ugc-play-bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0b1118;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.ugc-heart-badge {
+  position: absolute;
+  top: 6px;
+  right: -6px;
+  z-index: 4;
+  background: #ffffff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
+}
+.ugc-heart-badge svg { width: 14px; height: 14px; fill: #ef4444; }
+.ugc-growth-badge {
+  position: absolute;
+  top: 6px;
+  right: -6px;
+  z-index: 4;
+  background: #ffffff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #10b981;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+}
+.ugc-growth-badge svg { width: 14px; height: 14px; }
+
+.ugc-product-showcase {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ugc-product-main-view {
+  position: relative;
+  width: 100%;
+  height: 84px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+.ugc-product-main-view img { width: 100%; height: 100%; object-fit: cover; }
+.ugc-product-thumbs { display: flex; gap: 4px; }
+.ugc-pthumb {
+  flex: 1;
+  height: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+.ugc-pthumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.ugc-timeline-showcase {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ugc-video-preview-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ugc-timeline-screen {
+  position: relative;
+  width: 118px;
+  height: 68px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0f172a;
+}
+.ugc-timeline-screen img { width: 100%; height: 100%; object-fit: cover; }
+.ugc-editor-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  font: 800 11px 'Manrope', sans-serif;
+  display: grid;
+  place-items: center;
+}
+.ugc-timeline-bar {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 4px 5px;
+  position: relative;
+}
+.ugc-timeline-clips { display: flex; gap: 2px; margin-bottom: 3px; }
+.ugc-tclip { width: 15px; height: 15px; border-radius: 3px; overflow: hidden; }
+.ugc-tclip img { width: 100%; height: 100%; object-fit: cover; }
+.ugc-waveform-bar {
+  height: 8px;
+  background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+  border-radius: 2px;
+}
+.ugc-playhead-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #ff5c47;
+}
+
+.ugc-bottom-row { text-align: center; }
+.ugc-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #ff5c47 0%, #ff765d 100%);
+  color: #ffffff;
+  font: 700 14px 'DM Sans', sans-serif;
+  border-radius: 100px;
+  box-shadow: 0 6px 20px rgba(255, 92, 71, 0.3);
+  transition: transform .2s;
+}
+.ugc-cta-btn:hover { transform: translateY(-2px); }
+
+/* ===================================================
+   PORTFOLIO ARCHIVE (OPTIMIZED & CLEAN)
+   =================================================== */
+.portfolio-header-clean {
+  padding: 36px 0 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.category-nav-bar {
+  margin: 14px 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+.category-nav-bar::-webkit-scrollbar { display: none; }
+.cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  color: #475569;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .2s;
+}
+.cat-pill:hover, .cat-pill.active {
+  background: var(--ink);
+  color: #ffffff;
+  border-color: var(--ink);
+}
+.cat-pill svg { width: 14px; height: 14px; }
+
+.filter-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+}
+.search-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 14px 0 38px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  font-size: 13px;
+  color: var(--ink);
+}
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  width: 16px;
+  height: 16px;
+}
+.search-icon svg { width: 100%; height: 100%; }
+.format-select-wrap { position: relative; }
+.format-select {
+  height: 40px;
+  padding: 0 32px 0 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  appearance: none;
+}
+.select-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 14px;
+  height: 14px;
+  color: #64748b;
+}
+.select-arrow svg { width: 100%; height: 100%; }
+.filter-reset-btn {
+  display: none;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 8px;
+  background: var(--coral-light);
+  color: var(--coral);
+  border: 1px solid #fecdd3;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.filter-reset-btn.show { display: inline-flex; align-items: center; }
+
+/* Featured Reels */
+.featured-section { padding: 24px 0 32px; }
+.section-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.section-bar h2 {
+  font: 800 22px 'Manrope', sans-serif;
+  letter-spacing: -0.02em;
+}
+.section-bar p { font-size: 13.5px; color: #64748b; }
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.arrow-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--ink);
+  transition: all .2s;
+}
+.arrow-btn:hover { background: var(--soft); }
+.arrow-btn svg { width: 16px; height: 16px; }
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.reel-card {
+  flex: 0 0 200px;
+  aspect-ratio: 9/16;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #0f172a;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+.reel-card img { width: 100%; height: 100%; object-fit: cover; }
+.reel-card video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
+  pointer-events: none;
+}
+.reel-badge-top-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  font-weight: 800;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+}
+.reel-badge-top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+}
+.reel-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  color: #0b1118;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  transition: transform .2s;
+}
+.reel-card:hover .reel-play-btn { transform: translate(-50%, -50%) scale(1.1); }
+.reel-meta-bottom {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  color: #fff;
+  pointer-events: none;
+}
+.reel-title {
+  font: 700 13px/1.3 'Manrope', sans-serif;
+  margin-bottom: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.reel-sub { font-size: 10.5px; opacity: 0.8; }
+.reel-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.2);
+}
+.reel-progress-fill { height: 100%; width: 0%; background: var(--teal); }
+
+/* 16:9 Widescreen Commercials */
+.widescreen-section {
+  padding: 24px 0 32px;
+  border-top: 1px solid var(--line);
+}
+.widescreen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.wcard {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #0f172a;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+}
+.wcard-media { width: 100%; height: 100%; position: relative; }
+.wcard-media img, .wcard-media video { width: 100%; height: 100%; object-fit: cover; }
+.wcard-media video { position: absolute; inset: 0; }
+.wcard-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%);
+  pointer-events: none;
+}
+.wcard-top {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.wcard-badge {
+  font-size: 10.5px;
+  font-weight: 800;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.wcard-format-tag {
+  font-size: 10.5px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.wcard-bottom {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  color: #fff;
+  pointer-events: none;
+}
+.wcard-title { font: 800 15px 'Manrope', sans-serif; margin-bottom: 2px; }
+.wcard-desc { font-size: 11.5px; opacity: 0.85; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+.wcard-progress { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: rgba(255,255,255,0.2); }
+.wcard-progress-fill { height: 100%; width: 0%; background: var(--teal); }
+
+/* All Films Grid */
+.all-films-section {
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--line);
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 16px;
+}
+.pcard {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  display: flex;
+  flex-direction: column;
+}
+.pcard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(11, 17, 24, 0.08);
+}
+.pcard-media {
+  aspect-ratio: 9/16;
+  position: relative;
+  background: #0f172a;
+}
+.pcard-media img, .pcard-media video { width: 100%; height: 100%; object-fit: cover; }
+.pcard-media video { position: absolute; inset: 0; }
+.pcard-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+  pointer-events: none;
+}
+.pcard-badge-cat {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 9.5px;
+  font-weight: 800;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 2px 7px;
+  border-radius: 5px;
+}
+.pcard-badge-aspect {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 9.5px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+.pcard-play-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  color: #0b1118;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+.pcard-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.2);
+}
+.pcard-progress-fill { height: 100%; width: 0%; background: var(--teal); }
+.pcard-info { padding: 12px; }
+.pcard-info h4 {
+  font: 700 13.5px/1.3 'Manrope', sans-serif;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.pcard-industry { font-size: 11px; color: #64748b; margin-bottom: 6px; }
+.pcard-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+.pcard-tag {
+  font-size: 9.5px;
+  font-weight: 600;
+  background: var(--soft);
+  color: #475569;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.empty-state {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--soft);
+  border-radius: 12px;
+  margin: 20px 0;
+}
+.empty-state.show { display: block; }
+
+/* ===================================================
+   TESTIMONIALS SECTION (5-STARS, GOOGLE BADGE & VERIFIED INDIAN FOUNDERS)
+   =================================================== */
+.testimonials-section {
+  padding: 60px 0 54px;
+  border-top: 1px solid var(--line);
+  background: #ffffff;
+}
+.testimonials-header-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Official Google Reviews Badge */
+.google-rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(11, 17, 24, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.google-rating-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(11, 17, 24, 0.08);
+  border-color: #cbd5e1;
+}
+.google-logo-box {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.google-badge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.google-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.google-score {
+  font: 900 15.5px/1 'Manrope', sans-serif;
+  color: var(--ink);
+}
+.stars-gold-list {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.google-tag {
+  font: 800 9.5px 'Manrope', sans-serif;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 2.5px 7px;
+  border-radius: 5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.google-sub {
+  font-size: 11.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* 4 Testimonials Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.tm-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .25s ease, border-color .25s ease;
+  box-shadow: 0 4px 18px rgba(11, 17, 24, 0.03);
+}
+.tm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(11, 17, 24, 0.08);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+.tm-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.tm-metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 3.5px 11px;
+  border-radius: 100px;
+}
+.tm-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #f59e0b;
+}
+.tm-quote {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 20px;
+  flex: 1;
+}
+.tm-author-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+}
+.tm-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  box-shadow: 0 3px 10px rgba(11, 17, 24, 0.12);
+  flex-shrink: 0;
+}
+.tm-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.tm-meta {
+  flex: 1;
+}
+.tm-meta strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font: 800 13.5px 'Manrope', sans-serif;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.tm-meta span {
+  display: block;
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+.google-verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+/* Mobile Load More Reels */
+.load-more-wrap {
+  display: none;
+  justify-content: center;
+  margin-top: 36px;
+}
+.btn-load-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--ink);
+  color: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font: 800 14px 'Manrope', sans-serif;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 20px rgba(11, 17, 24, 0.12);
+}
+.btn-load-more:hover {
+  background: var(--teal);
+  color: #0b1118;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.3);
+}
+.btn-load-more svg {
+  transition: transform 0.25s;
+}
+.btn-load-more:hover svg {
+  transform: translateY(2px);
+}
+
+/* ===================================================
+   RESPONSIVE OVERHAUL FOR EVERY SECTION (MOBILE / TABLET)
+   =================================================== */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    width: calc(100% - 32px);
+  }
+  
+  /* Hero section on tablet/phone */
+  .hero-showcase {
+    padding: 32px 0 28px;
+  }
+  .hero-showcase-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    text-align: center;
+  }
+  .hero-tagline {
+    margin: 0 auto 20px !important;
+  }
+  .hero-buttons-row {
+    justify-content: center !important;
+  }
+  .hero-footer-badge {
+    justify-content: center !important;
+  }
+  .hero-fanned-cards {
+    height: 380px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 440px !important;
+  }
+  .fanned-card {
+    width: 170px !important;
+    height: 300px !important;
+  }
+  .fanned-left {
+    left: 4% !important;
+    transform: rotate(-7deg) translateY(12px) !important;
+  }
+  .fanned-center {
+    left: 28% !important;
+    width: 180px !important;
+    height: 320px !important;
+    transform: rotate(0deg) translateY(-6px) !important;
+  }
+  .fanned-right {
+    left: 52% !important;
+    transform: rotate(7deg) translateY(14px) !important;
+  }
+
+  /* Running Numbers Counter */
+  .counter-banner {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 24px 18px !important;
+  }
+  .counter-item:last-child {
+    grid-column: span 2;
+  }
+
+  /* Packages Section */
+  .pkg-grid-clean {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  /* Bento Grid */
+  .attract-bento-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Category pills horizontal scroll */
+  .cat-pills-row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cat-pill {
+    flex-shrink: 0;
+  }
+
+  /* Portfolio Grid: 2 columns on phones */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  /* Load More Reels on Phone */
+  .load-more-wrap {
+    display: flex !important;
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    padding: 38px 0 32px;
+  }
+  .testimonials-header-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Enquiry Section */
+  .enquiry-section {
+    padding: 36px 20px !important;
+  }
+  .enquiry-compact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-h1 {
+    font-size: 32px !important;
+  }
+  .fanned-card {
+    width: 145px !important;
+    height: 260px !important;
+  }
+  .fanned-center {
+    width: 155px !important;
+    height: 275px !important;
+  }
+  .hero-fanned-cards {
+    height: 310px !important;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===================================================
+   AYUSH SINGH STUDIO ENQUIRY & DIRECT WHATSAPP (9454083266)
+   =================================================== */
+.enquiry-section {
+  position: relative;
+  background: radial-gradient(900px circle at 85% 15%, rgba(16, 185, 129, 0.15), transparent 50%),
+              radial-gradient(800px circle at 15% 85%, rgba(255, 92, 71, 0.12), transparent 45%),
+              linear-gradient(155deg, #090e17 0%, #0d1522 50%, #111a2e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 56px 48px;
+  margin: 40px 0 60px;
+  color: #ffffff;
+  box-shadow: 0 25px 70px -15px rgba(5, 10, 20, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  overflow: hidden;
+}
+
+.enquiry-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+.glow-top-right {
+  top: -120px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.35) 0%, transparent 70%);
+  animation: floatOrb 8s ease-in-out infinite alternate;
+}
+.glow-bottom-left {
+  bottom: -100px;
+  left: -60px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 92, 71, 0.25) 0%, transparent 70%);
+  animation: floatOrb 10s ease-in-out infinite alternate-reverse;
+}
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(20px, -15px) scale(1.1); }
+}
+
+.enquiry-compact-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Left Column */
+.enquiry-left {
+  display: flex;
+  flex-direction: column;
+}
+.live-beacon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 100px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
+  font: 800 11.5px/1 'Manrope', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+.beacon-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: beaconPulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+@keyframes beaconPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.enquiry-headline {
+  font: 800 clamp(28px, 3.2vw, 42px)/1.15 'Manrope', sans-serif;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #ffffff 30%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.enquiry-subtext {
+  font-size: 15px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+.enquiry-subtext strong {
+  color: #f1f5f9;
+}
+
+/* Trust Badges Strip */
+.enquiry-trust-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.trust-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+}
+.trust-pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+.trust-pill strong {
+  display: block;
+  font: 700 12.5px 'Manrope', sans-serif;
+  color: #f1f5f9;
+  line-height: 1.2;
+}
+.trust-pill span {
+  font-size: 11px;
+  color: #94a3b8;
+  line-height: 1.3;
+}
+
+/* Direct WhatsApp Card */
+.wa-direct-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 22px 24px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.wa-direct-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wa-avatar-ring {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #065f46 100%);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+}
+.wa-avatar-initials {
+  font: 800 14px 'Manrope', sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+.wa-online-pip {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #22c55e;
+  border: 2px solid #0b1118;
+}
+.wa-director-name {
+  font: 800 15px 'Manrope', sans-serif;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.verified-svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.wa-director-role {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+.wa-director-role strong {
+  color: #34d399;
+}
+.wa-direct-desc {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+.wa-btn-luxury {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  font: 700 13.5px 'Manrope', sans-serif;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+}
+.wa-btn-luxury:hover {
+  background: linear-gradient(135deg, #27df6c 0%, #20ba5a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.4);
+}
+.wa-btn-luxury svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+.wa-btn-luxury .arrow-svg {
+  fill: none;
+  stroke: currentColor;
+  transition: transform 0.2s;
+}
+.wa-btn-luxury:hover .arrow-svg {
+  transform: translate(2px, -2px);
+}
+
+/* Right Column: Premium Glass Card */
+.enquiry-card-glass {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 34px 32px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.form-section-title {
+  font: 800 11.5px/1 'Manrope', sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.active-pkg-label {
+  color: #34d399;
+  font-weight: 800;
+  font-size: 11.5px;
+}
+
+/* Package Chips Grid */
+.pkg-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.pkg-chip {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  padding: 13px 14px;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+}
+.pkg-chip:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+.pkg-chip.active {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  box-shadow: 0 0 22px rgba(16, 185, 129, 0.2), inset 0 0 0 1px #10b981;
+  transform: translateY(-2px);
+}
+.pkg-chip.active::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+.pkg-chip-badge {
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  background: #10b981;
+  color: #ffffff;
+  font: 800 9px 'Manrope', sans-serif;
+  letter-spacing: 0.05em;
+  padding: 2px 7px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  box-shadow: 0 3px 8px rgba(16, 185, 129, 0.4);
+}
+.pkg-chip-badge.purple {
+  background: #8b5cf6;
+  box-shadow: 0 3px 8px rgba(139, 92, 246, 0.4);
+}
+.pkg-chip-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.chip-icon-box {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  display: grid;
+  place-items: center;
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.pkg-chip.active .chip-icon-box {
+  background: #10b981;
+  color: #ffffff;
+}
+.chip-icon-box.fire { color: #f59e0b; }
+.pkg-chip.active .chip-icon-box.fire { background: #f59e0b; color: #ffffff; }
+.chip-icon-box.purple { color: #a78bfa; }
+.pkg-chip.active .chip-icon-box.purple { background: #8b5cf6; color: #ffffff; }
+
+.chip-title {
+  font: 700 12.5px 'Manrope', sans-serif;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.chip-price {
+  font: 800 13.5px 'Manrope', sans-serif;
+  color: #f1f5f9;
+}
+.chip-price small {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+.chip-sub {
+  font-size: 10.5px;
+  color: #64748b;
+}
+.pkg-chip.active .chip-sub {
+  color: #34d399;
+}
+
+/* Form Fields */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.form-field-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.form-field-wrap label {
+  font: 700 12px 'Manrope', sans-serif;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.form-field-wrap label svg {
+  color: #64748b;
+  flex-shrink: 0;
+}
+.form-field-wrap label .req {
+  color: #ff5c47;
+  font-weight: 800;
+}
+.form-field-wrap label .opt {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.form-input-styled {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 11px;
+  padding: 12px 14px;
+  font-size: 13.5px;
+  font-family: 'DM Sans', sans-serif;
+  color: #ffffff;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+.form-input-styled::placeholder {
+  color: #475569;
+}
+.form-input-styled:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.form-input-styled:focus {
+  border-color: #10b981;
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2), 0 6px 16px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+.form-input-styled.error {
+  border-color: #ff5c47 !important;
+  box-shadow: 0 0 0 3px rgba(255, 92, 71, 0.25) !important;
+  animation: inputShake 0.4s ease;
+}
+@keyframes inputShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+textarea.form-input-styled {
+  resize: vertical;
+  min-height: 84px;
+  line-height: 1.5;
+}
+
+/* Rush Toggle Checkbox */
+.form-rush-toggle {
+  margin: 4px 0 20px;
+}
+.custom-checkbox-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 11px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+.custom-checkbox-wrap:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.custom-checkbox-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.custom-checkmark {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: all 0.2s;
+}
+.custom-checkbox-wrap input:checked ~ .custom-checkmark {
+  background: #10b981;
+  border-color: #10b981;
+}
+.custom-checkbox-wrap input:checked ~ .custom-checkmark::after {
+  content: '';
+  width: 5px;
+  height: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: -2px;
+}
+.rush-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.rush-text strong {
+  font: 700 12.5px 'Manrope', sans-serif;
+  color: #f1f5f9;
+}
+.rush-text small {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* Submit Glow Button */
+.btn-submit-glow {
+  position: relative;
+  width: 100%;
+  padding: 15px 24px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font: 800 14.5px/1.2 'Manrope', sans-serif;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.btn-submit-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transition: left 0.6s ease;
+}
+.btn-submit-glow:hover::before {
+  left: 100%;
+}
+.btn-submit-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 35px -5px rgba(16, 185, 129, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.btn-submit-glow:active {
+  transform: translateY(0) scale(0.99);
+}
+.btn-submit-glow .btn-arrow-icon {
+  transition: transform 0.25s;
+}
+.btn-submit-glow:hover .btn-arrow-icon {
+  transform: translate(3px, -2px);
+}
+
+/* Animated Success Card */
+.enquiry-success-glass {
+  display: none;
+  flex-direction: column;
+  gap: 18px;
+  animation: successPop 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes successPop {
+  from { opacity: 0; transform: scale(0.96) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.success-header-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.success-ring-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  border: 2px solid #10b981;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  animation: pulseSuccessRing 2s infinite;
+}
+@keyframes pulseSuccessRing {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.success-title {
+  font: 800 18px/1.2 'Manrope', sans-serif;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+.success-ref-pill {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  font: 700 11.5px monospace;
+  color: #34d399;
+}
+
+.success-summary-box {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.summary-lbl {
+  color: #94a3b8;
+}
+.summary-val {
+  color: #ffffff;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+}
+.summary-val.text-emerald {
+  color: #34d399;
+}
+
+.success-instruction {
+  font-size: 13.5px;
+  color: #94a3b8;
+  line-height: 1.55;
+}
+
+.pulse-wa {
+  animation: pulseWaBtn 2.5s infinite;
+}
+@keyframes pulseWaBtn {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.btn-reset-form {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #94a3b8;
+  font: 700 12.5px 'Manrope', sans-serif;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-reset-form:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Enquiry */
+@media (max-width: 992px) {
+  .enquiry-section {
+    padding: 44px 28px;
+  }
+  .enquiry-compact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+@media (max-width: 640px) {
+  .enquiry-section {
+    padding: 32px 18px;
+    border-radius: 20px;
+    margin: 30px 0 50px;
+  }
+  .enquiry-trust-strip {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .pkg-chips-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .enquiry-card-glass {
+    padding: 24px 18px;
+  }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(11, 17, 24, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.modal.open { display: flex; }
+.modal-box {
+  background: #ffffff;
+  border-radius: 18px;
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+}
+.modal-media-wrap {
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-media-wrap video { max-height: 80vh; width: 100%; }
+.modal-details {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-cat-tag { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--teal-dark); }
+.modal-details h3 { font: 800 20px 'Manrope', sans-serif; margin: 4px 0 8px; }
+.modal-desc { font-size: 13.5px; color: #475569; line-height: 1.5; margin-bottom: 16px; }
+.modal-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.spec-item small { display: block; font-size: 10.5px; color: #94a3b8; text-transform: uppercase; }
+.spec-item strong { font-size: 13px; color: var(--ink); }
+.modal-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 20px; }
+.modal-tag { font-size: 11px; background: var(--soft); padding: 3px 8px; border-radius: 4px; }
+.modal-inquire-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  display: block;
+}
+
+/* Floating WhatsApp Button (9454083266) */
+.flix-wa-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+}
+.flix-wa-btn-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+  transition: transform .2s;
+}
+.flix-wa-btn-circle:hover { transform: scale(1.08); }
+.flix-wa-btn-circle svg { width: 26px; height: 26px; fill: currentColor; }
+
+/* Footer */
+.footer {
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  color: #64748b;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-links { display: flex; gap: 16px; }
+
+@media (max-width: 980px) {
+  .hero-showcase-grid { grid-template-columns: 1fr; }
+  .hero-fanned-cards { height: 380px; }
+  .packages-grid-compact { grid-template-columns: 1fr; }
+  .ugc-bento-grid { grid-template-columns: 1fr; }
+  .live-counter-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: 1fr 1fr; }
+  .enquiry-compact-grid { grid-template-columns: 1fr; }
+  .modal-box { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+@media (max-width: 600px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .live-counter-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- FILM INTRO PRELOADER CURTAIN -->
+<div class="film-intro-curtain" id="filmCurtain">
+  <div class="intro-brand-box">
+    <div class="intro-aperture">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+      </svg>
+    </div>
+    <div class="intro-logo-text">
+      <strong>Ayush Singh</strong>
+      <span>Film Studio Reel · 2026</span>
+    </div>
+  </div>
+  <div class="intro-film-bar"><div class="intro-film-fill"></div></div>
+</div>
+
+<!-- Header -->
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand-ayush" href="#top" aria-label="Ayush Singh AI Creative Studio">
+      <div class="brand-avatar">AS</div>
+      <div class="brand-text">
+        <strong>Ayush Singh</strong>
+        <span>AI Creative Studio</span>
+      </div>
+    </a>
+    
+    <nav class="nav-links">
+      <a href="#allFilms">Portfolio</a>
+      <a href="#packagesSection">Packages</a>
+      <a href="#attractSection">UGC Ads</a>
+      <a href="#testimonialsSection">Testimonials</a>
+      <a href="#contact">Get in Touch</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn-nav-wa" href="https://wa.me/919454083266?text=Hi%20Ayush!%20I'm%20interested%20in%20video%20packages%20for%20my%20brand." target="_blank" rel="noopener noreferrer">
+        WhatsApp (9454083266) ↗
+      </a>
+      <a class="btn-nav-book" href="#contact">Get in Touch ↗</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================================================
+       HERO SECTION (MATCHING SCREENSHOT WITH 3D FANNED CARDS)
+       =================================================== -->
+  <section class="hero-showcase" id="heroShowcase">
+    <div class="hero-showcase-grid">
+      
+      <!-- Left Column: Copy & CTAs -->
+      <div class="hero-copy-col reveal-init">
+        <div class="hero-badge-mint">
+          <span class="dot-mint"></span>
+          <span>INDEPENDENT AI CREATIVE STUDIO · INDIA</span>
+        </div>
+        
+        <h1 class="hero-h1">
+          Make them<br>
+          <span class="hero-underline-brush">
+            stop scrolling.
+            <svg class="brush-svg-line" viewBox="0 0 340 18" fill="none" preserveAspectRatio="none">
+              <path d="M4 11C75 4 175 6 336 12C260 14 140 16 28 15" stroke="#10b981" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </h1>
+
+        <p class="hero-tagline">
+          High-impact video ads, creator-style UGC and cinematic product films built for the modern feed.
+        </p>
+
+        <div class="hero-buttons-row">
+          <a href="#allFilms" class="btn-hero-dark">
+            <span>Explore our work</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
+          </a>
+          <a href="https://wa.me/919454083266?text=Hi%20Ayush!%20I%20would%20like%20to%20discuss%20a%20video%20campaign." target="_blank" rel="noopener noreferrer" class="btn-hero-light">
+            <span>Discuss a campaign</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+
+        <div class="hero-footer-badge">
+          <span class="hero-footer-pill">
+            <span class="dot-mint"></span>
+            AI-ASSISTED PRODUCTION
+          </span>
+          <span>·</span>
+          <span>MADE FOR MODERN BRANDS</span>
+        </div>
+      </div>
+
+      <!-- Right Column: 3D Fanned-Out Cards (Interactive Auto-Playing Video Reels) -->
+      <div class="hero-fanned-cards" id="heroFannedCards">
+        <!-- Mint Doodles -->
+        <svg class="curl-mint curl-1" viewBox="0 0 40 40"><path d="M5 25C15 5 25 35 35 15"/></svg>
+        <svg class="curl-mint curl-2" viewBox="0 0 40 40"><path d="M5 15C20 35 30 5 35 25"/></svg>
+
+        <!-- Card 1 (Left Tilted) -->
+        <div class="fanned-card fanned-left" data-target="1038197401_1791789431663923.mp4" title="Click to view full video">
+          <video class="fanned-video" src="assets/portfolio/1038197401_1791789431663923.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/portfolio/thumbs/1038197401_1791789431663923.jpg">
+            <source src="assets/portfolio/1038197401_1791789431663923.mp4" type="video/mp4">
+          </video>
+          <div class="fanned-scrim"></div>
+          <div class="fanned-header">
+            <div class="fanned-avatar"><img src="assets/testimonials/leader-1.jpg" alt="Creator"></div>
+            <div class="fanned-category">
+              <strong>Beauty &amp; Skincare</strong>
+              <span>UGC Video</span>
+            </div>
+            <span class="fanned-live-badge">Auto-play</span>
+          </div>
+          <div class="fanned-caption">
+            <strong>Real creators.</strong>
+            <span>Real results.</span>
+          </div>
+        </div>
+
+        <!-- Card 2 (Center Hero Elevated) -->
+        <div class="fanned-card fanned-center" data-target="1003016778_1791789378443713.mp4" title="Click to view full video">
+          <video class="fanned-video" src="assets/portfolio/1003016778_1791789378443713.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/portfolio/thumbs/1003016778_1791789378443713.jpg">
+            <source src="assets/portfolio/1003016778_1791789378443713.mp4" type="video/mp4">
+          </video>
+          <div class="fanned-scrim"></div>
+          <div class="fanned-header">
+            <div class="fanned-avatar"><img src="assets/testimonials/leader-2.jpg" alt="Creator"></div>
+            <div class="fanned-category">
+              <strong>Fashion &amp; Jewellery</strong>
+              <span>Product Film</span>
+            </div>
+            <span class="fanned-live-badge">Auto-play</span>
+          </div>
+          <div class="fanned-caption">
+            <strong>Timeless stories.</strong>
+            <span>Modern creation.</span>
+          </div>
+        </div>
+
+        <!-- Card 3 (Right Tilted) -->
+        <div class="fanned-card fanned-right" data-target="18532995_1791789426382838.mp4" title="Click to view full video">
+          <video class="fanned-video" src="assets/portfolio/18532995_1791789426382838.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/portfolio/thumbs/18532995_1791789426382838.jpg">
+            <source src="assets/portfolio/18532995_1791789426382838.mp4" type="video/mp4">
+          </video>
+          <div class="fanned-scrim"></div>
+          <div class="fanned-header">
+            <div class="fanned-avatar"><img src="assets/testimonials/leader-4.jpg" alt="Creator"></div>
+            <div class="fanned-category">
+              <strong>Product Films</strong>
+              <span>Cinematic</span>
+            </div>
+            <span class="fanned-live-badge">Auto-play</span>
+          </div>
+          <div class="fanned-caption">
+            <strong>Engineered for</strong>
+            <span>Direct conversion.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================
+       LIVE RUNNING NUMBER BANNER SECTION
+       =================================================== -->
+  <section class="live-counter-section reveal-init" id="counterBanner">
+    <div class="live-counter-grid">
+      <div class="counter-box">
+        <div class="counter-number"><span class="counter-val" data-target="100">0</span><span class="counter-accent">+</span></div>
+        <div class="counter-label">Clients Served</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number"><span class="counter-val" data-target="51">0</span><span class="counter-accent">+</span></div>
+        <div class="counter-label">Production-Ready Films</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number"><span class="counter-val" data-target="38" data-decimal="1">0</span><span class="counter-accent">x</span></div>
+        <div class="counter-label">Average ROAS Lift</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number"><span class="counter-val" data-target="100">0</span><span class="counter-accent">%</span></div>
+        <div class="counter-label">Commercial Rights</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number">48<span class="counter-accent">h</span></div>
+        <div class="counter-label">Rush Turnaround</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       COMPACT & COLORFUL PACKAGES (MINIMAL, ZERO FLUFF)
+       =================================================== -->
+  <section class="packages-section reveal-init" id="packagesSection">
+    <div class="section-header-compact">
+      <div class="sec-badge">PRODUCTION PACKAGES</div>
+      <h2 class="sec-title">Predictable Pricing. Ad-Ready Batches.</h2>
+      <p class="sec-desc">Clear deliverables, fast turnaround, and 100% commercial usage rights included.</p>
+    </div>
+
+    <div class="packages-grid-compact">
+      
+      <!-- PACKAGE 1: STARTER TRIAL -->
+      <article class="pkg-card-clean pkg-starter">
+        <div class="pkg-top-row">
+          <span class="pkg-badge-compact coral">TESTING &amp; PROOF</span>
+        </div>
+        <h3 class="pkg-title-clean">Starter Trial</h3>
+        <div class="pkg-price-clean">
+          <span class="curr">₹</span>
+          <span class="val">15,000</span>
+          <span class="sub">/ batch</span>
+        </div>
+        <div class="pkg-volume-clean">10 High-Impact Videos (₹1,500/ea)</div>
+
+        <ul class="pkg-bullets-clean">
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 10 Vertical 9:16 Video Ads (Reels, TikTok)</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> AI UGC &amp; Virtual Spokesperson Hooks</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Trend Sound Sync &amp; Motion Captions</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 48–72h Delivery · 1 Polish Revision</li>
+        </ul>
+
+        <button type="button" class="pkg-btn-clean select-pkg-btn" data-package="Starter Trial Package (₹15,000 - 10 Videos)">
+          Select Starter (₹15k) ↗
+        </button>
+      </article>
+
+      <!-- PACKAGE 2: GROWTH ACCELERATOR -->
+      <article class="pkg-card-clean pkg-growth">
+        <div class="pkg-top-row">
+          <span class="pkg-badge-compact green">MOST POPULAR · BEST ROI</span>
+        </div>
+        <h3 class="pkg-title-clean">Growth Accelerator</h3>
+        <div class="pkg-price-clean">
+          <span class="curr">₹</span>
+          <span class="val">25,000</span>
+          <span class="sub">/ batch</span>
+        </div>
+        <div class="pkg-volume-clean">16 High-Converting Videos (₹1,562/ea)</div>
+
+        <ul class="pkg-bullets-clean">
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 16 Ad Creatives (9:16 + In-feed Cutdowns)</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 3 Hook Variations for Meta A/B Split Testing</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Macro Product Cinematography + Creator UGC</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 3–5 Days Delivery · 2 Dedicated Revisions</li>
+        </ul>
+
+        <button type="button" class="pkg-btn-clean select-pkg-btn" data-package="Growth Accelerator Package (₹25,000 - 16 Videos)">
+          Select Growth (₹25k) ↗
+        </button>
+      </article>
+
+      <!-- PACKAGE 3: SCALE & DOMINANCE -->
+      <article class="pkg-card-clean pkg-scale">
+        <div class="pkg-top-row">
+          <span class="pkg-badge-compact purple">PRODUCTION READY</span>
+        </div>
+        <h3 class="pkg-title-clean">Scale &amp; Dominance</h3>
+        <div class="pkg-price-clean">
+          <span class="curr">₹</span>
+          <span class="val">50,000</span>
+          <span class="sub">/ batch</span>
+        </div>
+        <div class="pkg-volume-clean">20 Videos Production Ready</div>
+
+        <ul class="pkg-bullets-clean">
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 20 Master Commercials (9:16 + 16:9 Widescreen)</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Custom AI Avatars with Voice Cloning</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 3D CGI Motion Aesthetics &amp; Ultra-Macro Shots</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Priority 48h Delivery · 1-on-1 with Ayush</li>
+        </ul>
+
+        <button type="button" class="pkg-btn-clean select-pkg-btn" data-package="Scale & Dominance (₹50,000 - 20 Videos Production Ready)">
+          Select Production Ready (₹50k) ↗
+        </button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================================================
+       UGC CONVERSION BENTO GRID
+       =================================================== -->
+  <section class="attract-section reveal-init" id="attractSection">
+    <div class="attract-inner">
+      <div style="text-align:center;">
+        <div class="ugc-badge-pill">
+          <span class="ugc-badge-dot"></span>
+          <span>CREATIVE THAT CONVERTS</span>
+        </div>
+        <h2 class="ugc-convert-title">UGC Video Ads That<br>Turn Views Into Sales</h2>
+        <p class="ugc-convert-sub">Scroll-stopping creatives built for performance, not just aesthetics.</p>
+        <div class="ugc-green-dash"></div>
+      </div>
+
+      <!-- 2x2 Bento Grid -->
+      <div class="ugc-bento-grid">
+        
+        <!-- CARD 1: Organic Social Content -->
+        <article class="ugc-bento-card">
+          <div class="ugc-card-left">
+            <div class="ugc-icon-box pink">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </div>
+            <h3 class="ugc-card-title">Organic Social Content</h3>
+            <p class="ugc-card-desc">Build trust. Stay memorable.</p>
+          </div>
+          <div class="ugc-card-visual">
+            <div class="ugc-phone-wrap">
+              <div class="ugc-phone-bg"></div>
+              <div class="ugc-phone-main">
+                <img src="assets/portfolio/thumbs/1038197401_1791789431663923.jpg" alt="Organic Social Content" loading="lazy">
+                <div class="ugc-play-bubble">▶</div>
+              </div>
+              <div class="ugc-heart-badge">
+                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2: Paid Social Ad Creatives -->
+        <article class="ugc-bento-card">
+          <div class="ugc-card-left">
+            <div class="ugc-icon-box green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3 class="ugc-card-title">Paid Social Ad Creatives</h3>
+            <p class="ugc-card-desc">Made to test hooks and drive action.</p>
+          </div>
+          <div class="ugc-card-visual">
+            <div class="ugc-phone-wrap">
+              <div class="ugc-phone-bg"></div>
+              <div class="ugc-phone-main">
+                <img src="assets/portfolio/thumbs/448484360_1791789430789662.jpg" alt="Paid Social Ad Creatives" loading="lazy">
+                <div class="ugc-play-bubble">▶</div>
+              </div>
+              <div class="ugc-growth-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3: E-commerce Product Videos -->
+        <article class="ugc-bento-card">
+          <div class="ugc-card-left">
+            <div class="ugc-icon-box blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+            <h3 class="ugc-card-title">E-commerce Product Videos</h3>
+            <p class="ugc-card-desc">Show the value. Make buying easy.</p>
+          </div>
+          <div class="ugc-card-visual">
+            <div class="ugc-product-showcase">
+              <div class="ugc-product-main-view">
+                <img src="assets/product_sneaker_mockup.jpg" alt="E-commerce Product Video" loading="lazy">
+                <div class="ugc-play-bubble">▶</div>
+              </div>
+              <div class="ugc-product-thumbs">
+                <div class="ugc-pthumb"><img src="assets/product_sneaker_mockup.jpg" alt="Angle 1" loading="lazy"></div>
+                <div class="ugc-pthumb"><img src="assets/portfolio/thumbs/1015025976_1791789375735186.jpg" alt="Angle 2" loading="lazy"></div>
+                <div class="ugc-pthumb"><img src="assets/portfolio/thumbs/648304148_1791789423902849.jpg" alt="Angle 3" loading="lazy"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 4: Fast, Ready-to-Launch Production -->
+        <article class="ugc-bento-card">
+          <div class="ugc-card-left">
+            <div class="ugc-icon-box peach">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3 class="ugc-card-title">Fast, Ready-to-Launch Production</h3>
+            <p class="ugc-card-desc">Go from brief to launch in days.</p>
+          </div>
+          <div class="ugc-card-visual">
+            <div class="ugc-timeline-showcase">
+              <div class="ugc-video-preview-row">
+                <div class="ugc-timeline-screen">
+                  <img src="assets/portfolio/thumbs/18532995_1791789426382838.jpg" alt="Presenter Video" loading="lazy">
+                  <div class="ugc-play-bubble">▶</div>
+                </div>
+                <div class="ugc-editor-btn">T</div>
+              </div>
+              <div class="ugc-timeline-bar">
+                <div class="ugc-playhead-line"></div>
+                <div class="ugc-timeline-clips">
+                  <div class="ugc-tclip"><img src="assets/portfolio/thumbs/18532995_1791789426382838.jpg" alt="clip 1"></div>
+                  <div class="ugc-tclip"><img src="assets/portfolio/thumbs/1038197401_1791789431663923.jpg" alt="clip 2"></div>
+                  <div class="ugc-tclip"><img src="assets/portfolio/thumbs/448484360_1791789430789662.jpg" alt="clip 3"></div>
+                  <div class="ugc-tclip"><img src="assets/portfolio/thumbs/229779830_1791789415179319.jpg" alt="clip 4"></div>
+                  <div class="ugc-tclip"><img src="assets/portfolio/thumbs/1015025976_1791789375735186.jpg" alt="clip 5"></div>
+                  <div class="ugc-tclip"><img src="assets/portfolio/thumbs/792453715_1791782728364995.jpg" alt="clip 6"></div>
+                </div>
+                <div class="ugc-waveform-bar"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="ugc-bottom-row">
+        <a href="#packagesSection" class="ugc-cta-btn">
+          <span>Explore Video Packages</span>
+          <span style="font-weight:900;">→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================
+       CURATED PORTFOLIO
+       =================================================== -->
+  <section class="portfolio-header-clean reveal-init">
+    <div>
+      <div class="sec-badge">PRODUCTION ARCHIVE</div>
+      <h2 class="sec-title">Selected Commercial Work</h2>
+      <p class="sec-desc">Hover to preview with sound. Click any film for specs &amp; creative brief.</p>
+    </div>
+
+    <!-- Category Navigation Bar -->
+    <nav class="category-nav-bar" aria-label="Filter portfolio by category">
+      <button class="cat-pill active" data-cat="all">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span>All Films (51)</span>
+      </button>
+      <button class="cat-pill" data-cat="fashion">Fashion &amp; Luxury</button>
+      <button class="cat-pill" data-cat="jewellery">Jewellery &amp; Luxury</button>
+      <button class="cat-pill" data-cat="beauty">Beauty &amp; Skincare</button>
+      <button class="cat-pill" data-cat="ugc">Creator UGC</button>
+      <button class="cat-pill" data-cat="avatar">AI Avatars</button>
+      <button class="cat-pill" data-cat="brand">Brand &amp; 3D</button>
+    </nav>
+  </section>
+
+  <!-- Search & Format Filter Controls -->
+  <div class="filter-controls-row reveal-init">
+    <div class="search-box">
+      <span class="search-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </span>
+      <input type="text" id="searchInput" class="search-input" placeholder="Search by niche, tag, or style..." aria-label="Search portfolio">
+    </div>
+    <div class="format-select-wrap">
+      <select id="formatSelect" class="format-select" aria-label="Filter by format">
+        <option value="all">All Formats</option>
+        <option value="9:16">9:16 Vertical Reels</option>
+        <option value="16:9">16:9 Landscape Commercials</option>
+      </select>
+      <span class="select-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </span>
+    </div>
+    <button id="resetFiltersBtn" class="filter-reset-btn">Clear filters <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+  </div>
+
+  <!-- FEATURED REELS CAROUSEL -->
+  <section class="featured-section reveal-init" id="featuredSection">
+    <div class="section-bar">
+      <div>
+        <h2>Featured Reels</h2>
+        <p>A few high-impact films worth stopping for.</p>
+      </div>
+      <div class="carousel-controls">
+        <button class="arrow-btn" id="featPrev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="arrow-btn" id="featNext" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="carousel-track" id="featuredTrack"></div>
+  </section>
+
+  <!-- DEDICATED 16:9 WIDESCREEN COMMERCIALS -->
+  <section class="widescreen-section reveal-init" id="widescreenSection">
+    <div class="section-bar">
+      <div>
+        <h2>16:9 Widescreen Commercials</h2>
+        <p>Broadcast-grade landscape video ads &amp; brand showreels.</p>
+      </div>
+    </div>
+    <div class="widescreen-grid" id="widescreenGrid">
+      <article class="wcard" data-video="assets/covers/fashion_apparel_16_9.mp4" data-title="Fashion &amp; Apparel Commercial" data-cat="Fashion &amp; Apparel" data-desc="Modern saree drapes and Indo-western silhouettes." data-industry="Fashion &amp; Luxury" data-format="16:9 Landscape">
+        <div class="wcard-media">
+          <img src="assets/covers/fashion_apparel_16_9.jpg" alt="Fashion &amp; Apparel" loading="lazy">
+          <video data-src="assets/covers/fashion_apparel_16_9.mp4" muted loop playsinline preload="none"></video>
+          <div class="wcard-scrim"></div>
+          <div class="wcard-progress"><div class="wcard-progress-fill"></div></div>
+        </div>
+        <div class="wcard-top"><span class="wcard-badge">Fashion</span><span class="wcard-format-tag">16:9</span></div>
+        <div class="wcard-bottom"><h3 class="wcard-title">Fashion &amp; Apparel</h3><p class="wcard-desc">Modern saree drapes &amp; Indo-western styles.</p></div>
+      </article>
+
+      <article class="wcard" data-video="assets/covers/jewellery_luxury_16_9.mp4" data-title="Jewellery &amp; Luxury Heritage" data-cat="Jewellery &amp; Luxury" data-desc="Traditional and contemporary bridal jewellery." data-industry="Jewellery &amp; Luxury" data-format="16:9 Landscape">
+        <div class="wcard-media">
+          <img src="assets/covers/jewellery_luxury_16_9.jpg" alt="Jewellery" loading="lazy">
+          <video data-src="assets/covers/jewellery_luxury_16_9.mp4" muted loop playsinline preload="none"></video>
+          <div class="wcard-scrim"></div>
+          <div class="wcard-progress"><div class="wcard-progress-fill"></div></div>
+        </div>
+        <div class="wcard-top"><span class="wcard-badge">Jewellery</span><span class="wcard-format-tag">16:9</span></div>
+        <div class="wcard-bottom"><h3 class="wcard-title">Jewellery &amp; Luxury</h3><p class="wcard-desc">Traditional &amp; contemporary gold heritage.</p></div>
+      </article>
+
+      <article class="wcard" data-video="assets/covers/cosmetics_makeup_16_9.mp4" data-title="Cosmetics &amp; Beauty Editorial" data-cat="Cosmetics &amp; Beauty" data-desc="Indian skin tones and rich festive pigments." data-industry="Cosmetics &amp; Makeup" data-format="16:9 Landscape">
+        <div class="wcard-media">
+          <img src="assets/covers/cosmetics_makeup_16_9.jpg" alt="Cosmetics" loading="lazy">
+          <video data-src="assets/covers/cosmetics_makeup_16_9.mp4" muted loop playsinline preload="none"></video>
+          <div class="wcard-scrim"></div>
+          <div class="wcard-progress"><div class="wcard-progress-fill"></div></div>
+        </div>
+        <div class="wcard-top"><span class="wcard-badge">Cosmetics</span><span class="wcard-format-tag">16:9</span></div>
+        <div class="wcard-bottom"><h3 class="wcard-title">Cosmetics &amp; Makeup</h3><p class="wcard-desc">Indian skin tones &amp; festive pigments.</p></div>
+      </article>
+
+      <article class="wcard" data-video="assets/covers/skincare_wellness_16_9.mp4" data-title="Skincare &amp; Sunscreen Routine" data-cat="Beauty &amp; Skincare" data-desc="Dewy hydration and modern wellness aesthetic." data-industry="Beauty &amp; Skincare" data-format="16:9 Landscape">
+        <div class="wcard-media">
+          <img src="assets/covers/skincare_wellness_16_9.jpg" alt="Skincare" loading="lazy">
+          <video data-src="assets/covers/skincare_wellness_16_9.mp4" muted loop playsinline preload="none"></video>
+          <div class="wcard-scrim"></div>
+          <div class="wcard-progress"><div class="wcard-progress-fill"></div></div>
+        </div>
+        <div class="wcard-top"><span class="wcard-badge">Skincare</span><span class="wcard-format-tag">16:9</span></div>
+        <div class="wcard-bottom"><h3 class="wcard-title">Skincare &amp; Wellness</h3><p class="wcard-desc">Dewy hydration &amp; sunscreen routine.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ALL 51 FILMS GRID -->
+  <section class="all-films-section reveal-init" id="allFilms">
+    <div class="section-bar">
+      <div>
+        <h2>Complete Library (51 Films)</h2>
+        <p>Curated AI commercials, UGC testimonials &amp; product reels.</p>
+      </div>
+      <div>
+        <a class="btn-nav-book" href="#contact">Request Custom Brief ↗</a>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state">
+      <h4>No production films found</h4>
+      <p>No films matched your search or filter combination.</p>
+      <button id="emptyResetBtn" class="btn-primary-hero" style="margin-top:10px;">Clear all filters</button>
+    </div>
+
+    <!-- Grid Cards Container -->
+    <div class="portfolio-grid" id="portfolioGrid"></div>
+
+    <!-- Mobile Pagination / Load More Button on Phones -->
+    <div class="load-more-wrap" id="loadMoreWrap">
+      <button type="button" class="btn-load-more" id="btnLoadMoreReels">
+        <span>View More Reels (43+ More Films)</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       TESTIMONIALS SECTION (5-STARS, GOOGLE BADGE & REAL INDIAN FOUNDERS)
+       =================================================== -->
+  <section class="testimonials-section reveal-init" id="testimonialsSection">
+    <div class="testimonials-header-wrap">
+      <div class="section-header-compact" style="margin-bottom:0;">
+        <div class="sec-badge">VERIFIED CLIENT SUCCESS</div>
+        <h2 class="sec-title">Trusted by India’s Leading D2C Founders &amp; Growth Leads</h2>
+        <p class="sec-desc">Proven performance across Instagram Ads, Meta Reels, and high-converting product launches.</p>
+      </div>
+
+      <!-- Official Google Reviews Badge -->
+      <div class="google-rating-badge" aria-label="5.0 out of 5 stars on Google Reviews">
+        <div class="google-logo-box">
+          <svg width="26" height="26" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+          </svg>
+        </div>
+        <div class="google-badge-text">
+          <div class="google-stars-row">
+            <span class="google-score">5.0</span>
+            <div class="stars-gold-list">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <span class="google-tag">Google Reviews</span>
+          </div>
+          <span class="google-sub">100% Positive Feedback · Verified Founders</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials-grid">
+      
+      <!-- Testimonial 1: Ananya Singhania -->
+      <article class="tm-card">
+        <div>
+          <div class="tm-top-meta">
+            <div class="tm-metric-pill">+184% ROAS Lift</div>
+            <div class="tm-stars-row" title="5.0 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+          </div>
+          <p class="tm-quote">
+            "Ayush delivered 16 high-converting reels in 4 days. Our Meta ROAS jumped from 1.8x to 3.4x in week one. The creator hooks look so natural our customers thought we spent ₹8 Lakhs on an in-house Mumbai studio shoot."
+          </p>
+        </div>
+        <div class="tm-author-row">
+          <div class="tm-avatar">
+            <img src="assets/testimonials/indian_ananya.jpg" alt="Ananya Singhania" loading="lazy">
+          </div>
+          <div class="tm-meta">
+            <strong>Ananya Singhania</strong>
+            <span>Founder &amp; CEO, Veda Botanicals (Mumbai)</span>
+            <span class="google-verified-pill">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Google Verified Client
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Testimonial 2: Rohan Verma -->
+      <article class="tm-card">
+        <div>
+          <div class="tm-top-meta">
+            <div class="tm-metric-pill">-42% Lower CAC</div>
+            <div class="tm-stars-row" title="5.0 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+          </div>
+          <p class="tm-quote">
+            "The jewellery macro details and 3D lighting in Ayush's reels look like a ₹5 Lakh studio commercial. Our customer acquisition cost dropped 42% on Instagram Reels, generating over ₹38 Lakhs in tracked revenue."
+          </p>
+        </div>
+        <div class="tm-author-row">
+          <div class="tm-avatar">
+            <img src="assets/testimonials/indian_rohan.jpg" alt="Rohan Verma" loading="lazy">
+          </div>
+          <div class="tm-meta">
+            <strong>Rohan Verma</strong>
+            <span>Head of Growth, Aura Jewels (Delhi)</span>
+            <span class="google-verified-pill">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Google Verified Client
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Testimonial 3: Priya Sharma -->
+      <article class="tm-card">
+        <div>
+          <div class="tm-top-meta">
+            <div class="tm-metric-pill">3.8x CTR on Meta</div>
+            <div class="tm-stars-row" title="5.0 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+          </div>
+          <p class="tm-quote">
+            "Having 3 distinct hook variations per concept allowed our team to find 2 breakout winning creatives that have been scaling our activewear drop profitably for 3 months straight. Incredible turnaround!"
+          </p>
+        </div>
+        <div class="tm-author-row">
+          <div class="tm-avatar">
+            <img src="assets/testimonials/indian_priya.jpg" alt="Priya Sharma" loading="lazy">
+          </div>
+          <div class="tm-meta">
+            <strong>Priya Sharma</strong>
+            <span>VP Brand &amp; Growth, ZenFit Apparel (Bengaluru)</span>
+            <span class="google-verified-pill">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Google Verified Client
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Testimonial 4: Vikramaditya Roy -->
+      <article class="tm-card">
+        <div>
+          <div class="tm-top-meta">
+            <div class="tm-metric-pill">48h Rush Delivery</div>
+            <div class="tm-stars-row" title="5.0 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+          </div>
+          <p class="tm-quote">
+            "Ayush's AI spokesperson videos were completely indistinguishable from real actors. Flawless script delivery, zero production headaches, and broadcast-ready in 48 hours. He is our secret weapon for performance video ads."
+          </p>
+        </div>
+        <div class="tm-author-row">
+          <div class="tm-avatar">
+            <img src="assets/testimonials/indian_vikram.jpg" alt="Vikramaditya Roy" loading="lazy">
+          </div>
+          <div class="tm-meta">
+            <strong>Vikramaditya Roy</strong>
+            <span>Co-Founder &amp; CEO, NextWave Medtech (Gurgaon)</span>
+            <span class="google-verified-pill">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Google Verified Client
+            </span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+    <!-- ===================================================
+       AYUSH SINGH STUDIO ENQUIRY & DIRECT WHATSAPP (9454083266)
+       =================================================== -->
+  <section class="enquiry-section reveal-init" id="contact">
+    <!-- Ambient glowing backdrop orbs -->
+    <div class="enquiry-glow-orb glow-top-right" aria-hidden="true"></div>
+    <div class="enquiry-glow-orb glow-bottom-left" aria-hidden="true"></div>
+
+    <div class="enquiry-compact-grid">
+      
+      <!-- Left Column: Fast Action & Direct Line -->
+      <div class="enquiry-left">
+        <div class="live-beacon">
+          <span class="beacon-dot"></span>
+          <span>DIRECT PRODUCTION DESK · ACTIVE NOW</span>
+        </div>
+
+        <h2 class="enquiry-headline">
+          Let’s build video ads that <span class="text-gradient-emerald">actually convert.</span>
+        </h2>
+        
+        <p class="enquiry-subtext">
+          Lock in your batch production or send your product brief. Ayush reviews every submission personally within <strong>4 to 6 business hours</strong> with initial hook concepts.
+        </p>
+
+        <!-- Trust Badges Strip -->
+        <div class="enquiry-trust-strip">
+          <div class="trust-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            <div>
+              <strong>48h–72h Delivery</strong>
+              <span>Rush turnaround ready</span>
+            </div>
+          </div>
+          <div class="trust-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <div>
+              <strong>100% Commercial</strong>
+              <span>Full copyright + raw 4K</span>
+            </div>
+          </div>
+          <div class="trust-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <div>
+              <strong>Meta &amp; TikTok</strong>
+              <span>Platform-native cutdowns</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct WhatsApp Card with 9454083266 -->
+        <div class="wa-direct-card">
+          <div class="wa-direct-top">
+            <div class="wa-avatar-ring">
+              <span class="wa-avatar-initials">AS</span>
+              <span class="wa-online-pip"></span>
+            </div>
+            <div>
+              <div class="wa-director-name">
+                Ayush Singh
+                <svg class="verified-svg" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              </div>
+              <div class="wa-director-role">Director &amp; AI Creative Producer · <strong>Avg 15m reply</strong></div>
+            </div>
+          </div>
+          
+          <p class="wa-direct-desc">
+            Need urgent same-week delivery or want to bounce video hook ideas right now? Skip the email queue and connect directly on WhatsApp.
+          </p>
+
+          <a class="wa-btn-luxury" href="https://wa.me/919454083266?text=Hi%20Ayush!%20I'm%20interested%20in%20your%20video%20packages%20for%20my%20brand." target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>Chat on WhatsApp (+91 9454083266)</span>
+            <svg class="arrow-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Brief Form -->
+      <div class="enquiry-card-glass">
+        <form id="enquiryForm" class="enquiry-form-styled" novalidate autocomplete="on">
+          <input type="text" name="_bot_guard" id="enqHoneypot" style="display:none !important;" tabindex="-1" autocomplete="off">
+          
+          <!-- Package Selector -->
+          <div class="form-section-title">
+            <span>STEP 1 · SELECT PRODUCTION PACKAGE</span>
+            <span class="active-pkg-label" id="activePkgLabelDisplay">Growth Accelerator (₹25k)</span>
+          </div>
+
+          <div class="pkg-chips-grid" id="packageChipsGrid" role="radiogroup" aria-label="Select Video Package">
+            
+            <!-- Starter -->
+            <button type="button" class="pkg-chip" data-package="Starter Trial Package (₹15,000 - 10 Videos)" role="radio" aria-checked="false">
+              <div class="pkg-chip-header">
+                <span class="chip-icon-box">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </span>
+                <span class="chip-title">Starter Trial</span>
+              </div>
+              <div class="chip-price">₹15,000 <small>· 10 Videos</small></div>
+              <span class="chip-sub">Fast 48h launch</span>
+            </button>
+
+            <!-- Growth (Default Active) -->
+            <button type="button" class="pkg-chip active" data-package="Growth Accelerator Package (₹25,000 - 16 Videos)" role="radio" aria-checked="true">
+              <span class="pkg-chip-badge">MOST POPULAR</span>
+              <div class="pkg-chip-header">
+                <span class="chip-icon-box fire">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+                </span>
+                <span class="chip-title">Growth Accelerator</span>
+              </div>
+              <div class="chip-price">₹25,000 <small>· 16 Videos</small></div>
+              <span class="chip-sub">Best Meta / TikTok ROI</span>
+            </button>
+
+            <!-- Production Ready -->
+            <button type="button" class="pkg-chip" data-package="Scale & Dominance (₹50,000 - 20 Videos Production Ready)" role="radio" aria-checked="false">
+              <span class="pkg-chip-badge purple">PRO READY</span>
+              <div class="pkg-chip-header">
+                <span class="chip-icon-box purple">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5v-2z"></path></svg>
+                </span>
+                <span class="chip-title">Scale &amp; Dominance</span>
+              </div>
+              <div class="chip-price">₹50,000 <small>· 20 Videos</small></div>
+              <span class="chip-sub">3D CGI &amp; Voice Clone</span>
+            </button>
+
+            <!-- Custom Agency Scope -->
+            <button type="button" class="pkg-chip" data-package="Custom Retainer / Agency Scope" role="radio" aria-checked="false">
+              <div class="pkg-chip-header">
+                <span class="chip-icon-box">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+                </span>
+                <span class="chip-title">Custom Scope</span>
+              </div>
+              <div class="chip-price">Retainer <small>· Monthly</small></div>
+              <span class="chip-sub">Bespoke Enterprise</span>
+            </button>
+
+          </div>
+
+          <!-- Hidden Input for Package -->
+          <input type="hidden" id="enqBudget" name="budget" value="Growth Accelerator Package (₹25,000 - 16 Videos)">
+
+          <!-- Fields Section -->
+          <div class="form-section-title" style="margin-top: 14px;">
+            <span>STEP 2 · BRAND &amp; CONTACT DETAILS</span>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field-wrap">
+              <label for="enqName">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                Your Name <span class="req">*</span>
+              </label>
+              <input type="text" id="enqName" name="name" class="form-input-styled" placeholder="e.g. Rahul Mehta" required>
+            </div>
+            
+            <div class="form-field-wrap">
+              <label for="enqBrand">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                Brand / Store Name <span class="req">*</span>
+              </label>
+              <input type="text" id="enqBrand" name="brand" class="form-input-styled" placeholder="e.g. Aura Naturals" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field-wrap">
+              <label for="enqPhone">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                WhatsApp Number <span class="req">*</span>
+              </label>
+              <input type="tel" id="enqPhone" name="phone" class="form-input-styled" placeholder="+91 94540 83266" required>
+            </div>
+
+            <div class="form-field-wrap">
+              <label for="enqEmail">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Work Email <span class="opt">(Optional)</span>
+              </label>
+              <input type="email" id="enqEmail" name="email" class="form-input-styled" placeholder="rahul@mybrand.com">
+            </div>
+          </div>
+
+          <div class="form-field-wrap">
+            <label for="enqBrief">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+              Project Brief &amp; Product Link <span class="req">*</span>
+            </label>
+            <textarea id="enqBrief" name="brief" class="form-input-styled" rows="3" placeholder="Tell me about your product, desired hook angle, target audience, or paste a link..." required></textarea>
+          </div>
+
+          <div class="form-rush-toggle">
+            <label class="custom-checkbox-wrap">
+              <input type="checkbox" id="enqUrgent" name="urgent">
+              <span class="custom-checkmark"></span>
+              <span class="rush-text">
+                <strong>Need 48h–72h Priority Rush Delivery</strong>
+                <small>Moves your batch to the top of the AI rendering &amp; editing queue.</small>
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit-glow" id="enqSubmitBtn">
+            <span>Submit Brief &amp; Connect on WhatsApp</span>
+            <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </form>
+
+        <!-- Animated Success Receipt Card -->
+        <div class="enquiry-success-glass" id="enquirySuccessCard" style="display:none;">
+          <div class="success-header-row">
+            <div class="success-ring-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div>
+              <h3 class="success-title">Brief Submitted Successfully!</h3>
+              <div class="success-ref-pill" id="receiptRefId">REF: AYUSH-2026-9481</div>
+            </div>
+          </div>
+
+          <div class="success-summary-box">
+            <div class="summary-item">
+              <span class="summary-lbl">Client &amp; Brand:</span>
+              <strong class="summary-val" id="receiptClientBrand">Rahul Mehta · Aura Naturals</strong>
+            </div>
+            <div class="summary-item">
+              <span class="summary-lbl">Selected Tier:</span>
+              <strong class="summary-val text-emerald" id="receiptBudgetVal">Growth Accelerator (₹25,000)</strong>
+            </div>
+            <div class="summary-item">
+              <span class="summary-lbl">Production Priority:</span>
+              <strong class="summary-val" id="receiptUrgencyVal">Standard Review (4–6h)</strong>
+            </div>
+          </div>
+
+          <p class="success-instruction">
+            Ayush has received your brief and is generating initial angle concepts. Click below to start the conversation on WhatsApp right now with your pre-filled brief:
+          </p>
+
+          <a class="wa-btn-luxury pulse-wa" id="receiptEmergencyWaBtn" href="#" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>Open WhatsApp Chat with Ayush (+91 9454083266)</span>
+            <svg class="arrow-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+
+          <button type="button" class="btn-reset-form" id="receiptNewEnquiryBtn">
+            <span>Submit Another Project Brief</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- CINEMATIC PREVIEW MODAL -->
+<div class="modal" id="previewModal" aria-hidden="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close modal"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    <div class="modal-media-wrap">
+      <video id="modalVideo" controls playsinline></video>
+    </div>
+    <div class="modal-details">
+      <div>
+        <span class="modal-cat-tag" id="modalCat">Fashion &amp; Luxury</span>
+        <h3 id="modalTitle">Campaign Title</h3>
+        <p class="modal-desc" id="modalDesc">Creative direction and visual concept description.</p>
+        
+        <div class="modal-specs-grid">
+          <div class="spec-item"><small>Industry</small><strong id="modalIndustry">Fashion</strong></div>
+          <div class="spec-item"><small>Format</small><strong id="modalFormat">Reel</strong></div>
+          <div class="spec-item"><small>Aspect Ratio</small><strong id="modalAspect">9:16</strong></div>
+          <div class="spec-item"><small>Duration</small><strong id="modalDuration">8s</strong></div>
+        </div>
+
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+
+      <a class="modal-inquire-btn" id="modalInquireBtn" href="#contact">Book Video Like This ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Direct WhatsApp Button (9454083266) -->
+<aside class="flix-wa-float" id="flixWaFloat">
+  <a class="flix-wa-btn-circle" href="https://wa.me/919454083266?text=Hi%20Ayush!%20I'm%20visiting%20your%20portfolio%20and%20want%20to%20discuss%20video%20packages." target="_blank" rel="noopener noreferrer" title="Chat directly with Ayush on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+</aside>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>© 2026 Ayush Singh. AI Creative Studio. WhatsApp: +91 9454083266. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#allFilms">Portfolio</a>
+      <a href="#packagesSection">Packages</a>
+      <a href="#attractSection">UGC Ads</a>
+      <a href="#testimonialsSection">Testimonials</a>
+      <a href="#contact">Get in Touch</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Fade out Film Curtain Preloader on load
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const curtain = document.getElementById('filmCurtain');
+    if (curtain) curtain.classList.add('loaded');
+  }, 450);
+});
+
+// Scroll Reveal Observer
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal-init').forEach(el => revealObserver.observe(el));
+
+// Live Counter Numbers Animation
+let countersTriggered = false;
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !countersTriggered) {
+      countersTriggered = true;
+      document.querySelectorAll('.counter-val').forEach(el => {
+        const target = parseFloat(el.dataset.target);
+        const isDecimal = el.dataset.decimal === '1';
+        let current = 0;
+        const duration = 1600;
+        const stepTime = 25;
+        const steps = duration / stepTime;
+        const increment = target / steps;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = isDecimal ? (current / 10).toFixed(1) : Math.floor(current);
+        }, stepTime);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+const counterSec = document.getElementById('counterBanner');
+if (counterSec) counterObserver.observe(counterSec);
+
+// Hero Videos Auto-Play on Loop & Smooth Hardware-Accelerated Parallax
+(function initHeroSectionVideos() {
+  const fannedContainer = document.getElementById('heroFannedCards');
+  if (!fannedContainer) return;
+
+  const heroVideos = fannedContainer.querySelectorAll('.fanned-video');
+
+  // 1. Guaranteed Autoplay Execution
+  function playAllHeroVideos() {
+    heroVideos.forEach(v => {
+      v.muted = true;
+      v.defaultMuted = true;
+      v.playsInline = true;
+      v.loop = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('playsinline', '');
+      v.setAttribute('webkit-playsinline', '');
+
+      const p = v.play();
+      if (p !== undefined) {
+        p.catch(() => {});
+      }
+    });
+  }
+
+  // Play immediately
+  playAllHeroVideos();
+
+  // Retry on loadedmetadata and canplay
+  heroVideos.forEach(v => {
+    v.addEventListener('loadedmetadata', playAllHeroVideos, { once: true });
+    v.addEventListener('canplay', playAllHeroVideos, { once: true });
+  });
+
+  // Global user gesture unlock for strict browser autoplay policies
+  function unlockAutoplay() {
+    playAllHeroVideos();
+    ['click', 'touchstart', 'scroll', 'pointerdown', 'keydown'].forEach(evt => {
+      window.removeEventListener(evt, unlockAutoplay);
+    });
+  }
+  ['click', 'touchstart', 'scroll', 'pointerdown', 'keydown'].forEach(evt => {
+    window.addEventListener(evt, unlockAutoplay, { passive: true, once: true });
+  });
+
+  // 2. Pause only when scrolled well out of view (> 750px) to save GPU
+  window.addEventListener('scroll', () => {
+    const isHeroInView = window.scrollY < 750;
+    heroVideos.forEach(v => {
+      if (isHeroInView) {
+        if (v.paused) v.play().catch(() => {});
+      } else {
+        if (!v.paused) v.pause();
+      }
+    });
+  }, { passive: true });
+
+  // 3. Jitter-Free RAF-Throttled Mouse Parallax
+  const leftCard = fannedContainer.querySelector('.fanned-left');
+  const centerCard = fannedContainer.querySelector('.fanned-center');
+  const rightCard = fannedContainer.querySelector('.fanned-right');
+
+  let mouseX = 0, mouseY = 0, isHovering = false, rafId = null;
+
+  function updateCardTransforms() {
+    if (!isHovering) {
+      if (leftCard) leftCard.style.transform = 'rotate(-10deg) translateY(18px)';
+      if (centerCard) centerCard.style.transform = 'rotate(0deg) translateY(-8px)';
+      if (rightCard) rightCard.style.transform = 'rotate(12deg) translateY(24px)';
+      rafId = null;
+      return;
+    }
+    if (leftCard) leftCard.style.transform = `rotate(${-10 + mouseX * 8}deg) translateY(${18 + mouseY * 14}px)`;
+    if (centerCard) centerCard.style.transform = `rotate(${mouseX * 6}deg) translateY(${-8 + mouseY * 16}px)`;
+    if (rightCard) rightCard.style.transform = `rotate(${12 + mouseX * 8}deg) translateY(${24 + mouseY * 14}px)`;
+    rafId = null;
+  }
+
+  fannedContainer.addEventListener('mousemove', (e) => {
+    const rect = fannedContainer.getBoundingClientRect();
+    mouseX = (e.clientX - rect.left) / rect.width - 0.5;
+    mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+    isHovering = true;
+    if (!rafId) {
+      rafId = requestAnimationFrame(updateCardTransforms);
+    }
+  }, { passive: true });
+
+  fannedContainer.addEventListener('mouseleave', () => {
+    isHovering = false;
+    if (!rafId) {
+      rafId = requestAnimationFrame(updateCardTransforms);
+    }
+  });
+
+  // 4. Click to open modal
+  fannedContainer.querySelectorAll('.fanned-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const target = card.dataset.target;
+      if (typeof PORTFOLIO_DATA !== 'undefined') {
+        const item = PORTFOLIO_DATA.find(p => p.file === target);
+        if (item && typeof openModal === 'function') openModal(item);
+      }
+    });
+  });
+})();
+
+const PORTFOLIO_DATA = [{"file":"1003016778_1791789378443713.mp4","title":"Royal Heritage Bridal Lehenga & Emerald Choker","category":"fashion","industry":"Fashion & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Bridal","Couture","Jewellery","Heritage","Indian Wedding"],"desc":"Cinematic royal bridal campaign featuring handcrafted velvet embroidery, emerald jewellery, and palace ambiance.","thumb":"assets/portfolio/thumbs/1003016778_1791789378443713.jpg","src":"assets/portfolio/1003016778_1791789378443713.mp4"},{"file":"1005987106_1791789407532581.mp4","title":"Ivory Gold Couture & Maang Tikka Ritual","category":"fashion","industry":"Fashion & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Bridal","Ivory Couture","Gold Jewellery","Wedding Story"],"desc":"Intimate wedding preparation visual showing bridal jewellery placement in soft architectural morning light.","thumb":"assets/portfolio/thumbs/1005987106_1791789407532581.jpg","src":"assets/portfolio/1005987106_1791789407532581.mp4"},{"file":"1015025976_1791789375735186.mp4","title":"Aura Flow Activewear Movement","category":"fashion","industry":"Fitness & Apparel","format":"Product Film","aspect":"9:16","duration":"8s","tags":["Activewear","Athleisure","Fitness","Movement"],"desc":"Seamless studio athletic wear showcase emphasizing contour fit, breathability, and mindful posture.","thumb":"assets/portfolio/thumbs/1015025976_1791789375735186.jpg","src":"assets/portfolio/1015025976_1791789375735186.mp4"},{"file":"1025116091_1791789373210638.mp4","title":"Handcrafted Kundan Pearl Nath Close-Up","category":"jewellery","industry":"Jewellery & Luxury","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Nath","Pearl Jewellery","Macro Focus","Bridal Detail"],"desc":"High-definition macro detail of traditional bridal nose ring with pearls and ruby floral settings.","thumb":"assets/portfolio/thumbs/1025116091_1791789373210638.jpg","src":"assets/portfolio/1025116091_1791789373210638.mp4"},{"file":"1038197401_1791789431663923.mp4","title":"Morning Routine Dewy Serum Application","category":"beauty","industry":"Beauty & Skincare","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Skincare Routine","Serum Bottle","Bathrobe Aesthetic","D2C"],"desc":"Creator-led skincare morning regimen demo showcasing product texture, hydration barrier, and skin glow.","thumb":"assets/portfolio/thumbs/1038197401_1791789431663923.jpg","src":"assets/portfolio/1038197401_1791789431663923.mp4"},{"file":"1062639834_1791789379429436.mp4","title":"Effortless Linen Loungewear Everyday Look","category":"fashion","industry":"Fashion & Lifestyle","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Linen Wear","Lifestyle","Casual Chic","Summer Drop"],"desc":"Natural lifestyle creator showcasing relaxed linen coordinates in daylight modern apartment.","thumb":"assets/portfolio/thumbs/1062639834_1791789379429436.jpg","src":"assets/portfolio/1062639834_1791789379429436.mp4"},{"file":"128668584_1791789398079868.mp4","title":"Banarasi Royal Blue Silk Brocade Weave","category":"fashion","industry":"Textiles & Couture","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Silk Saree","Textile Macro","Zari Embroidery","Handloom"],"desc":"Slow-motion macro texture film of royal sapphire silk featuring intricate gold zari floral motifs.","thumb":"assets/portfolio/thumbs/128668584_1791789398079868.jpg","src":"assets/portfolio/128668584_1791789398079868.mp4"},{"file":"150052268_1791789406341517.mp4","title":"Minimalist Trenchcoat Architectural Runway","category":"fashion","industry":"High Fashion","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Outerwear","Trenchcoat","Architectural","Minimalist"],"desc":"Monochrome architectural editorial showing draped structured trenchcoat walking through glass modern spaces.","thumb":"assets/portfolio/thumbs/150052268_1791789406341517.jpg","src":"assets/portfolio/150052268_1791789406341517.mp4"},{"file":"18532995_1791789426382838.mp4","title":"Skyline Executive AI Presenter Pitch","category":"avatar","industry":"Corporate & Tech","format":"AI Avatar","aspect":"9:16","duration":"8s","tags":["AI Presenter","Corporate","Financial Tech","Spokesperson"],"desc":"Hyper-realistic executive spokesperson presenting enterprise solutions with downtown skyscraper view.","thumb":"assets/portfolio/thumbs/18532995_1791789426382838.jpg","src":"assets/portfolio/18532995_1791789426382838.mp4"},{"file":"189895571_1791789387284318.mp4","title":"Native Phone-Camera Selfie Review","category":"ugc","industry":"Consumer D2C","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Selfie Hook","TikTok Format","Native Feed","Authentic Review"],"desc":"Raw native UI phone-camera hook creating instant authenticity for high-converting social paid ads.","thumb":"assets/portfolio/thumbs/189895571_1791789387284318.jpg","src":"assets/portfolio/189895571_1791789387284318.mp4"},{"file":"192186587_1791789392692329.mp4","title":"Golden Hour Satin Evening Gowns Trio","category":"fashion","industry":"Evening Wear","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Evening Gowns","Satin","Golden Hour","Party Collection"],"desc":"Glamorous trio of emerald, champagne and black satin slips walking into sunset rooftop party.","thumb":"assets/portfolio/thumbs/192186587_1791789392692329.jpg","src":"assets/portfolio/192186587_1791789392692329.mp4"},{"file":"229779830_1791789415179319.mp4","title":"Executive AI Talent Modern Office Story","category":"avatar","industry":"Corporate & Tech","format":"AI Avatar","aspect":"9:16","duration":"8s","tags":["AI Presenter","Virtual Spokesperson","B2B SaaS","Corporate"],"desc":"Natural delivery female presenter in tailored suit delivering product introduction for B2B brands.","thumb":"assets/portfolio/thumbs/229779830_1791789415179319.jpg","src":"assets/portfolio/229779830_1791789415179319.mp4"},{"file":"233234970_1791789400399066.mp4","title":"Crimson Palace Arch Bridal Portrait","category":"fashion","industry":"Fashion & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Bridal","Heritage Arch","Red Lehenga","Luxury Couture"],"desc":"Framed architectural composition of bride in crimson bridal wear standing under carved sandstone archways.","thumb":"assets/portfolio/thumbs/233234970_1791789400399066.jpg","src":"assets/portfolio/233234970_1791789400399066.mp4"},{"file":"338689278_1791789370672910.mp4","title":"Mirrored Reflection Bridal Gold Reveal","category":"jewellery","industry":"Jewellery & Luxury","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Gold Jewellery","Mirror Shot","Traditional Bride","Heritage"],"desc":"Artistic double-mirror reflection focusing on ornate gold temple jewellery layers and red Banarasi drape.","thumb":"assets/portfolio/thumbs/338689278_1791789370672910.jpg","src":"assets/portfolio/338689278_1791789370672910.mp4"},{"file":"356774144_1791789421910696.mp4","title":"Polki Kundan Gold Kada Bangle Fitting","category":"jewellery","industry":"Jewellery & Luxury","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Kada Bangle","Kundan Jewellery","Macro Detail","Handmade"],"desc":"Tender close-up of ceremonial gold bangle fitting illuminated by soft candlelight.","thumb":"assets/portfolio/thumbs/356774144_1791789421910696.jpg","src":"assets/portfolio/356774144_1791789421910696.mp4"},{"file":"392036597_1791782731131649.mp4","title":"Studio Skincare Presenter Mastercut","category":"brand","industry":"Beauty & Skincare","format":"Product Commercial","aspect":"16:9","duration":"4s","tags":["Commercial","Serum","Studio Lighting","Presenter"],"desc":"Clean wide commercial master shot of presenter holding skincare product with soft studio interior.","thumb":"assets/portfolio/thumbs/392036597_1791782731131649.jpg","src":"assets/portfolio/392036597_1791782731131649.mp4"},{"file":"398255620_1791789390811645.mp4","title":"Full-Length Mirror Outfit Of The Day Check","category":"ugc","industry":"Fashion & Lifestyle","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["OOTD","Mirror Selfie","Summer Fit","Casual Wear"],"desc":"Viral TikTok style mirror outfit check displaying styling versatility of minimalist wardrobe essentials.","thumb":"assets/portfolio/thumbs/398255620_1791789390811645.jpg","src":"assets/portfolio/398255620_1791789390811645.mp4"},{"file":"448484360_1791789430789662.mp4","title":"Hydra-Dew Glass Skin Dropper Application","category":"beauty","industry":"Beauty & Skincare","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Glass Skin","Serum Dropper","Hydration","Beauty Close-Up"],"desc":"Ultra-macro beauty shot demonstrating glass skin radiance and viscous serum glide across the cheek.","thumb":"assets/portfolio/thumbs/448484360_1791789430789662.jpg","src":"assets/portfolio/448484360_1791789430789662.mp4"},{"file":"465091365_1791789389101710.mp4","title":"Knit Cardigan Daily Dressing Morning Ritual","category":"ugc","industry":"Apparel & Lifestyle","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Knitwear","Earring Hook","Cosy Aesthetic","Lifestyle D2C"],"desc":"Warm relatable creator getting ready at mirror putting on delicate gold earrings in cream knit cardigan.","thumb":"assets/portfolio/thumbs/465091365_1791789389101710.jpg","src":"assets/portfolio/465091365_1791789389101710.mp4"},{"file":"486994959_1791789383239799.mp4","title":"Luxury Perfume Mist Floral Fragrance Hook","category":"beauty","industry":"Fragrance & Beauty","format":"Product Film","aspect":"9:16","duration":"8s","tags":["Perfume","Fragrance Mist","Sensory Visual","D2C Luxury"],"desc":"Sensory visual capturing fine atomized perfume mist sprayed in slow motion with warm room lighting.","thumb":"assets/portfolio/thumbs/486994959_1791789383239799.jpg","src":"assets/portfolio/486994959_1791789383239799.mp4"},{"file":"522375655_1791789394439578.mp4","title":"Handcrafted Silk Kurta Groom Elegance","category":"fashion","industry":"Menswear & Wedding","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Menswear","Sherwani","Groom Wear","Heritage Palace"],"desc":"Refined royal groom portrait in ivory silk kurta with delicate tone-on-tone thread embroidery.","thumb":"assets/portfolio/thumbs/522375655_1791789394439578.jpg","src":"assets/portfolio/522375655_1791789394439578.mp4"},{"file":"529060394_1791780680947632.mp4","title":"Modern Living Room Creator Video Ad","category":"ugc","industry":"Home & Lifestyle","format":"UGC Ad","aspect":"16:9","duration":"4s","tags":["Living Room","Lifestyle Creator","UGC Video","Storytelling"],"desc":"Conversational wide creator ad setup with warm interior shelving and organic houseplants.","thumb":"assets/portfolio/thumbs/529060394_1791780680947632.jpg","src":"assets/portfolio/529060394_1791780680947632.mp4"},{"file":"536621126_1791789409361664.mp4","title":"Charcoal Power Suit Confident Runway Walk","category":"fashion","industry":"Women's Workwear","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Power Suit","Tailoring","Workwear","Street Runway"],"desc":"Dynamic low-angle runway strut of tailored charcoal two-piece pant suit outside corporate glass headquarters.","thumb":"assets/portfolio/thumbs/536621126_1791789409361664.jpg","src":"assets/portfolio/536621126_1791789409361664.mp4"},{"file":"538006068_1791789428405320.mp4","title":"Avant-Garde Cyber Couture Runway Showcase","category":"fashion","industry":"High Fashion","format":"Runway Film","aspect":"9:16","duration":"8s","tags":["Runway","Avant-Garde","Futuristic","High Fashion"],"desc":"Futuristic iridescent runway presentation exploring geometric silhouettes and ambient lavender runway lights.","thumb":"assets/portfolio/thumbs/538006068_1791789428405320.jpg","src":"assets/portfolio/538006068_1791789428405320.mp4"},{"file":"609586045_1791789416239583.mp4","title":"Bespoke Corporate AI Spokesperson","category":"avatar","industry":"Corporate & Tech","format":"AI Avatar","aspect":"9:16","duration":"8s","tags":["AI Spokesperson","Corporate","Finance","Leadership"],"desc":"Professional executive in bespoke dark navy suit communicating brand trust and financial stability.","thumb":"assets/portfolio/thumbs/609586045_1791789416239583.jpg","src":"assets/portfolio/609586045_1791789416239583.mp4"},{"file":"6140405_1791789385631044.mp4","title":"Berry Lip Souffle Vanity Swatch Demo","category":"beauty","industry":"Cosmetics & Makeup","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Lip Tint","Makeup Vanity","Product Swatch","D2C Cosmetics"],"desc":"Backstage vanity mirror product demonstration applying velvet berry lip balm directly to camera.","thumb":"assets/portfolio/thumbs/6140405_1791789385631044.jpg","src":"assets/portfolio/6140405_1791789385631044.mp4"},{"file":"630911033_1791789369902570.mp4","title":"Pearl Choker Layering & Chikankari Kurta","category":"fashion","industry":"Fashion & Jewellery","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Pearl Haar","Chikankari","Ivory Kurta","Luxury Festive"],"desc":"Multi-strand freshwater pearl necklace showcased against delicate ivory Chikankari embroidered festive kurta.","thumb":"assets/portfolio/thumbs/630911033_1791789369902570.jpg","src":"assets/portfolio/630911033_1791789369902570.mp4"},{"file":"648304148_1791789423902849.mp4","title":"Solitaire Diamond Engagement Ring Macro","category":"jewellery","industry":"Fine Jewellery","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Diamond Ring","Macro Refraction","Fine Jewellery","Bridal"],"desc":"360-degree rotation of brilliant-cut solitaire diamond ring revealing fire, symmetry, and platinum prong detail.","thumb":"assets/portfolio/thumbs/648304148_1791789423902849.jpg","src":"assets/portfolio/648304148_1791789423902849.mp4"},{"file":"690444140_1791789380325076.mp4","title":"Mindful Morning Awakening & Soft Loungewear","category":"ugc","industry":"Wellness & Loungewear","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Morning Routine","Wellness","Loungewear","Self Care"],"desc":"Calm bedroom morning awakening sequence featuring breathable organic cotton co-ords in natural daylight.","thumb":"assets/portfolio/thumbs/690444140_1791789380325076.jpg","src":"assets/portfolio/690444140_1791789380325076.mp4"},{"file":"711838982_1791789367204598.mp4","title":"Traditional South Indian Kasavu Gold Temple Mala","category":"jewellery","industry":"Jewellery & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Temple Jewellery","Kasavu Saree","Gold Mala","South Indian"],"desc":"Intricate Lakshmi coin necklace and antique temple gold mala worn on classic crimson Kanjivaram silk saree.","thumb":"assets/portfolio/thumbs/711838982_1791789367204598.jpg","src":"assets/portfolio/711838982_1791789367204598.mp4"},{"file":"714108181_1791780684906371.mp4","title":"Brand Spokesperson Product Explainer Master","category":"avatar","industry":"Consumer Health","format":"Product Commercial","aspect":"16:9","duration":"6s","tags":["Commercial","Healthcare","Explainer","Studio"],"desc":"Wide commercial shot of trusted spokesperson communicating key product differentiation in home setting.","thumb":"assets/portfolio/thumbs/714108181_1791780684906371.jpg","src":"assets/portfolio/714108181_1791780684906371.mp4"},{"file":"738473110_1791789404622041.mp4","title":"Antique Gold Goddess Choker & Ruby Pearls","category":"jewellery","industry":"Fine Jewellery","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Temple Jewellery","Antique Gold","Ruby Pearl","Macro Focus"],"desc":"Museum-grade close-up of antique gold choker featuring sculptured deity figures and suspended natural pearls.","thumb":"assets/portfolio/thumbs/738473110_1791789404622041.jpg","src":"assets/portfolio/738473110_1791789404622041.mp4"},{"file":"765383045_1791789402513133.mp4","title":"Crimson Kanjivaram Saree Temple Corridor Walk","category":"fashion","industry":"Textiles & Luxury","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Kanjivaram Silk","Temple Corridor","Royal Saree","Traditional"],"desc":"Majestic full-length slow walk down stone temple pillars showcasing rich gold pallu and flowing crimson silk.","thumb":"assets/portfolio/thumbs/765383045_1791789402513133.jpg","src":"assets/portfolio/765383045_1791789402513133.mp4"},{"file":"786722950_1791789434018747.mp4","title":"Wool Overcoat Back Silhouette & Movement","category":"fashion","industry":"High Fashion","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Overcoat","Tailoring","Architectural","Brutalist"],"desc":"Sleek back silhouette and walking movement of tailored charcoal wool coat set against minimalist concrete.","thumb":"assets/portfolio/thumbs/786722950_1791789434018747.jpg","src":"assets/portfolio/786722950_1791789434018747.mp4"},{"file":"792453715_1791782728364995.mp4","title":"Split-Screen Skincare Creator & Dropper Hook","category":"beauty","industry":"Beauty & Skincare","format":"UGC Ad","aspect":"16:9","duration":"4s","tags":["Split Screen","Serum Dropper","UGC Hook","Performance Ad"],"desc":"High-converting split-screen layout pairing creator reaction with macro golden serum dropper on bare skin.","thumb":"assets/portfolio/thumbs/792453715_1791782728364995.jpg","src":"assets/portfolio/792453715_1791782728364995.mp4"},{"file":"796929918_1791789420206695.mp4","title":"FLIX LABS 3D Holographic Agency Showreel","category":"brand","industry":"Creative Studio","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Showreel","3D Motion","Holographic","Agency Branding"],"desc":"Metallic bronze 3D Flix Labs emblem surrounded by glowing performance data, ticker charts and particles.","thumb":"assets/portfolio/thumbs/796929918_1791789420206695.jpg","src":"assets/portfolio/796929918_1791789420206695.mp4"},{"file":"827158599_1791789413672069.mp4","title":"Cinema Camera Robotic Rig Behind-The-Scenes","category":"brand","industry":"Production Studio","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["BTS","Camera Rig","Studio Tech","Cinematic Setup"],"desc":"Behind-the-scenes look at high-precision cinema camera rig and professional studio lighting in motion.","thumb":"assets/portfolio/thumbs/827158599_1791789413672069.jpg","src":"assets/portfolio/827158599_1791789413672069.mp4"},{"file":"834108934_1791789417473357.mp4","title":"Glass Bottle Peptide Serum Radiant Glow","category":"beauty","industry":"Beauty & Skincare","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Glass Skin","Serum Bottle","Radiance","Skincare Demo"],"desc":"Beaming natural skincare model presenting frosted glass peptide serum bottle with dewy skin finish.","thumb":"assets/portfolio/thumbs/834108934_1791789417473357.jpg","src":"assets/portfolio/834108934_1791789417473357.mp4"},{"file":"914785054_1791789438141531.mp4","title":"Pear-Cut Diamond Tennis Bracelet Macro Sparkle","category":"jewellery","industry":"Fine Jewellery","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Tennis Bracelet","Pear Diamond","Macro Sparkle","Fine Jewellery"],"desc":"Macro lighting sweep across pear-shaped bezel-set diamond bracelet showing optical brilliance and fire.","thumb":"assets/portfolio/thumbs/914785054_1791789438141531.jpg","src":"assets/portfolio/914785054_1791789438141531.mp4"},{"file":"934423229_1791789434994533.mp4","title":"Architectural Concrete Trenchcoat Model Walk","category":"fashion","industry":"High Fashion","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Trenchcoat","Architectural","Editorial","Modernism"],"desc":"Full-figure editorial model walk in stone trenchcoat through brutalist concrete geometry.","thumb":"assets/portfolio/thumbs/934423229_1791789434994533.jpg","src":"assets/portfolio/934423229_1791789434994533.mp4"},{"file":"955111829_1791789410733995.mp4","title":"Botanical Wellness Unboxing & Creator Hook","category":"ugc","industry":"Organic & Wellness","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Unboxing","Organic Botanical","Creator Hook","D2C Packaging"],"desc":"Warm smiling creator in organic linen dress presenting botanical herbal packaging directly to customer.","thumb":"assets/portfolio/thumbs/955111829_1791789410733995.jpg","src":"assets/portfolio/955111829_1791789410733995.mp4"},{"file":"988024536_1791789436841629.mp4","title":"Emerald Green Festive Silk Saree & Jhumkas","category":"fashion","industry":"Festive Couture","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Silk Saree","Emerald Green","Jhumkas","Festive Campaign"],"desc":"Palace courtyard portrait of model in emerald green handwoven silk saree with traditional jhumka earrings.","thumb":"assets/portfolio/thumbs/988024536_1791789436841629.jpg","src":"assets/portfolio/988024536_1791789436841629.mp4"},{"file":"998761038_1791789395783025.mp4","title":"Oversized Boyfriend Blazer Contemporary Walk","category":"fashion","industry":"Contemporary Apparel","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Oversized Blazer","Street Style","Contemporary","Loft Studio"],"desc":"City loft studio shoot of model in relaxed oversized black blazer paired with tailored shorts.","thumb":"assets/portfolio/thumbs/998761038_1791789395783025.jpg","src":"assets/portfolio/998761038_1791789395783025.mp4"},{"file":"VN20261012_111529.mp4","title":"Flix Labs Hero Commercial: The Serum Story","category":"brand","industry":"Beauty Commercial","format":"Hero Showreel","aspect":"16:9","duration":"34s","tags":["Hero Commercial","Presenter-led","Macro Dropper","Flix Showreel"],"desc":"Flagship 34-second studio commercial combining presenter storytelling with macro product cinematography.","thumb":"assets/portfolio/thumbs/VN20261012_111529.jpg","src":"assets/portfolio/VN20261012_111529.mp4"},{"file":"fashion_apparel_16_9.mp4","title":"Fashion & Apparel Commercial Widescreen","category":"fashion","industry":"Fashion & Luxury","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Modern Saree","Indo-Western","Contemporary","16:9"],"desc":"Mix of modern saree drapes, Indo-western, and contemporary western wear.","thumb":"assets/covers/fashion_apparel_16_9.jpg","src":"assets/covers/fashion_apparel_16_9.mp4"},{"file":"jewellery_luxury_16_9.mp4","title":"Jewellery & Luxury Heritage Commercial","category":"jewellery","industry":"Jewellery & Luxury","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Gold Necklace","Traditional","Contemporary Jewellery","16:9"],"desc":"Elegant Indian models highlighting traditional and contemporary jewellery.","thumb":"assets/covers/jewellery_luxury_16_9.jpg","src":"assets/covers/jewellery_luxury_16_9.mp4"},{"file":"cosmetics_makeup_16_9.mp4","title":"Cosmetics & Festive Makeup Commercial","category":"beauty","industry":"Cosmetics & Makeup","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Indian Skin Tones","Beauty Aesthetic","Festive Makeup","16:9"],"desc":"Indian skin tones with local beauty aesthetic and rich festive pigments.","thumb":"assets/covers/cosmetics_makeup_16_9.jpg","src":"assets/covers/cosmetics_makeup_16_9.mp4"},{"file":"skincare_wellness_16_9.mp4","title":"Skincare & Sunscreen Routine Showcase","category":"beauty","industry":"Beauty & Skincare","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Sunscreen","Glowing Skin","Modern Wellness","16:9"],"desc":"Sunscreen application, glowing skin texture, and modern wellness aesthetic.","thumb":"assets/covers/skincare_wellness_16_9.jpg","src":"assets/covers/skincare_wellness_16_9.mp4"},{"file":"food_beverage_16_9.mp4","title":"Food & Beverage Refreshing Commercial","category":"brand","industry":"Food & Beverage","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Beverage","Refreshing Splash","Thums Up Vibes","16:9"],"desc":"Refreshing, high-energy visuals featuring classic Indian staples like Thums Up and Frooti vibes.","thumb":"assets/covers/food_beverage_16_9.jpg","src":"assets/covers/food_beverage_16_9.mp4"},{"file":"consumer_tech_home_16_9.mp4","title":"Consumer Tech & Smart Home Devices","category":"brand","industry":"Consumer Electronics","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Smart Home","Smartphones","Modern Electronics","16:9"],"desc":"High-demand modern consumer electronics (smartphones, sleek ceiling fans, smart home devices).","thumb":"assets/covers/consumer_tech_home_16_9.jpg","src":"assets/covers/consumer_tech_home_16_9.mp4"},{"file":"ecommerce_d2c_16_9.mp4","title":"New-Age E-Commerce Unboxing Commercial","category":"ugc","industry":"D2C & E-Commerce","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Unboxing","Fast-Moving Trends","D2C Lighting","16:9"],"desc":"Fast-moving consumer trends with vibrant commercial lighting.","thumb":"assets/covers/ecommerce_d2c_16_9.jpg","src":"assets/covers/ecommerce_d2c_16_9.mp4"}];
+
+const CATEGORY_LABELS = {
+  fashion: 'Fashion & Apparel',
+  jewellery: 'Jewellery & Luxury',
+  beauty: 'Beauty & Skincare',
+  ugc: 'Creator UGC',
+  avatar: 'AI Avatars',
+  brand: 'Brand & 3D'
+};
+
+// 6 Highlight Featured Reels (matching reference layout)
+const FEATURED_FILES = [
+  '1003016778_1791789378443713.mp4', // Royal Heritage Bridal
+  '1025116091_1791789373210638.mp4', // Kundan Pearl Nath
+  '1015025976_1791789375735186.mp4', // Aura Flow Activewear
+  '18532995_1791789426382838.mp4',   // Skyline Executive Presenter
+  '792453715_1791782728364995.mp4',   // Dewy Serum UGC
+  '796929918_1791789420206695.mp4'    // 3D Showreel
+];
+
+// Populate Featured Reels
+const featuredTrack = document.getElementById('featuredTrack');
+FEATURED_FILES.forEach(filename => {
+  const item = PORTFOLIO_DATA.find(p => p.file === filename);
+  if (!item) return;
+
+  const card = document.createElement('article');
+  card.className = 'reel-card';
+  card.dataset.id = item.file;
+  card.innerHTML = `
+    <img class="poster-img" src="${item.thumb}" alt="${item.title}" loading="lazy">
+    <video data-src="${item.src}" muted loop playsinline preload="none"></video>
+    <div class="reel-scrim"></div>
+    <span class="reel-badge-top-left">${item.industry || CATEGORY_LABELS[item.category]}</span>
+    <span class="reel-badge-top-right">${item.aspect}</span>
+    <div class="reel-play-btn">▶</div>
+    <div class="reel-meta-bottom">
+      <div class="reel-title">${item.title}</div>
+      <div class="reel-sub">${item.industry} · ${item.format}</div>
+    </div>
+    <div class="reel-progress"><div class="reel-progress-fill"></div></div>
+  `;
+  featuredTrack.appendChild(card);
+});
+
+// Populate Complete Grid
+const portfolioGrid = document.getElementById('portfolioGrid');
+PORTFOLIO_DATA.forEach(item => {
+  const card = document.createElement('article');
+  card.className = 'pcard';
+  card.dataset.category = item.category;
+  card.dataset.aspect = item.aspect;
+  card.dataset.title = (item.title || '').toLowerCase();
+  card.dataset.tags = (item.tags || []).join(' ').toLowerCase();
+  card.dataset.industry = (item.industry || '').toLowerCase();
+  card.dataset.id = item.file;
+
+  const tagsHtml = (item.tags || []).slice(0, 3).map(t => `<span class="pcard-tag">${t}</span>`).join('');
+
+  card.innerHTML = `
+    <div class="pcard-media">
+      <img class="poster-img" src="${item.thumb}" alt="${item.title}" loading="lazy">
+      <video data-src="${item.src}" muted loop playsinline preload="none"></video>
+      <div class="pcard-shade"></div>
+      <span class="pcard-badge-cat">${CATEGORY_LABELS[item.category] || item.category}</span>
+      <span class="pcard-badge-aspect">${item.aspect}</span>
+      <div class="pcard-play-hint">▶</div>
+      <div class="pcard-progress"><div class="pcard-progress-fill"></div></div>
+    </div>
+    <div class="pcard-info">
+      <h4>${item.title}</h4>
+      <div class="pcard-industry">${item.industry} · ${item.duration}</div>
+      <div class="pcard-tags">${tagsHtml}</div>
+    </div>
+  `;
+  portfolioGrid.appendChild(card);
+});
+
+// Hover Autoplay Engine with Lazy Decoder Mounting & Progress Tracking
+function bindHoverAutoplay(cardSelector) {
+  document.querySelectorAll(cardSelector).forEach(card => {
+    const video = card.querySelector('video');
+    const fill = card.querySelector('.reel-progress-fill, .pcard-progress-fill');
+    if (!video) return;
+
+    let animFrame = null;
+
+    function updateProgress() {
+      if (video.duration && fill) {
+        fill.style.width = ((video.currentTime / video.duration) * 100) + '%';
+      }
+      if (!video.paused) {
+        animFrame = requestAnimationFrame(updateProgress);
+      }
+    }
+
+    card.addEventListener('mouseenter', () => {
+      card.classList.add('playing');
+      if (!video.src && video.dataset.src) {
+        video.src = video.dataset.src;
+        video.load();
+      }
+      const p = video.play();
+      if (p !== undefined) p.catch(() => {});
+      animFrame = requestAnimationFrame(updateProgress);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.classList.remove('playing');
+      video.pause();
+      video.currentTime = 0;
+      if (fill) fill.style.width = '0%';
+      if (animFrame) cancelAnimationFrame(animFrame);
+    });
+
+    card.addEventListener('click', () => {
+      const id = card.dataset.id;
+      const item = PORTFOLIO_DATA.find(p => p.file === id);
+      if (item) openModal(item);
+    });
+  });
+}
+
+bindHoverAutoplay('.reel-card');
+bindHoverAutoplay('.pcard');
+
+// Auto-play visible reels on scroll / in-view (mobile & desktop)
+(function initScrollAutoplayReels() {
+  if (!('IntersectionObserver' in window)) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const card = entry.target;
+      const video = card.querySelector('video');
+      if (!video) return;
+
+      if (entry.isIntersecting) {
+        if (!video.src && video.dataset.src) {
+          video.src = video.dataset.src;
+          video.load();
+        }
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.loop = true;
+        const p = video.play();
+        if (p !== undefined) p.catch(() => {});
+        card.classList.add('playing');
+      } else {
+        video.pause();
+        card.classList.remove('playing');
+      }
+    });
+  }, { threshold: 0.4 });
+
+  // Observe all current and future reel cards
+  function observeAllReels() {
+    document.querySelectorAll('.reel-card, .pcard').forEach(c => observer.observe(c));
+  }
+  observeAllReels();
+
+  // Re-observe after load-more or filter updates
+  const loadMoreBtn = document.getElementById('btnLoadMoreReels');
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      setTimeout(observeAllReels, 100);
+    });
+  }
+})();
+
+// Carousel Smooth Navigation
+function setupCarousel(trackId, prevBtnId, nextBtnId) {
+  const track = document.getElementById(trackId);
+  const prevBtn = document.getElementById(prevBtnId);
+  const nextBtn = document.getElementById(nextBtnId);
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -track.clientWidth * 0.75, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: track.clientWidth * 0.75, behavior: 'smooth' });
+  });
+}
+
+setupCarousel('featuredTrack', 'featPrev', 'featNext');
+setupCarousel('catTrack', 'catPrev', 'catNext');
+
+// Category Browse Cards Click
+document.querySelectorAll('.cat-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const cat = card.dataset.cat;
+    setActiveCategory(cat);
+    document.getElementById('allFilms').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Category Navigation Pills
+const catPills = document.querySelectorAll('.cat-pill');
+const searchInput = document.getElementById('searchInput');
+const formatSelect = document.getElementById('formatSelect');
+const resetBtn = document.getElementById('resetFiltersBtn');
+const gridTitlePrefix = document.getElementById('gridTitlePrefix');
+const resultCountText = document.getElementById('resultCountText');
+const emptyState = document.getElementById('emptyState');
+const emptyResetBtn = document.getElementById('emptyResetBtn');
+
+let currentCategory = 'all';
+let currentSearch = '';
+let currentFormat = 'all';
+
+function setActiveCategory(cat) {
+  currentCategory = cat;
+  catPills.forEach(p => p.classList.toggle('active', p.dataset.cat === cat));
+  gridTitlePrefix.textContent = cat === 'all' ? 'All Production' : CATEGORY_LABELS[cat];
+  applyFilters();
+}
+
+catPills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    setActiveCategory(pill.dataset.cat);
+  });
+});
+
+searchInput.addEventListener('input', e => {
+  currentSearch = e.target.value.toLowerCase().trim();
+  applyFilters();
+});
+
+formatSelect.addEventListener('change', e => {
+  currentFormat = e.target.value;
+  applyFilters();
+});
+
+function resetFilters() {
+  currentCategory = 'all';
+  currentSearch = '';
+  currentFormat = 'all';
+  searchInput.value = '';
+  formatSelect.value = 'all';
+  catPills.forEach(p => p.classList.toggle('active', p.dataset.cat === 'all'));
+  gridTitlePrefix.textContent = 'All Production';
+  applyFilters();
+}
+
+resetBtn.addEventListener('click', resetFilters);
+emptyResetBtn.addEventListener('click', resetFilters);
+
+// Mobile Reels Pagination State ("View More" on Phones)
+let mobileVisibleLimit = 8;
+const INITIAL_MOBILE_LIMIT = 8;
+const BATCH_MOBILE_STEP = 8;
+
+function updateMobileReelsVisibility() {
+  const isMobile = window.innerWidth <= 768;
+  const cards = Array.from(document.querySelectorAll('#portfolioGrid .pcard'));
+  const loadMoreWrap = document.getElementById('loadMoreWrap');
+  const loadMoreBtn = document.getElementById('btnLoadMoreReels');
+
+  const matchingCards = cards.filter(c => c.dataset.match !== 'false');
+
+  if (!isMobile) {
+    cards.forEach(c => {
+      if (c.dataset.match !== 'false') {
+        c.style.display = '';
+      } else {
+        c.style.display = 'none';
+      }
+    });
+    if (loadMoreWrap) loadMoreWrap.style.display = 'none';
+    return;
+  }
+
+  let hiddenCount = 0;
+  matchingCards.forEach((c, idx) => {
+    if (idx < mobileVisibleLimit) {
+      c.style.display = '';
+    } else {
+      c.style.display = 'none';
+      hiddenCount++;
+    }
+  });
+
+  if (loadMoreWrap) {
+    if (hiddenCount > 0) {
+      loadMoreWrap.style.display = 'flex';
+      if (loadMoreBtn) {
+        const span = loadMoreBtn.querySelector('span');
+        if (span) span.textContent = `View More Reels (${hiddenCount} More Films) ↘`;
+      }
+    } else {
+      loadMoreWrap.style.display = 'none';
+    }
+  }
+}
+
+// Bind Load More Click
+const loadMoreBtn = document.getElementById('btnLoadMoreReels');
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener('click', () => {
+    mobileVisibleLimit += BATCH_MOBILE_STEP;
+    updateMobileReelsVisibility();
+  });
+}
+window.addEventListener('resize', () => {
+  updateMobileReelsVisibility();
+}, { passive: true });
+
+function applyFilters() {
+  const isFiltered = (currentCategory !== 'all' || currentSearch !== '' || currentFormat !== 'all');
+  resetBtn.classList.toggle('show', isFiltered);
+
+  let visibleCount = 0;
+  const cards = document.querySelectorAll('.pcard');
+
+  cards.forEach(card => {
+    const cat = card.dataset.category;
+    const aspect = card.dataset.aspect;
+    const title = card.dataset.title;
+    const tags = card.dataset.tags;
+    const industry = card.dataset.industry;
+
+    const matchCat = (currentCategory === 'all' || cat === currentCategory);
+    const matchFormat = (currentFormat === 'all' || aspect === currentFormat);
+    const matchSearch = !currentSearch || title.includes(currentSearch) || tags.includes(currentSearch) || industry.includes(currentSearch);
+
+    if (matchCat && matchFormat && matchSearch) {
+      card.dataset.match = 'true';
+      visibleCount++;
+    } else {
+      card.dataset.match = 'false';
+      card.style.display = 'none';
+    }
+  });
+
+  emptyState.classList.toggle('show', visibleCount === 0);
+  
+  // Reset mobile pagination limit to initial 8 on filter change
+  mobileVisibleLimit = INITIAL_MOBILE_LIMIT;
+  updateMobileReelsVisibility();
+}
+
+// Initial Mobile Check
+setTimeout(updateMobileReelsVisibility, 200);
+
+// Cinematic Inspection Modal Logic
+const modal = document.getElementById('previewModal');
+const modalClose = document.getElementById('modalClose');
+const modalVideo = document.getElementById('modalVideo');
+const modalCat = document.getElementById('modalCat');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalIndustry = document.getElementById('modalIndustry');
+const modalFormat = document.getElementById('modalFormat');
+const modalAspect = document.getElementById('modalAspect');
+const modalDuration = document.getElementById('modalDuration');
+const modalTags = document.getElementById('modalTags');
+const modalInquire = document.getElementById('modalInquireBtn');
+
+function openModal(item) {
+  modalCat.textContent = CATEGORY_LABELS[item.category] || item.category;
+  modalTitle.textContent = item.title;
+  modalDesc.textContent = item.desc;
+  modalIndustry.textContent = item.industry;
+  modalFormat.textContent = item.format;
+  modalAspect.textContent = item.aspect + (item.aspect === '9:16' ? ' (Vertical Reel)' : ' (Landscape)');
+  modalDuration.textContent = item.duration;
+  modalTags.innerHTML = (item.tags || []).map(t => `<span class="modal-tag">${t}</span>`).join('');
+  modalInquire.href = 'index.html#contact?project=' + encodeURIComponent(item.title);
+
+  modalVideo.src = item.src;
+  modalVideo.currentTime = 0;
+  modalVideo.play().catch(() => {});
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modal.classList.remove('open');
+  modalVideo.pause();
+  modalVideo.src = '';
+  document.body.style.overflow = '';
+}
+
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', e => {
+  if (e.target === modal) closeModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+});
+
+// Widescreen 16:9 cards hover autoplay & modal click
+(function initWidescreenCards() {
+  const wcards = document.querySelectorAll('.wcard');
+  wcards.forEach(card => {
+    const v = card.querySelector('video');
+    const img = card.querySelector('img');
+    const bar = card.querySelector('.wcard-progress-fill');
+    if (v) {
+      card.addEventListener('mouseenter', () => {
+        if (img) img.style.opacity = '0';
+        if (!v.src && v.dataset.src) {
+          v.src = v.dataset.src;
+          v.load();
+        }
+        v.currentTime = 0;
+        v.play().catch(()=>{});
+      });
+      card.addEventListener('mouseleave', () => {
+        if (img) img.style.opacity = '1';
+        v.pause();
+        v.currentTime = 0;
+        if (bar) bar.style.width = '0%';
+      });
+      if (bar) {
+        v.addEventListener('timeupdate', () => {
+          if (v.duration && !isNaN(v.duration)) {
+            const p = (v.currentTime / v.duration) * 100;
+            bar.style.width = p.toFixed(1) + '%';
+          }
+        });
+      }
+    }
+
+    card.addEventListener('click', () => {
+      const src = card.dataset.video;
+      const title = card.dataset.title;
+      const cat = card.dataset.cat;
+      const desc = card.dataset.desc;
+      const ind = card.dataset.industry;
+      const fmt = card.dataset.format || '16:9 Landscape Video Ad';
+      
+      const modal = document.getElementById('previewModal');
+      const v = document.getElementById('modalVideo');
+      if (v) {
+        v.src = src;
+        v.currentTime = 0;
+      }
+      document.getElementById('modalCat').textContent = cat;
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = desc;
+      document.getElementById('modalIndustry').textContent = ind;
+      document.getElementById('modalFormat').textContent = fmt;
+      document.getElementById('modalAspect').textContent = '16:9 Widescreen';
+      document.getElementById('modalDuration').textContent = '6s';
+      
+      const tagsContainer = document.getElementById('modalTags');
+      if (tagsContainer) {
+        tagsContainer.innerHTML = '<span class="modal-tag">16:9 Landscape</span><span class="modal-tag">Commercial Film</span><span class="modal-tag">Broadcast Quality</span>';
+      }
+      if (modal) {
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      if (v) v.play().catch(()=>{});
+    });
+  });
+})();
+
+// Ayush Singh Studio Enquiry Suite & WhatsApp Dispatcher (9454083266)
+(function initStudioEnquirySuite() {
+  const form = document.getElementById('enquiryForm');
+  const successCard = document.getElementById('enquirySuccessCard');
+  if (!form || !successCard) return;
+
+  const AYUSH_WHATSAPP = '919454083266';
+
+  // Strict DOM-based HTML Sanitizer for XSS Prevention
+  function sanitizeInput(str) {
+    if (!str) return '';
+    const temp = document.createElement('div');
+    temp.textContent = str;
+    return temp.innerHTML;
+  }
+
+  // Interactive Package Chips Selector
+  const pkgChips = document.querySelectorAll('#packageChipsGrid .pkg-chip');
+  const budgetInput = document.getElementById('enqBudget');
+  const activePkgDisplay = document.getElementById('activePkgLabelDisplay');
+
+  function selectPackageChip(chip) {
+    if (!chip) return;
+    pkgChips.forEach(c => {
+      c.classList.remove('active');
+      c.setAttribute('aria-checked', 'false');
+    });
+    chip.classList.add('active');
+    chip.setAttribute('aria-checked', 'true');
+    const val = chip.getAttribute('data-package') || '';
+    if (budgetInput) budgetInput.value = val;
+    
+    // Friendly display
+    let label = val.split('(')[0].trim();
+    if (val.includes('₹15,000')) label = 'Starter Trial (₹15k)';
+    else if (val.includes('₹25,000')) label = 'Growth Accelerator (₹25k)';
+    else if (val.includes('₹50,000')) label = 'Scale & Dominance (₹50k)';
+    else if (val.includes('Custom')) label = 'Custom Agency Retainer';
+    if (activePkgDisplay) activePkgDisplay.textContent = label;
+  }
+
+  pkgChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      selectPackageChip(chip);
+    });
+  });
+
+  // Wire up External Package Selection Buttons on the page
+  document.querySelectorAll('.select-pkg-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const pkgName = btn.dataset.package;
+      let matchedChip = null;
+      pkgChips.forEach(chip => {
+        if (chip.getAttribute('data-package') === pkgName) {
+          matchedChip = chip;
+        }
+      });
+      if (matchedChip) {
+        selectPackageChip(matchedChip);
+      }
+      
+      const briefInp = document.getElementById('enqBrief');
+      if (briefInp && !briefInp.value.trim()) {
+        briefInp.value = 'Interested in booking the ' + (pkgName.split('(')[0].trim()) + '. Looking to discuss concepts and production.';
+      }
+      
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          const nameField = document.getElementById('enqName');
+          if (nameField) nameField.focus();
+        }, 500);
+      }
+    });
+  });
+
+  // Wire up Modal Inquire button
+  const modalInquire = document.getElementById('modalInquireBtn');
+  if (modalInquire) {
+    modalInquire.addEventListener('click', () => {
+      const modal = document.getElementById('previewModal');
+      const title = document.getElementById('modalTitle')?.textContent || '';
+      const cat = document.getElementById('modalCat')?.textContent || '';
+      const briefInp = document.getElementById('enqBrief');
+      if (briefInp && title) {
+        briefInp.value = 'Interested in creating campaign video similar to: "' + title + '" (' + cat + '). Please provide hook options and quote.';
+      }
+      if (modal && modal.classList.contains('open')) {
+        modal.classList.remove('open');
+        const v = document.getElementById('modalVideo');
+        if (v) { v.pause(); v.src = ''; }
+        document.body.style.overflow = '';
+      }
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          const nameField = document.getElementById('enqName');
+          if (nameField) nameField.focus();
+        }, 500);
+      }
+    });
+  }
+
+  // Real-time input error removal
+  ['enqName', 'enqBrand', 'enqPhone', 'enqBrief'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('input', () => {
+        if (el.value.trim()) {
+          el.classList.remove('error');
+        }
+      });
+    }
+  });
+
+  // Form Submission
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Honeypot bot protection
+    const honeypot = document.getElementById('enqHoneypot');
+    if (honeypot && honeypot.value) return;
+
+    const nameInp = document.getElementById('enqName');
+    const brandInp = document.getElementById('enqBrand');
+    const phoneInp = document.getElementById('enqPhone');
+    const emailInp = document.getElementById('enqEmail');
+    const briefInp = document.getElementById('enqBrief');
+    const urgentInp = document.getElementById('enqUrgent');
+
+    let hasError = false;
+    [nameInp, brandInp, phoneInp, briefInp].forEach(inp => {
+      if (!inp) return;
+      inp.classList.remove('error');
+      if (!inp.value.trim()) {
+        inp.classList.add('error');
+        hasError = true;
+      }
+    });
+
+    if (hasError) {
+      const firstErr = form.querySelector('.error');
+      if (firstErr) firstErr.focus();
+      return;
+    }
+
+    const name = nameInp.value.trim();
+    const brand = brandInp.value.trim();
+    const phone = phoneInp.value.trim();
+    const email = emailInp ? emailInp.value.trim() : '';
+    const budget = budgetInput ? budgetInput.value : 'Growth Accelerator Package (₹25,000 - 16 Videos)';
+    const brief = briefInp.value.trim();
+    const isUrgent = urgentInp ? urgentInp.checked : false;
+
+    // Ref ID
+    const refCode = 'AYUSH-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+
+    // Populate Receipt
+    const refEl = document.getElementById('receiptRefId');
+    const brandEl = document.getElementById('receiptClientBrand');
+    const budgetEl = document.getElementById('receiptBudgetVal');
+    const urgentEl = document.getElementById('receiptUrgencyVal');
+    const waBtn = document.getElementById('receiptEmergencyWaBtn');
+
+    if (refEl) refEl.textContent = 'REF: ' + refCode;
+    if (brandEl) brandEl.textContent = name + ' · ' + brand;
+    if (budgetEl) budgetEl.textContent = budget.split('(')[0].trim() + (budget.includes('₹') ? ' (' + budget.split('(')[1].split(')')[0] + ')' : '');
+    if (urgentEl) {
+      urgentEl.textContent = isUrgent ? 'Priority Rush (48h–72h Turnaround)' : 'Standard Production (4–6h Review)';
+      urgentEl.style.color = isUrgent ? '#ff5c47' : '#34d399';
+    }
+
+    // Pre-filled WhatsApp Text
+    const waText = 'Hi Ayush! I just submitted campaign brief [' + refCode + '] for my brand *' + brand + '* (' + name + ').\n' +
+      'Package: ' + budget + '\n' +
+      'Priority: ' + (isUrgent ? 'PRIORITY RUSH 48h-72h' : 'Standard 4-6h Review') + '\n' +
+      (email ? 'Email: ' + email + '\n' : '') +
+      'Phone: ' + phone + '\n' +
+      'Brief: ' + brief.slice(0, 160) + (brief.length > 160 ? '...' : '') + '\n\n' +
+      'Can we discuss creative angles and timeline?';
+
+    if (waBtn) {
+      waBtn.href = 'https://wa.me/' + AYUSH_WHATSAPP + '?text=' + encodeURIComponent(waText);
+    }
+
+    // Animate transition
+    form.style.display = 'none';
+    successCard.style.display = 'flex';
+    successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Reset to submit another brief
+  const resetBtn = document.getElementById('receiptNewEnquiryBtn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      form.reset();
+      // restore default package
+      const defaultChip = document.querySelector('#packageChipsGrid .pkg-chip[data-package*="25,000"]');
+      if (defaultChip) selectPackageChip(defaultChip);
+      form.style.display = 'block';
+      successCard.style.display = 'none';
+      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        const nameField = document.getElementById('enqName');
+        if (nameField) nameField.focus();
+      }, 400);
+    });
+  }
+})();
+
+</script>
+</body>
+</html>
