@@ -1,6 +1,6 @@
-# Ayush Singh — AI Video Architect & Creative Studio Portfolio
+# FlixLabs — Performance AI Video Studio & Commercials Portfolio
 
-High-converting, performance-driven video ad portfolio for **Ayush Singh** (Founder & Creative Director, FlixLabs).
+High-converting, performance-driven video ad portfolio for **FlixLabs** (Performance AI Video Studio).
 
 ## 🚀 Features
 - **51+ Production-Ready Reel Archive** with smooth client-side filtering and mobile pagination
