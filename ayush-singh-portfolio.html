@@ -3197,13 +3197,184 @@ textarea.form-input-styled {
   display: grid;
   place-items: center;
 }
+/* Complete Native Media Controls Suppressor (Chrome, Edge, Safari, Firefox, iOS, Android) */
+video::-webkit-media-controls,
+video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+  -webkit-appearance: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Luxury Custom Video Player for Modal */
 .modal-media-wrap {
-  background: #0f172a;
+  background: #0b1118;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
-.modal-media-wrap video { max-height: 80vh; width: 100%; }
+.modal-media-wrap video {
+  max-height: 80vh;
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.modal-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 4;
+}
+.modal-play-badge {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: rgba(11, 17, 24, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+.modal-play-badge.show {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-badge-icon {
+  display: none;
+}
+.modal-badge-icon.play {
+  display: block;
+  margin-left: 3px;
+}
+.paused .modal-badge-icon.play {
+  display: block;
+}
+.paused .modal-badge-icon.pause {
+  display: none;
+}
+.playing .modal-badge-icon.play {
+  display: none;
+}
+.playing .modal-badge-icon.pause {
+  display: block;
+  margin-left: 0;
+}
+
+/* Floating Sleek Glass Controls Bar */
+.modal-controls-bar {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  height: 42px;
+  padding: 0 14px;
+  background: rgba(11, 17, 24, 0.85);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.modal-controls-bar.autohide {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+.modal-media-wrap:hover .modal-controls-bar {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.modal-ctrl-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+.modal-ctrl-btn:hover {
+  background: #10b981;
+  color: #0b1118;
+  transform: scale(1.08);
+}
+.modal-ctrl-btn .ctrl-icon-pause {
+  display: none;
+}
+.modal-ctrl-btn.playing .ctrl-icon-play {
+  display: none;
+}
+.modal-ctrl-btn.playing .ctrl-icon-pause {
+  display: block;
+}
+.modal-ctrl-btn .ctrl-icon-sound-off {
+  display: none;
+}
+.modal-ctrl-btn.muted .ctrl-icon-sound-on {
+  display: none;
+}
+.modal-ctrl-btn.muted .ctrl-icon-sound-off {
+  display: block;
+}
+.modal-time-text {
+  font: 700 11.5px/1 'DM Sans', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.modal-timeline {
+  flex: 1;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.22);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.15s ease;
+}
+.modal-timeline:hover {
+  height: 7px;
+}
+.modal-timeline-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+  pointer-events: none;
+}
 .modal-details {
   padding: 24px;
   display: flex;
@@ -3315,10 +3486,10 @@ textarea.form-input-styled {
     </a>
     
     <nav class="nav-links" aria-label="Primary Navigation">
-      <a href="#allFilms">Portfolio</a>
+      <a href="#featuredSection">Featured</a>
       <a href="#packagesSection">Packages</a>
       <a href="#attractSection">UGC Ads</a>
-      <a href="#testimonialsSection">Testimonials</a>
+      <a href="#allFilms">Portfolio</a>
       <a href="#contact">Get in Touch</a>
     </nav>
 
@@ -3365,12 +3536,12 @@ textarea.form-input-styled {
       </button>
     </div>
     <nav class="mobile-drawer-nav">
-      <a href="#allFilms" onclick="closeMobileDrawer()">
+      <a href="#featuredSection" onclick="closeMobileDrawer()">
         <span class="drawer-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
         </span>
-        <span class="drawer-label">Portfolio Archive</span>
-        <span class="drawer-badge">51 Films</span>
+        <span class="drawer-label">Featured Reels</span>
+        <span class="drawer-badge">Spotlight</span>
       </a>
       <a href="#packagesSection" onclick="closeMobileDrawer()">
         <span class="drawer-icon">
@@ -3378,6 +3549,13 @@ textarea.form-input-styled {
         </span>
         <span class="drawer-label">Video Packages</span>
         <span class="drawer-sub">₹15k · ₹25k · ₹50k</span>
+      </a>
+      <a href="#allFilms" onclick="closeMobileDrawer()">
+        <span class="drawer-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+        </span>
+        <span class="drawer-label">Portfolio Archive</span>
+        <span class="drawer-badge">51 Films</span>
       </a>
       <a href="#attractSection" onclick="closeMobileDrawer()">
         <span class="drawer-icon">
@@ -3565,6 +3743,28 @@ textarea.form-input-styled {
         <div class="counter-label">Rush Turnaround</div>
       </div>
     </div>
+  </section>
+
+  <!-- ===================================================
+       FEATURED REELS CAROUSEL (SPOTLIGHT PORTFOLIO)
+       =================================================== -->
+  <section class="featured-section reveal-init" id="featuredSection">
+    <div class="section-bar">
+      <div>
+        <div class="sec-badge">CURATED SPOTLIGHT</div>
+        <h2 style="margin-top:6px;">Featured Reels</h2>
+        <p>A few high-impact films worth stopping for.</p>
+      </div>
+      <div class="carousel-controls">
+        <button class="arrow-btn" id="featPrev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="arrow-btn" id="featNext" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="carousel-track" id="featuredTrack"></div>
   </section>
 
   <!-- ===================================================
@@ -3836,25 +4036,6 @@ textarea.form-input-styled {
     </div>
     <button id="resetFiltersBtn" class="filter-reset-btn">Clear filters <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
   </div>
-
-  <!-- FEATURED REELS CAROUSEL -->
-  <section class="featured-section reveal-init" id="featuredSection">
-    <div class="section-bar">
-      <div>
-        <h2>Featured Reels</h2>
-        <p>A few high-impact films worth stopping for.</p>
-      </div>
-      <div class="carousel-controls">
-        <button class="arrow-btn" id="featPrev" aria-label="Previous">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button class="arrow-btn" id="featNext" aria-label="Next">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-    </div>
-    <div class="carousel-track" id="featuredTrack"></div>
-  </section>
 
   <!-- DEDICATED 16:9 WIDESCREEN COMMERCIALS -->
   <section class="widescreen-section reveal-init" id="widescreenSection">
@@ -4378,8 +4559,32 @@ textarea.form-input-styled {
 <div class="modal" id="previewModal" aria-hidden="true">
   <div class="modal-box">
     <button class="modal-close" id="modalClose" aria-label="Close modal"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
-    <div class="modal-media-wrap">
-      <video id="modalVideo" controls playsinline></video>
+    <div class="modal-media-wrap" id="modalMediaWrap">
+      <video id="modalVideo" playsinline loop preload="auto"></video>
+      
+      <!-- Big Center Tap-to-Play/Pause Indicator -->
+      <div class="modal-play-overlay" id="modalPlayOverlay">
+        <div class="modal-play-badge" id="modalPlayBadge">
+          <svg class="modal-badge-icon play" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <svg class="modal-badge-icon pause" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </div>
+      </div>
+
+      <!-- Luxury Frosted Floating Controls Bar -->
+      <div class="modal-controls-bar" id="modalControlsBar">
+        <button class="modal-ctrl-btn playing" id="modalPlayToggle" type="button" aria-label="Play/Pause">
+          <svg class="ctrl-icon-play" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <svg class="ctrl-icon-pause" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+        <span class="modal-time-text" id="modalTimeText">0:00 / 0:08</span>
+        <div class="modal-timeline" id="modalTimeline" title="Click to seek">
+          <div class="modal-timeline-fill" id="modalTimelineFill"></div>
+        </div>
+        <button class="modal-ctrl-btn" id="modalMuteToggle" type="button" aria-label="Toggle Sound">
+          <svg class="ctrl-icon-sound-on" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          <svg class="ctrl-icon-sound-off" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+        </button>
+      </div>
     </div>
     <div class="modal-details">
       <div>
@@ -4941,6 +5146,129 @@ const modalAspect = document.getElementById('modalAspect');
 const modalDuration = document.getElementById('modalDuration');
 const modalTags = document.getElementById('modalTags');
 const modalInquire = document.getElementById('modalInquireBtn');
+const modalMediaWrap = document.getElementById('modalMediaWrap');
+const modalPlayToggle = document.getElementById('modalPlayToggle');
+const modalMuteToggle = document.getElementById('modalMuteToggle');
+const modalPlayBadge = document.getElementById('modalPlayBadge');
+const modalTimeText = document.getElementById('modalTimeText');
+const modalTimeline = document.getElementById('modalTimeline');
+const modalTimelineFill = document.getElementById('modalTimelineFill');
+const modalControlsBar = document.getElementById('modalControlsBar');
+
+function formatTime(sec) {
+  if (isNaN(sec) || sec < 0) return '0:00';
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return m + ':' + (s < 10 ? '0' : '') + s;
+}
+
+function updatePlayStateUI(isPlaying) {
+  if (modalPlayToggle) {
+    modalPlayToggle.classList.toggle('playing', isPlaying);
+  }
+  if (modalPlayBadge) {
+    modalPlayBadge.classList.remove('play', 'pause');
+    modalPlayBadge.classList.add(isPlaying ? 'pause' : 'play');
+    modalPlayBadge.classList.add('show');
+    clearTimeout(modalPlayBadge._timer);
+    modalPlayBadge._timer = setTimeout(() => {
+      modalPlayBadge.classList.remove('show');
+    }, 450);
+  }
+}
+
+function updateMuteStateUI(isMuted) {
+  if (modalMuteToggle) {
+    modalMuteToggle.classList.toggle('muted', isMuted);
+  }
+}
+
+function toggleModalPlay() {
+  if (!modalVideo) return;
+  if (modalVideo.paused) {
+    modalVideo.play().catch(() => {});
+  } else {
+    modalVideo.pause();
+  }
+}
+
+function toggleModalMute(e) {
+  if (e) e.stopPropagation();
+  if (!modalVideo) return;
+  modalVideo.muted = !modalVideo.muted;
+  updateMuteStateUI(modalVideo.muted);
+}
+
+// Autohide controls on inactivity
+let controlsTimer = null;
+function resetControlsTimer() {
+  if (!modalControlsBar) return;
+  modalControlsBar.classList.remove('autohide');
+  clearTimeout(controlsTimer);
+  controlsTimer = setTimeout(() => {
+    if (modalVideo && !modalVideo.paused) {
+      modalControlsBar.classList.add('autohide');
+    }
+  }, 2500);
+}
+
+if (modalMediaWrap) {
+  modalMediaWrap.addEventListener('mousemove', resetControlsTimer);
+  modalMediaWrap.addEventListener('touchstart', resetControlsTimer, { passive: true });
+  modalMediaWrap.addEventListener('click', (e) => {
+    if (modalControlsBar && modalControlsBar.contains(e.target)) return;
+    toggleModalPlay();
+  });
+}
+
+if (modalPlayToggle) {
+  modalPlayToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleModalPlay();
+  });
+}
+
+if (modalMuteToggle) {
+  modalMuteToggle.addEventListener('click', toggleModalMute);
+}
+
+if (modalVideo) {
+  modalVideo.addEventListener('play', () => {
+    updatePlayStateUI(true);
+    resetControlsTimer();
+  });
+  modalVideo.addEventListener('pause', () => {
+    updatePlayStateUI(false);
+    if (modalControlsBar) modalControlsBar.classList.remove('autohide');
+  });
+  modalVideo.addEventListener('timeupdate', () => {
+    if (!modalVideo.duration) return;
+    const cur = modalVideo.currentTime;
+    const dur = modalVideo.duration;
+    if (modalTimelineFill) {
+      modalTimelineFill.style.width = ((cur / dur) * 100) + '%';
+    }
+    if (modalTimeText) {
+      modalTimeText.textContent = formatTime(cur) + ' / ' + formatTime(dur);
+    }
+  });
+  modalVideo.addEventListener('loadedmetadata', () => {
+    if (modalTimeText) {
+      modalTimeText.textContent = '0:00 / ' + formatTime(modalVideo.duration);
+    }
+    if (modalTimelineFill) modalTimelineFill.style.width = '0%';
+  });
+}
+
+if (modalTimeline) {
+  modalTimeline.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!modalVideo || !modalVideo.duration) return;
+    const rect = modalTimeline.getBoundingClientRect();
+    const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    modalVideo.currentTime = ratio * modalVideo.duration;
+  });
+}
 
 function openModal(item) {
   modalCat.textContent = CATEGORY_LABELS[item.category] || item.category;
@@ -4955,16 +5283,27 @@ function openModal(item) {
 
   modalVideo.src = item.src;
   modalVideo.currentTime = 0;
-  modalVideo.play().catch(() => {});
+  modalVideo.muted = false;
+  updateMuteStateUI(false);
+  modalVideo.play().catch(() => {
+    // Fallback if browser blocks unmuted autoplay
+    modalVideo.muted = true;
+    updateMuteStateUI(true);
+    modalVideo.play().catch(() => {});
+  });
+  if (modalControlsBar) modalControlsBar.classList.remove('autohide');
   modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
   modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
   modalVideo.pause();
   modalVideo.src = '';
   document.body.style.overflow = '';
+  clearTimeout(controlsTimer);
 }
 
 modalClose.addEventListener('click', closeModal);
