@@ -54,8 +54,13 @@ img, video { max-width: 100%; display: block; content-visibility: auto; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
   pointer-events: none;
+  animation: autoDismissCurtain 0.8s ease 0.4s forwards;
+}
+@keyframes autoDismissCurtain {
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; pointer-events: none; }
 }
 .film-intro-curtain.loaded {
   opacity: 0;
@@ -5788,75 +5793,37 @@ document.addEventListener('keydown', e => {
     if (budgetInput) budgetInput.value = val;
     
     let label = val.split('(')[0].trim();
-    if (val.includes('₹15,000') || val.includes('$250')) label = 'Starter Trial';
-    else if (val.includes('₹25,000') || val.includes('$500')) label = 'Growth Accelerator';
-    else if (val.includes('₹50,000') || val.includes('$1,000')) label = 'Scale & Dominance';
-    else if (val.includes('Retainer') || val.includes('Custom')) label = 'Custom Scope';
-    
-    if (activePkgDisplay) activePkgDisplay.textContent = label + ' (' + (val.includes('₹') ? val.split('(')[1].split(' ')[0] : (val.includes('
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      if (drawer && drawer.classList.contains('active')) {
-        closeDrawer();
-      } else {
-        openDrawer();
-      }
-    });
-  }
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeDrawer);
-  }
-
-  if (drawer) {
-    drawer.addEventListener('click', (e) => {
-      if (e.target === drawer) {
-        closeDrawer();
-      }
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeDrawer();
-  });
-
-  // Dynamic Frosted Glass Elevation on Scroll
-  const navHeader = document.querySelector('.nav');
-  function handleNavScroll() {
-    if (!navHeader) return;
-    if (window.scrollY > 16) {
-      navHeader.classList.add('nav-scrolled');
-    } else {
-      navHeader.classList.remove('nav-scrolled');
+    let pricePart = 'Selected';
+    if (val.includes('₹')) {
+      const match = val.match(/₹[d,]+/);
+      if (match) pricePart = match[0];
+    } else if (val.includes('$')) {
+      const match = val.match(/\$[\d,]+/);
+      if (match) pricePart = match[0];
     }
-  }
-  window.addEventListener('scroll', handleNavScroll, { passive: true });
-  handleNavScroll();
-})();
-
-</script>
-</body>
-</html>) ? val.split('(')[1].split(' ')[0] : 'Selected')) + ')';
+    
+    if (activePkgDisplay) activePkgDisplay.textContent = label + ' (' + pricePart + ')';
   }
 
   function renderPackageChips() {
     const container = document.getElementById('packageChipsGrid');
     if (!container) return;
     const packages = activeCurrency === 'INR' ? INR_PACKAGES : USD_PACKAGES;
-    container.innerHTML = packages.map((pkg) => `
-      <button type="button" class="pkg-chip ${pkg.active ? 'active' : ''}" data-package="${pkg.name}" role="radio" aria-checked="${pkg.active ? 'true' : 'false'}">
-        ${pkg.badge ? `<span class="pkg-chip-badge ${pkg.badgeClass || ''}">${pkg.badge}</span>` : ''}
-        <div class="pkg-chip-header">
-          <span class="chip-icon-box ${pkg.iconBoxClass || ''}">
-            ${pkg.icon}
-          </span>
-          <span class="chip-title">${pkg.title}</span>
-        </div>
-        <div class="chip-price">${pkg.price} <small>· ${pkg.sub}</small></div>
-        <span class="chip-sub">${pkg.note}</span>
-      </button>
-    `).join('');
+    container.innerHTML = packages.map((pkg) => {
+      const badgeHtml = pkg.badge ? '<span class="pkg-chip-badge ' + (pkg.badgeClass || '') + '">' + pkg.badge + '</span>' : '';
+      const iconBoxClass = pkg.iconBoxClass ? ' ' + pkg.iconBoxClass : '';
+      return '<button type="button" class="pkg-chip ' + (pkg.active ? 'active' : '') + '" data-package="' + pkg.name + '" role="radio" aria-checked="' + (pkg.active ? 'true' : 'false') + '">' +
+        badgeHtml +
+        '<div class="pkg-chip-header">' +
+          '<span class="chip-icon-box' + iconBoxClass + '">' +
+            pkg.icon +
+          '</span>' +
+          '<span class="chip-title">' + pkg.title + '</span>' +
+        '</div>' +
+        '<div class="chip-price">' + pkg.price + ' <small>· ' + pkg.sub + '</small></div>' +
+        '<span class="chip-sub">' + pkg.note + '</span>' +
+      '</button>';
+    }).join('');
 
     container.querySelectorAll('.pkg-chip').forEach(chip => {
       chip.addEventListener('click', () => {
@@ -5871,7 +5838,7 @@ document.addEventListener('keydown', e => {
   function updateCurrency(curr, isUserManual) {
     activeCurrency = curr;
     if (isUserManual) {
-      localStorage.setItem('flix_currency', curr);
+      try { localStorage.setItem('flix_currency', curr); } catch (e) {}
     }
 
     // Update navigation currency pills
@@ -5897,17 +5864,17 @@ document.addEventListener('keydown', e => {
       }
     }
 
-    // Re-render package chips in enquiry form with matching icons & badges
+    // Re-render package chips in enquiry form
     renderPackageChips();
   }
 
   // Geolocation & Persistence Initialization
   (function initGeolocation() {
-    const stored = localStorage.getItem('flix_currency');
+    let stored = null;
+    try { stored = localStorage.getItem('flix_currency'); } catch (e) {}
     if (stored === 'INR' || stored === 'USD') {
       updateCurrency(stored, false);
     } else {
-      // Instant heuristic based on browser timezone (0ms flash)
       let defaultCurr = 'USD';
       try {
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
@@ -5917,11 +5884,12 @@ document.addEventListener('keydown', e => {
       } catch (e) {}
       updateCurrency(defaultCurr, false);
 
-      // Async Vercel Edge Country Header verification (/api/geo)
       fetch('/api/geo')
         .then(res => res.json())
         .then(data => {
-          if (!localStorage.getItem('flix_currency') && data.currency) {
+          let hasStored = false;
+          try { hasStored = Boolean(localStorage.getItem('flix_currency')); } catch (e) {}
+          if (!hasStored && data.currency) {
             updateCurrency(data.currency, false);
           }
         })
@@ -6010,7 +5978,6 @@ document.addEventListener('keydown', e => {
   const successCard = document.getElementById('enquirySuccessCard');
 
   if (form && successCard) {
-    // Error clearing on input
     ['enqName', 'enqBrand', 'enqPhone', 'enqBrief'].forEach(id => {
       const el = document.getElementById(id);
       if (el) {
@@ -6073,51 +6040,7 @@ document.addEventListener('keydown', e => {
 
       if (refEl) refEl.textContent = 'REF: ' + refCode;
       if (brandEl) brandEl.textContent = name + ' · ' + brand;
-      if (budgetEl) budgetEl.textContent = budget.split('(')[0].trim() + (budget.includes('₹') ? ' (' + budget.split('(')[1].split(')')[0] + ')' : (budget.includes('
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      if (drawer && drawer.classList.contains('active')) {
-        closeDrawer();
-      } else {
-        openDrawer();
-      }
-    });
-  }
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeDrawer);
-  }
-
-  if (drawer) {
-    drawer.addEventListener('click', (e) => {
-      if (e.target === drawer) {
-        closeDrawer();
-      }
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeDrawer();
-  });
-
-  // Dynamic Frosted Glass Elevation on Scroll
-  const navHeader = document.querySelector('.nav');
-  function handleNavScroll() {
-    if (!navHeader) return;
-    if (window.scrollY > 16) {
-      navHeader.classList.add('nav-scrolled');
-    } else {
-      navHeader.classList.remove('nav-scrolled');
-    }
-  }
-  window.addEventListener('scroll', handleNavScroll, { passive: true });
-  handleNavScroll();
-})();
-
-</script>
-</body>
-</html>) ? ' (' + budget.split('(')[1].split(')')[0] + ')' : ''));
+      if (budgetEl) budgetEl.textContent = budget.split('(')[0].trim();
       if (urgentEl) {
         urgentEl.textContent = isUrgent ? 'Priority Rush (48h–72h Turnaround)' : 'Standard Production (4–6h Review)';
         urgentEl.style.color = isUrgent ? '#ff5c47' : '#34d399';
