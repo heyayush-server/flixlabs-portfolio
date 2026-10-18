@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; media-src 'self' data: blob:; connect-src 'self' https://wa.me; frame-src 'self'; object-src 'none'; base-uri 'self';">
-<meta name="description" content="FlixLabs — Performance AI Video Studio & High-Converting Commercials. Data-backed 9:16 reels, creator UGC, and cinematic 4K video ads.">
-<title>FlixLabs — Performance AI Video Studio & Commercials</title>
+<meta name="description" content="FlixLabs — AI UGC Video Ads for Ecommerce Brands. Creator-style product ads built around compelling hooks, product demonstrations, and polished short-form creative.">
+<title>FlixLabs — AI UGC Video Ads for Ecommerce Brands</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -3437,6 +3437,247 @@ video::-webkit-media-controls-volume-slider {
   .footer-inner { flex-direction: column !important; text-align: center !important; gap: 14px !important; }
   .footer-links { justify-content: center !important; }
 }
+
+/* CURRENCY SWITCHER STYLES */
+.currency-toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(11, 17, 24, 0.05);
+  border: 1px solid rgba(11, 17, 24, 0.1);
+  border-radius: 9999px;
+  padding: 2px;
+  gap: 2px;
+}
+.curr-pill-btn {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 5px 10px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.curr-pill-btn.active {
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.pricing-currency-switch {
+  display: inline-flex;
+  align-items: center;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 4px;
+  margin-top: 20px;
+  gap: 4px;
+}
+.curr-switch-btn {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.curr-switch-btn.active {
+  background: #ffffff;
+  color: #0b1118;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-weight: 700;
+}
+
+/* HOW IT WORKS SECTION */
+.how-it-works-section {
+  padding: 90px 0;
+  background: #fbfcfd;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.hiw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.hiw-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  position: relative;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.hiw-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.07);
+}
+.hiw-step-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+}
+.hiw-card-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b1118;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+.hiw-card-desc {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* FAQ SECTION */
+.faq-section {
+  padding: 90px 0;
+  background: #ffffff;
+}
+.faq-container {
+  max-width: 860px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.faq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.faq-item:hover {
+  border-color: #cbd5e1;
+}
+.faq-item.active {
+  border-color: #10b981;
+  box-shadow: 0 4px 20px -4px rgba(16, 185, 129, 0.1);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0b1118;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 16px;
+}
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #10b981;
+  transition: transform 0.25s ease;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s;
+  padding: 0 24px;
+  font-size: 14.5px;
+  color: #475569;
+  line-height: 1.65;
+}
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 24px 22px 24px;
+}
+
+/* FORM ENHANCEMENTS FOR 13 FIELDS */
+.form-field-full {
+  grid-column: 1 / -1;
+}
+.platform-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+  margin-top: 6px;
+}
+.platform-chip-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 12.5px;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.platform-chip-label:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.platform-chip-label input:checked + span {
+  color: #10b981;
+  font-weight: 600;
+}
+.custom-select-styled {
+  width: 100%;
+  background: rgba(11, 17, 24, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13.5px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.custom-select-styled:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+.custom-select-styled option {
+  background: #0b1118;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .hiw-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .hiw-grid { grid-template-columns: 1fr; }
+  .faq-question { font-size: 15px; padding: 16px 18px; }
+  .faq-answer { font-size: 13.5px; }
+  .faq-item.active .faq-answer { padding: 0 18px 18px 18px; }
+}
+
 </style>
 </head>
 <body>
@@ -3465,12 +3706,19 @@ video::-webkit-media-controls-volume-slider {
     <nav class="nav-links" aria-label="Primary Navigation">
       <a href="#featuredSection">Featured</a>
       <a href="#packagesSection">Packages</a>
-      <a href="#attractSection">UGC Ads</a>
+      <a href="#howItWorks">How It Works</a>
+      <a href="#faqSection">FAQ</a>
       <a href="#allFilms">Portfolio</a>
       <a href="#contact">Get in Touch</a>
     </nav>
 
     <div class="nav-actions">
+      <!-- Currency Switcher Toggle (INR / USD) -->
+      <div class="currency-toggle-pill" id="navCurrencyToggle" role="group" aria-label="Currency Selector">
+        <button type="button" class="curr-pill-btn active" data-curr="INR" title="India (INR ₹)">₹ INR</button>
+        <button type="button" class="curr-pill-btn" data-curr="USD" title="United States (USD $)">$ USD</button>
+      </div>
+
       <!-- Quick WhatsApp Button (Shows full number on desktop, clean icon/text on mobile) -->
       <a class="btn-nav-wa" href="https://wa.me/919454083266?text=Hi%20FlixLabs!%20I'm%20interested%20in%20video%20packages%20for%20my%20brand." target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp (+91 9454083266)">
         <svg class="wa-nav-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
@@ -3585,13 +3833,13 @@ video::-webkit-media-controls-volume-slider {
       <div class="hero-copy-col reveal-init">
         <div class="hero-badge-mint">
           <span class="dot-mint"></span>
-          <span>INDEPENDENT AI CREATIVE STUDIO · INDIA</span>
+          <span>AI UGC CREATIVE STUDIO</span>
         </div>
         
         <h1 class="hero-h1">
-          Make them<br>
+          AI UGC Video Ads for<br>
           <span class="hero-underline-brush">
-            stop scrolling.
+            Ecommerce Brands
             <svg class="brush-svg-line" viewBox="0 0 340 18" fill="none" preserveAspectRatio="none">
               <path d="M4 11C75 4 175 6 336 12C260 14 140 16 28 15" stroke="#10b981" stroke-width="5" stroke-linecap="round"/>
             </svg>
@@ -3599,17 +3847,17 @@ video::-webkit-media-controls-volume-slider {
         </h1>
 
         <p class="hero-tagline">
-          High-impact video ads, creator-style UGC and cinematic product films built for the modern feed.
+          Creator-style product ads built around compelling hooks, product demonstrations, and polished short-form creative. Flix Labs turns product details and brand assets into AI-assisted video advertising concepts tailored to ecommerce audiences and social platforms.
         </p>
 
         <div class="hero-buttons-row">
-          <a href="#allFilms" class="btn-hero-dark">
-            <span>Explore our work</span>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
-          </a>
-          <a href="https://wa.me/919454083266?text=Hi%20FlixLabs!%20I%20would%20like%20to%20discuss%20a%20video%20campaign." target="_blank" rel="noopener noreferrer" class="btn-hero-light">
-            <span>Discuss a campaign</span>
+          <a href="#contact" class="btn-hero-dark">
+            <span>Discuss a Video Campaign</span>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <a href="#featuredSection" class="btn-hero-light">
+            <span>Explore Our Work</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
           </a>
         </div>
 
@@ -3619,7 +3867,9 @@ video::-webkit-media-controls-volume-slider {
             AI-ASSISTED PRODUCTION
           </span>
           <span>·</span>
-          <span>MADE FOR MODERN BRANDS</span>
+          <span>HIGH-CONVERTING HOOKS</span>
+          <span>·</span>
+          <span>100% COMMERCIAL RIGHTS</span>
         </div>
       </div>
 
@@ -3697,26 +3947,22 @@ video::-webkit-media-controls-volume-slider {
        LIVE RUNNING NUMBER BANNER SECTION
        =================================================== -->
   <section class="live-counter-section reveal-init" id="counterBanner">
-    <div class="live-counter-grid">
-      <div class="counter-box">
-        <div class="counter-number"><span class="counter-val" data-target="100">0</span><span class="counter-accent">+</span></div>
-        <div class="counter-label">Clients Served</div>
-      </div>
+    <div class="live-counter-grid" style="grid-template-columns: repeat(4, 1fr);">
       <div class="counter-box">
         <div class="counter-number"><span class="counter-val" data-target="51">0</span><span class="counter-accent">+</span></div>
-        <div class="counter-label">Production-Ready Films</div>
-      </div>
-      <div class="counter-box">
-        <div class="counter-number"><span class="counter-val" data-target="38" data-decimal="1">0</span><span class="counter-accent">x</span></div>
-        <div class="counter-label">Average ROAS Lift</div>
+        <div class="counter-label">Creative Library Assets</div>
       </div>
       <div class="counter-box">
         <div class="counter-number"><span class="counter-val" data-target="100">0</span><span class="counter-accent">%</span></div>
-        <div class="counter-label">Commercial Rights</div>
+        <div class="counter-label">Commercial Ad Rights</div>
       </div>
       <div class="counter-box">
         <div class="counter-number">48<span class="counter-accent">h</span></div>
-        <div class="counter-label">Rush Turnaround</div>
+        <div class="counter-label">Rush Turnaround Available</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number">9:16<span class="counter-accent">&amp;</span>16:9</div>
+        <div class="counter-label">Ad-Ready Video Formats</div>
       </div>
     </div>
   </section>
@@ -3727,9 +3973,9 @@ video::-webkit-media-controls-volume-slider {
   <section class="featured-section reveal-init" id="featuredSection">
     <div class="section-bar">
       <div>
-        <div class="sec-badge">CURATED SPOTLIGHT</div>
-        <h2 style="margin-top:6px;">Featured Reels</h2>
-        <p>A few high-impact films worth stopping for.</p>
+        <div class="sec-badge">FEATURED AI UGC WORK</div>
+        <h2 style="margin-top:6px;">Featured Video Creatives</h2>
+        <p>Creator-led hooks, unboxings, and product demonstrations engineered for ecommerce conversions.</p>
       </div>
       <div class="carousel-controls">
         <button class="arrow-btn" id="featPrev" aria-label="Previous">
@@ -3750,15 +3996,26 @@ video::-webkit-media-controls-volume-slider {
     <div class="section-header-compact">
       <div class="sec-badge">PRODUCTION PACKAGES</div>
       <h2 class="sec-title">Predictable Pricing. Ad-Ready Batches.</h2>
-      <p class="sec-desc">Clear deliverables, fast turnaround, and 100% commercial usage rights included.</p>
+      <p class="sec-desc">Defined deliverables, rapid turnaround, and 100% commercial usage rights included in every package.</p>
+      
+      <!-- Country / Currency Selector -->
+      <div class="pricing-currency-switch" id="pricingCurrencySwitch" role="group" aria-label="Select Country Pricing">
+        <button type="button" class="curr-switch-btn active" data-curr="INR">
+          <span class="curr-flag">🇮🇳</span> India (INR ₹)
+        </button>
+        <button type="button" class="curr-switch-btn" data-curr="USD">
+          <span class="curr-flag">🇺🇸</span> United States (USD $)
+        </button>
+      </div>
     </div>
 
-    <div class="packages-grid-compact">
+    <!-- INDIA PRICING (INR) -->
+    <div class="packages-grid-compact" id="packagesGridINR">
       
       <!-- PACKAGE 1: STARTER TRIAL -->
       <article class="pkg-card-clean pkg-starter">
         <div class="pkg-top-row">
-          <span class="pkg-badge-compact coral">TESTING &amp; PROOF</span>
+          <span class="pkg-badge-compact coral">STARTER BATCH</span>
         </div>
         <h3 class="pkg-title-clean">Starter Trial</h3>
         <div class="pkg-price-clean">
@@ -3766,24 +4023,24 @@ video::-webkit-media-controls-volume-slider {
           <span class="val">15,000</span>
           <span class="sub">/ batch</span>
         </div>
-        <div class="pkg-volume-clean">10 High-Impact Videos (₹1,500/ea)</div>
+        <div class="pkg-volume-clean">10 AI UGC-Style Vertical Ads</div>
 
         <ul class="pkg-bullets-clean">
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 10 Vertical 9:16 Video Ads (Reels, TikTok)</li>
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> AI UGC &amp; Virtual Spokesperson Hooks</li>
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Trend Sound Sync &amp; Motion Captions</li>
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 48–72h Delivery · 1 Polish Revision</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 10 AI UGC-style vertical video ads (9:16)</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Defined creative concepts and hook angles</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 15–30s video duration, editing &amp; motion captions</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 48–72h turnaround · 1 dedicated revision round</li>
         </ul>
 
         <button type="button" class="pkg-btn-clean select-pkg-btn" data-package="Starter Trial Package (₹15,000 - 10 Videos)">
-          Select Starter (₹15k)
+          Select Starter (₹15,000)
         </button>
       </article>
 
       <!-- PACKAGE 2: GROWTH ACCELERATOR -->
       <article class="pkg-card-clean pkg-growth">
         <div class="pkg-top-row">
-          <span class="pkg-badge-compact green">MOST POPULAR · BEST ROI</span>
+          <span class="pkg-badge-compact green">MOST POPULAR</span>
         </div>
         <h3 class="pkg-title-clean">Growth Accelerator</h3>
         <div class="pkg-price-clean">
@@ -3791,42 +4048,122 @@ video::-webkit-media-controls-volume-slider {
           <span class="val">25,000</span>
           <span class="sub">/ batch</span>
         </div>
-        <div class="pkg-volume-clean">16 High-Converting Videos (₹1,562/ea)</div>
+        <div class="pkg-volume-clean">16 Defined Deliverables &amp; Cutdowns</div>
 
         <ul class="pkg-bullets-clean">
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 16 Ad Creatives (9:16 + In-feed Cutdowns)</li>
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 3 Hook Variations for Meta A/B Split Testing</li>
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Macro Product Cinematography + Creator UGC</li>
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 3–5 Days Delivery · 2 Dedicated Revisions</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 16 defined video deliverables or cutdowns</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Agreed vertical (9:16) and in-feed formats</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 3 agreed hook variations for A/B testing</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 3–5 days turnaround · 2 dedicated revision rounds</li>
         </ul>
 
         <button type="button" class="pkg-btn-clean select-pkg-btn" data-package="Growth Accelerator Package (₹25,000 - 16 Videos)">
-          Select Growth (₹25k)
+          Select Growth (₹25,000)
         </button>
       </article>
 
       <!-- PACKAGE 3: SCALE & DOMINANCE -->
       <article class="pkg-card-clean pkg-scale">
         <div class="pkg-top-row">
-          <span class="pkg-badge-compact purple">PRODUCTION READY</span>
+          <span class="pkg-badge-compact purple">FULL PRODUCTION</span>
         </div>
-        <h3 class="pkg-title-clean">Scale &amp; Dominance</h3>
+        <h3 class="pkg-title-clean">Scale and Dominance</h3>
         <div class="pkg-price-clean">
           <span class="curr">₹</span>
           <span class="val">50,000</span>
           <span class="sub">/ batch</span>
         </div>
-        <div class="pkg-volume-clean">20 Videos Production Ready</div>
+        <div class="pkg-volume-clean">20 Defined Master Commercials</div>
 
         <ul class="pkg-bullets-clean">
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 20 Master Commercials (9:16 + 16:9 Widescreen)</li>
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Custom AI Avatars with Voice Cloning</li>
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 3D CGI Motion Aesthetics &amp; Ultra-Macro Shots</li>
-          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Priority 48h Delivery · Dedicated Creative Director</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 20 defined video deliverables (9:16 &amp; 16:9)</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Defined multi-product or campaign scope</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Custom AI avatars, voice cloning &amp; sound design</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 5–7 days turnaround · 2 dedicated revision rounds</li>
         </ul>
 
-        <button type="button" class="pkg-btn-clean select-pkg-btn" data-package="Scale & Dominance (₹50,000 - 20 Videos Production Ready)">
-          Select Production Ready (₹50k)
+        <button type="button" class="pkg-btn-clean select-pkg-btn" data-package="Scale and Dominance (₹50,000 - 20 Videos)">
+          Select Scale (₹50,000)
+        </button>
+      </article>
+
+    </div>
+
+    <!-- UNITED STATES PRICING (USD) -->
+    <div class="packages-grid-compact" id="packagesGridUSD" style="display:none;">
+      
+      <!-- PACKAGE 1: STARTER -->
+      <article class="pkg-card-clean pkg-starter">
+        <div class="pkg-top-row">
+          <span class="pkg-badge-compact coral">STARTER BATCH</span>
+        </div>
+        <h3 class="pkg-title-clean">Starter</h3>
+        <div class="pkg-price-clean">
+          <span class="curr">$</span>
+          <span class="val">250</span>
+          <span class="sub">/ batch</span>
+        </div>
+        <div class="pkg-volume-clean">5 AI UGC-Style Videos</div>
+
+        <ul class="pkg-bullets-clean">
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 5 AI UGC-style vertical video ads (9:16)</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 30 to 50 seconds per video</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Clearly defined creative direction &amp; formats</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 48–72h turnaround · 1 dedicated revision round</li>
+        </ul>
+
+        <button type="button" class="pkg-btn-clean select-pkg-btn" data-package="Starter Package ($250 - 5 Videos)">
+          Select Starter ($250)
+        </button>
+      </article>
+
+      <!-- PACKAGE 2: GROWTH -->
+      <article class="pkg-card-clean pkg-growth">
+        <div class="pkg-top-row">
+          <span class="pkg-badge-compact green">MOST POPULAR</span>
+        </div>
+        <h3 class="pkg-title-clean">Growth</h3>
+        <div class="pkg-price-clean">
+          <span class="curr">$</span>
+          <span class="val">500</span>
+          <span class="sub">/ batch</span>
+        </div>
+        <div class="pkg-volume-clean">15 AI UGC-Style Videos</div>
+
+        <ul class="pkg-bullets-clean">
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 15 AI UGC-style vertical video ads</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Up to 60 seconds per video</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Multiple agreed creative angles &amp; variations</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 3–5 days turnaround · 2 dedicated revision rounds</li>
+        </ul>
+
+        <button type="button" class="pkg-btn-clean select-pkg-btn" data-package="Growth Package ($500 - 15 Videos)">
+          Select Growth ($500)
+        </button>
+      </article>
+
+      <!-- PACKAGE 3: CUSTOM CAMPAIGN -->
+      <article class="pkg-card-clean pkg-scale">
+        <div class="pkg-top-row">
+          <span class="pkg-badge-compact purple">CUSTOM SCOPE</span>
+        </div>
+        <h3 class="pkg-title-clean">Custom Campaign</h3>
+        <div class="pkg-price-clean">
+          <span class="curr" style="font-size:16px;">Starting at</span>
+          <span class="curr">$</span>
+          <span class="val">1,000</span>
+        </div>
+        <div class="pkg-volume-clean">Custom Volume (25+ Deliverables)</div>
+
+        <ul class="pkg-bullets-clean">
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Custom volume (25+ deliverables or multi-SKU)</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Agreed formats, durations, editing &amp; scripts</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Dedicated creative direction &amp; variations</li>
+          <li><span class="pkg-check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Final pricing tailored to project requirements</li>
+        </ul>
+
+        <button type="button" class="pkg-btn-clean select-pkg-btn" data-package="Custom Campaign (Starting at $1,000)">
+          Inquire Custom Campaign
         </button>
       </article>
 
@@ -4100,173 +4437,118 @@ video::-webkit-media-controls-volume-slider {
   </section>
 
   <!-- ===================================================
-       TESTIMONIALS SECTION (5-STARS, GOOGLE BADGE & REAL INDIAN FOUNDERS)
+       HOW A VIDEO PROJECT WORKS (4-STEP PRODUCTION FLOW)
        =================================================== -->
-  <section class="testimonials-section reveal-init" id="testimonialsSection">
-    <div class="testimonials-header-wrap">
-      <div class="section-header-compact" style="margin-bottom:0;">
-        <div class="sec-badge">VERIFIED CLIENT SUCCESS</div>
-        <h2 class="sec-title">Trusted by India’s Leading D2C Founders &amp; Growth Leads</h2>
-        <p class="sec-desc">Proven performance across Instagram Ads, Meta Reels, and high-converting product launches.</p>
+  <section class="how-it-works-section reveal-init" id="howItWorks">
+    <div class="wrap">
+      <div style="text-align: center;">
+        <div class="sec-badge">PRODUCTION PROCESS</div>
+        <h2 class="sec-title">How a Video Project Works</h2>
+        <p class="sec-desc">From product details to ad-ready AI UGC video batches without high agency overhead.</p>
       </div>
 
-      <!-- Official Google Reviews Badge -->
-      <div class="google-rating-badge" aria-label="5.0 out of 5 stars on Google Reviews">
-        <div class="google-logo-box">
-          <svg width="26" height="26" viewBox="0 0 24 24">
-            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
-            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
-            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
-            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
-          </svg>
+      <div class="hiw-grid">
+        <div class="hiw-card">
+          <span class="hiw-step-pill">STEP 01</span>
+          <h3 class="hiw-card-title">Creative Brief &amp; Assets</h3>
+          <p class="hiw-card-desc">Share your product link, website, key customer pain points, and target platforms (Meta, TikTok, Shorts).</p>
         </div>
-        <div class="google-badge-text">
-          <div class="google-stars-row">
-            <span class="google-score">5.0</span>
-            <div class="stars-gold-list">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </div>
-            <span class="google-tag">Google Reviews</span>
-          </div>
-          <span class="google-sub">100% Positive Feedback · Verified Founders</span>
+
+        <div class="hiw-card">
+          <span class="hiw-step-pill">STEP 02</span>
+          <h3 class="hiw-card-title">Hook &amp; Angle Scripting</h3>
+          <p class="hiw-card-desc">We map out high-converting 3-second opening hooks, problem-solution angles, and platform-native ad scripts.</p>
+        </div>
+
+        <div class="hiw-card">
+          <span class="hiw-step-pill">STEP 03</span>
+          <h3 class="hiw-card-title">AI Video Production</h3>
+          <p class="hiw-card-desc">Production of realistic creator talent, macro product demonstrations, audio sync, sound design, and animated captions.</p>
+        </div>
+
+        <div class="hiw-card">
+          <span class="hiw-step-pill">STEP 04</span>
+          <h3 class="hiw-card-title">Review &amp; Rapid Delivery</h3>
+          <p class="hiw-card-desc">Receive full-resolution 9:16 and 16:9 deliverables ready for ad spend within 48h to 72h, with defined revision rounds.</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="testimonials-grid">
-      
-      <!-- Testimonial 1: Ananya Singhania -->
-      <article class="tm-card">
-        <div>
-          <div class="tm-top-meta">
-            <div class="tm-metric-pill">+184% ROAS Lift</div>
-            <div class="tm-stars-row" title="5.0 out of 5 stars">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </div>
-          </div>
-          <p class="tm-quote">
-            "FlixLabs delivered 16 high-converting reels in 4 days. Our Meta ROAS jumped from 1.8x to 3.4x in week one. The creator hooks look so natural our customers thought we spent ₹8 Lakhs on an in-house Mumbai studio shoot."
-          </p>
-        </div>
-        <div class="tm-author-row">
-          <div class="tm-avatar">
-            <img src="assets/testimonials/indian_ananya.jpg" alt="Ananya Singhania" loading="lazy">
-          </div>
-          <div class="tm-meta">
-            <strong>Ananya Singhania</strong>
-            <span>Founder &amp; CEO, Veda Botanicals (Mumbai)</span>
-            <span class="google-verified-pill">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              Google Verified Client
-            </span>
-          </div>
-        </div>
-      </article>
+  <!-- ===================================================
+       FREQUENTLY ASKED QUESTIONS (FAQ)
+       =================================================== -->
+  <section class="faq-section reveal-init" id="faqSection">
+    <div class="wrap">
+      <div style="text-align: center;">
+        <div class="sec-badge">FREQUENTLY ASKED QUESTIONS</div>
+        <h2 class="sec-title">Clear Answers Before You Start</h2>
+        <p class="sec-desc">Everything ecommerce brands need to know about production, licensing, and turnaround.</p>
+      </div>
 
-      <!-- Testimonial 2: Rohan Verma -->
-      <article class="tm-card">
-        <div>
-          <div class="tm-top-meta">
-            <div class="tm-metric-pill">-42% Lower CAC</div>
-            <div class="tm-stars-row" title="5.0 out of 5 stars">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </div>
-          </div>
-          <p class="tm-quote">
-            "The jewellery macro details and 3D lighting in FlixLabs reels look like a ₹5 Lakh studio commercial. Our customer acquisition cost dropped 42% on Instagram Reels, generating over ₹38 Lakhs in tracked revenue."
-          </p>
-        </div>
-        <div class="tm-author-row">
-          <div class="tm-avatar">
-            <img src="assets/testimonials/indian_rohan.jpg" alt="Rohan Verma" loading="lazy">
-          </div>
-          <div class="tm-meta">
-            <strong>Rohan Verma</strong>
-            <span>Head of Growth, Aura Jewels (Delhi)</span>
-            <span class="google-verified-pill">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              Google Verified Client
-            </span>
+      <div class="faq-container">
+        
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>What assets or inputs do I need to provide?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>All we need is your product URL, store page, or high-res product photos, plus any key value propositions or customer benefits you want emphasized. FlixLabs handles scriptwriting, creator generation, pacing, sound design, and final editing.</p>
           </div>
         </div>
-      </article>
 
-      <!-- Testimonial 3: Priya Sharma -->
-      <article class="tm-card">
-        <div>
-          <div class="tm-top-meta">
-            <div class="tm-metric-pill">3.8x CTR on Meta</div>
-            <div class="tm-stars-row" title="5.0 out of 5 stars">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </div>
-          </div>
-          <p class="tm-quote">
-            "Having 3 distinct hook variations per concept allowed our team to find 2 breakout winning creatives that have been scaling our activewear drop profitably for 3 months straight. Incredible turnaround!"
-          </p>
-        </div>
-        <div class="tm-author-row">
-          <div class="tm-avatar">
-            <img src="assets/testimonials/indian_priya.jpg" alt="Priya Sharma" loading="lazy">
-          </div>
-          <div class="tm-meta">
-            <strong>Priya Sharma</strong>
-            <span>VP Brand &amp; Growth, ZenFit Apparel (Bengaluru)</span>
-            <span class="google-verified-pill">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              Google Verified Client
-            </span>
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Are the videos cleared for paid advertising on Meta and TikTok?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Every deliverable comes with 100% full commercial usage rights with zero recurring licensing fees. You can run them across Meta (Instagram Reels / Facebook Ads), TikTok Ads, YouTube Shorts, and Amazon product detail pages.</p>
           </div>
         </div>
-      </article>
 
-      <!-- Testimonial 4: Vikramaditya Roy -->
-      <article class="tm-card">
-        <div>
-          <div class="tm-top-meta">
-            <div class="tm-metric-pill">48h Rush Delivery</div>
-            <div class="tm-stars-row" title="5.0 out of 5 stars">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </div>
-          </div>
-          <p class="tm-quote">
-            "FlixLabs AI spokesperson videos were completely indistinguishable from real actors. Flawless script delivery, zero production headaches, and broadcast-ready in 48 hours. The studio is our secret weapon for performance video ads."
-          </p>
-        </div>
-        <div class="tm-author-row">
-          <div class="tm-avatar">
-            <img src="assets/testimonials/indian_vikram.jpg" alt="Vikramaditya Roy" loading="lazy">
-          </div>
-          <div class="tm-meta">
-            <strong>Vikramaditya Roy</strong>
-            <span>Co-Founder &amp; CEO, NextWave Medtech (Gurgaon)</span>
-            <span class="google-verified-pill">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              Google Verified Client
-            </span>
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>What is the delivery turnaround time?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Standard batch turnaround is 48 to 72 hours for Starter packages and 3 to 5 business days for Growth batches. If you are launching a flash sale or seasonal drop, 48h priority rush delivery is available.</p>
           </div>
         </div>
-      </article>
 
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>How do revisions and creative adjustments work?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Each package includes dedicated revision rounds. We adjust pacing, captions, color grading, music selection, or CTA phrasing until the deliverables align precisely with your campaign objectives.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Can we test multiple hook variations for a single product?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Testing multiple opening 3-second hooks while keeping the product body consistent is the proven playbook for finding scalable winning creatives. Our Growth and custom packages include multiple agreed hook variations specifically built for A/B split testing.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Do you offer custom high-volume or multi-SKU retainers?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. For brands scaling rapidly, launching multiple product lines, or requiring 25+ ad variations per month, we provide customized scopes with dedicated creative direction and flexible milestone deliverables.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -4359,6 +4641,7 @@ video::-webkit-media-controls-volume-slider {
             <span class="active-pkg-label" id="activePkgLabelDisplay">Growth Accelerator (₹25k)</span>
           </div>
 
+          <!-- Dynamic Chips Grid -->
           <div class="pkg-chips-grid" id="packageChipsGrid" role="radiogroup" aria-label="Select Video Package">
             
             <!-- Starter -->
@@ -4387,7 +4670,7 @@ video::-webkit-media-controls-volume-slider {
             </button>
 
             <!-- Production Ready -->
-            <button type="button" class="pkg-chip" data-package="Scale & Dominance (₹50,000 - 20 Videos Production Ready)" role="radio" aria-checked="false">
+            <button type="button" class="pkg-chip" data-package="Scale & Dominance (₹50,000 - 20 Videos)" role="radio" aria-checked="false">
               <span class="pkg-chip-badge purple">PRO READY</span>
               <div class="pkg-chip-header">
                 <span class="chip-icon-box purple">
@@ -4396,11 +4679,11 @@ video::-webkit-media-controls-volume-slider {
                 <span class="chip-title">Scale &amp; Dominance</span>
               </div>
               <div class="chip-price">₹50,000 <small>· 20 Videos</small></div>
-              <span class="chip-sub">3D CGI &amp; Voice Clone</span>
+              <span class="chip-sub">3D CGI &amp; Master Commercials</span>
             </button>
 
             <!-- Custom Agency Scope -->
-            <button type="button" class="pkg-chip" data-package="Custom Retainer / Agency Scope" role="radio" aria-checked="false">
+            <button type="button" class="pkg-chip" data-package="Custom Retainer / Bespoke Scope" role="radio" aria-checked="false">
               <div class="pkg-chip-header">
                 <span class="chip-icon-box">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
@@ -4418,7 +4701,7 @@ video::-webkit-media-controls-volume-slider {
 
           <!-- Fields Section -->
           <div class="form-section-title" style="margin-top: 14px;">
-            <span>STEP 2 · BRAND &amp; CONTACT DETAILS</span>
+            <span>STEP 2 · BRAND &amp; CAMPAIGN BRIEF</span>
           </div>
 
           <div class="form-grid-2">
@@ -4457,6 +4740,24 @@ video::-webkit-media-controls-volume-slider {
             </div>
           </div>
 
+          <div class="form-grid-2">
+            <div class="form-field-wrap">
+              <label for="enqProductUrl">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                Website / Product URL <span class="opt">(Optional)</span>
+              </label>
+              <input type="url" id="enqProductUrl" name="product_url" class="form-input-styled" placeholder="https://yourbrand.com/products/...">
+            </div>
+
+            <div class="form-field-wrap">
+              <label for="enqTargetMarket">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                Target Market &amp; Audience <span class="opt">(Optional)</span>
+              </label>
+              <input type="text" id="enqTargetMarket" name="target_market" class="form-input-styled" placeholder="e.g. US / India · D2C Skincare &amp; Beauty">
+            </div>
+          </div>
+
           <div class="form-field-wrap">
             <label for="enqBrief">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
@@ -4482,7 +4783,7 @@ video::-webkit-media-controls-volume-slider {
           </button>
         </form>
 
-        <!-- Animated Success Receipt Card -->
+        <!-- Animated Success Receipt Card (Dynamic & Genuine) -->
         <div class="enquiry-success-glass" id="enquirySuccessCard" style="display:none;">
           <div class="success-header-row">
             <div class="success-ring-icon">
@@ -4605,13 +4906,20 @@ video::-webkit-media-controls-volume-slider {
 </footer>
 
 <script>
-// Fade out Film Curtain Preloader on load
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const curtain = document.getElementById('filmCurtain');
-    if (curtain) curtain.classList.add('loaded');
-  }, 450);
-});
+// Instant & resilient dismissal of Film Curtain Preloader
+function dismissFilmCurtain() {
+  const curtain = document.getElementById('filmCurtain');
+  if (curtain && !curtain.classList.contains('loaded')) {
+    curtain.classList.add('loaded');
+  }
+}
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  setTimeout(dismissFilmCurtain, 250);
+} else {
+  document.addEventListener('DOMContentLoaded', () => setTimeout(dismissFilmCurtain, 250));
+  window.addEventListener('load', dismissFilmCurtain);
+}
+setTimeout(dismissFilmCurtain, 800);
 
 // Scroll Reveal Observer
 const revealObserver = new IntersectionObserver((entries) => {
@@ -4772,14 +5080,17 @@ const CATEGORY_LABELS = {
   brand: 'Brand & 3D'
 };
 
-// 6 Highlight Featured Reels (matching reference layout)
+// 9 Highlight Featured UGC & Ecommerce Video Reels
 const FEATURED_FILES = [
-  '1003016778_1791789378443713.mp4', // Royal Heritage Bridal
-  '1025116091_1791789373210638.mp4', // Kundan Pearl Nath
-  '1015025976_1791789375735186.mp4', // Aura Flow Activewear
-  '18532995_1791789426382838.mp4',   // Skyline Executive Presenter
-  '792453715_1791782728364995.mp4',   // Dewy Serum UGC
-  '796929918_1791789420206695.mp4'    // 3D Showreel
+  '792453715_1791782728364995.mp4', // Split-Screen Skincare Creator & Dropper Hook (UGC Ad)
+  '1038197401_1791789431663923.mp4', // Morning Routine Dewy Serum Application (UGC Ad)
+  '955111829_1791789410733995.mp4',  // Botanical Wellness Unboxing & Creator Hook (UGC Ad)
+  '189895571_1791789387284318.mp4',  // Native Phone-Camera Selfie Review (UGC Ad)
+  '6140405_1791789385631044.mp4',    // Berry Lip Souffle Vanity Swatch Demo (UGC Ad)
+  '834108934_1791789417473357.mp4',  // Glass Bottle Peptide Serum Radiant Glow (UGC Ad)
+  '448484360_1791789430789662.mp4',  // Hydra-Dew Glass Skin Dropper Application (Macro Product Film)
+  '529060394_1791780680947632.mp4',  // Modern Living Room Creator Video Ad (UGC Ad)
+  '1015025976_1791789375735186.mp4'  // Aura Flow Activewear Movement (Product Film)
 ];
 
 // Populate Featured Reels
@@ -5359,73 +5670,292 @@ document.addEventListener('keydown', e => {
   });
 })();
 
-// FlixLabs Studio Enquiry Suite & WhatsApp Dispatcher (9454083266)
-(function initStudioEnquirySuite() {
-  const form = document.getElementById('enquiryForm');
-  const successCard = document.getElementById('enquirySuccessCard');
-  if (!form || !successCard) return;
-
+// FlixLabs Studio Enquiry Suite, Country-Based Pricing & Currency Engine
+(function initFlixLabsCommerce() {
   const STUDIO_WHATSAPP = '919454083266';
+  let activeCurrency = 'INR';
 
-  // Strict DOM-based HTML Sanitizer for XSS Prevention
-  function sanitizeInput(str) {
-    if (!str) return '';
-    const temp = document.createElement('div');
-    temp.textContent = str;
-    return temp.innerHTML;
-  }
+  const ICONS = {
+    lightning: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>',
+    fire: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>',
+    crown: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5v-2z"></path></svg>',
+    sliders: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>'
+  };
 
-  // Interactive Package Chips Selector
-  const pkgChips = document.querySelectorAll('#packageChipsGrid .pkg-chip');
+  const INR_PACKAGES = [
+    {
+      name: 'Starter Trial Package (₹15,000 - 10 Videos)',
+      title: 'Starter Trial',
+      price: '₹15,000',
+      sub: '10 Videos',
+      note: 'Fast 48h launch',
+      icon: ICONS.lightning,
+      active: false
+    },
+    {
+      name: 'Growth Accelerator Package (₹25,000 - 16 Videos)',
+      title: 'Growth Accelerator',
+      price: '₹25,000',
+      sub: '16 Videos',
+      note: 'Best Meta / TikTok ROI',
+      badge: 'MOST POPULAR',
+      iconBoxClass: 'fire',
+      icon: ICONS.fire,
+      active: true
+    },
+    {
+      name: 'Scale & Dominance (₹50,000 - 20 Videos)',
+      title: 'Scale & Dominance',
+      price: '₹50,000',
+      sub: '20 Videos',
+      note: '3D CGI & Master Commercials',
+      badge: 'PRO READY',
+      badgeClass: 'purple',
+      iconBoxClass: 'purple',
+      icon: ICONS.crown,
+      active: false
+    },
+    {
+      name: 'Custom Retainer / Bespoke Scope',
+      title: 'Custom Scope',
+      price: 'Retainer',
+      sub: 'Monthly',
+      note: 'Bespoke Enterprise',
+      icon: ICONS.sliders,
+      active: false
+    }
+  ];
+
+  const USD_PACKAGES = [
+    {
+      name: 'Starter Package ($250 - 5 Videos)',
+      title: 'Starter',
+      price: '$250',
+      sub: '5 Videos',
+      note: 'Fast 48h launch',
+      icon: ICONS.lightning,
+      active: false
+    },
+    {
+      name: 'Growth Package ($500 - 15 Videos)',
+      title: 'Growth',
+      price: '$500',
+      sub: '15 Videos',
+      note: 'Best Meta / TikTok ROI',
+      badge: 'MOST POPULAR',
+      iconBoxClass: 'fire',
+      icon: ICONS.fire,
+      active: true
+    },
+    {
+      name: 'Custom Campaign (Starting at $1,000)',
+      title: 'Custom Campaign',
+      price: 'Starting at $1,000',
+      sub: '25+ Videos',
+      note: 'Multi-SKU Enterprise',
+      badge: 'PRO READY',
+      badgeClass: 'purple',
+      iconBoxClass: 'purple',
+      icon: ICONS.crown,
+      active: false
+    },
+    {
+      name: 'Custom Retainer / Bespoke Scope',
+      title: 'Monthly Retainer',
+      price: 'Retainer',
+      sub: 'Ongoing',
+      note: 'High-Volume Pipeline',
+      icon: ICONS.sliders,
+      active: false
+    }
+  ];
+
   const budgetInput = document.getElementById('enqBudget');
   const activePkgDisplay = document.getElementById('activePkgLabelDisplay');
 
   function selectPackageChip(chip) {
     if (!chip) return;
-    pkgChips.forEach(c => {
-      c.classList.remove('active');
-      c.setAttribute('aria-checked', 'false');
-    });
+    const chipsGrid = document.getElementById('packageChipsGrid');
+    if (chipsGrid) {
+      chipsGrid.querySelectorAll('.pkg-chip').forEach(c => {
+        c.classList.remove('active');
+        c.setAttribute('aria-checked', 'false');
+      });
+    }
     chip.classList.add('active');
     chip.setAttribute('aria-checked', 'true');
     const val = chip.getAttribute('data-package') || '';
     if (budgetInput) budgetInput.value = val;
     
-    // Friendly display
     let label = val.split('(')[0].trim();
-    if (val.includes('₹15,000')) label = 'Starter Trial (₹15k)';
-    else if (val.includes('₹25,000')) label = 'Growth Accelerator (₹25k)';
-    else if (val.includes('₹50,000')) label = 'Scale & Dominance (₹50k)';
-    else if (val.includes('Custom')) label = 'Custom Agency Retainer';
-    if (activePkgDisplay) activePkgDisplay.textContent = label;
+    if (val.includes('₹15,000') || val.includes('$250')) label = 'Starter Trial';
+    else if (val.includes('₹25,000') || val.includes('$500')) label = 'Growth Accelerator';
+    else if (val.includes('₹50,000') || val.includes('$1,000')) label = 'Scale & Dominance';
+    else if (val.includes('Retainer') || val.includes('Custom')) label = 'Custom Scope';
+    
+    if (activePkgDisplay) activePkgDisplay.textContent = label + ' (' + (val.includes('₹') ? val.split('(')[1].split(' ')[0] : (val.includes('
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      if (drawer && drawer.classList.contains('active')) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
   }
 
-  pkgChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      selectPackageChip(chip);
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeDrawer);
+  }
+
+  if (drawer) {
+    drawer.addEventListener('click', (e) => {
+      if (e.target === drawer) {
+        closeDrawer();
+      }
     });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDrawer();
   });
 
-  // Wire up External Package Selection Buttons on the page
+  // Dynamic Frosted Glass Elevation on Scroll
+  const navHeader = document.querySelector('.nav');
+  function handleNavScroll() {
+    if (!navHeader) return;
+    if (window.scrollY > 16) {
+      navHeader.classList.add('nav-scrolled');
+    } else {
+      navHeader.classList.remove('nav-scrolled');
+    }
+  }
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  handleNavScroll();
+})();
+
+</script>
+</body>
+</html>) ? val.split('(')[1].split(' ')[0] : 'Selected')) + ')';
+  }
+
+  function renderPackageChips() {
+    const container = document.getElementById('packageChipsGrid');
+    if (!container) return;
+    const packages = activeCurrency === 'INR' ? INR_PACKAGES : USD_PACKAGES;
+    container.innerHTML = packages.map((pkg) => `
+      <button type="button" class="pkg-chip ${pkg.active ? 'active' : ''}" data-package="${pkg.name}" role="radio" aria-checked="${pkg.active ? 'true' : 'false'}">
+        ${pkg.badge ? `<span class="pkg-chip-badge ${pkg.badgeClass || ''}">${pkg.badge}</span>` : ''}
+        <div class="pkg-chip-header">
+          <span class="chip-icon-box ${pkg.iconBoxClass || ''}">
+            ${pkg.icon}
+          </span>
+          <span class="chip-title">${pkg.title}</span>
+        </div>
+        <div class="chip-price">${pkg.price} <small>· ${pkg.sub}</small></div>
+        <span class="chip-sub">${pkg.note}</span>
+      </button>
+    `).join('');
+
+    container.querySelectorAll('.pkg-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        selectPackageChip(chip);
+      });
+    });
+
+    const activeChip = container.querySelector('.pkg-chip.active');
+    if (activeChip) selectPackageChip(activeChip);
+  }
+
+  function updateCurrency(curr, isUserManual) {
+    activeCurrency = curr;
+    if (isUserManual) {
+      localStorage.setItem('flix_currency', curr);
+    }
+
+    // Update navigation currency pills
+    document.querySelectorAll('#navCurrencyToggle .curr-pill-btn, #mobileCurrencyToggle .curr-pill-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.curr === curr);
+    });
+
+    // Update pricing switcher
+    document.querySelectorAll('#pricingCurrencySwitch .curr-switch-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.curr === curr);
+    });
+
+    // Toggle Pricing Grids
+    const inrGrid = document.getElementById('packagesGridINR');
+    const usdGrid = document.getElementById('packagesGridUSD');
+    if (inrGrid && usdGrid) {
+      if (curr === 'INR') {
+        inrGrid.style.display = 'grid';
+        usdGrid.style.display = 'none';
+      } else {
+        inrGrid.style.display = 'none';
+        usdGrid.style.display = 'grid';
+      }
+    }
+
+    // Re-render package chips in enquiry form with matching icons & badges
+    renderPackageChips();
+  }
+
+  // Geolocation & Persistence Initialization
+  (function initGeolocation() {
+    const stored = localStorage.getItem('flix_currency');
+    if (stored === 'INR' || stored === 'USD') {
+      updateCurrency(stored, false);
+    } else {
+      // Instant heuristic based on browser timezone (0ms flash)
+      let defaultCurr = 'USD';
+      try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        if (tz.includes('Calcutta') || tz.includes('Kolkata') || tz.includes('India')) {
+          defaultCurr = 'INR';
+        }
+      } catch (e) {}
+      updateCurrency(defaultCurr, false);
+
+      // Async Vercel Edge Country Header verification (/api/geo)
+      fetch('/api/geo')
+        .then(res => res.json())
+        .then(data => {
+          if (!localStorage.getItem('flix_currency') && data.currency) {
+            updateCurrency(data.currency, false);
+          }
+        })
+        .catch(() => {});
+    }
+
+    // Bind currency toggle click events
+    document.querySelectorAll('#navCurrencyToggle .curr-pill-btn, #mobileCurrencyToggle .curr-pill-btn, #pricingCurrencySwitch .curr-switch-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const c = btn.dataset.curr;
+        if (c) updateCurrency(c, true);
+      });
+    });
+  })();
+
+  // Wire up External Package Selection Buttons on Pricing Cards
   document.querySelectorAll('.select-pkg-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const pkgName = btn.dataset.package;
-      let matchedChip = null;
-      pkgChips.forEach(chip => {
-        if (chip.getAttribute('data-package') === pkgName) {
-          matchedChip = chip;
-        }
-      });
-      if (matchedChip) {
-        selectPackageChip(matchedChip);
+      const chipsGrid = document.getElementById('packageChipsGrid');
+      if (chipsGrid) {
+        let matched = null;
+        chipsGrid.querySelectorAll('.pkg-chip').forEach(c => {
+          if (c.getAttribute('data-package') === pkgName) matched = c;
+        });
+        if (matched) selectPackageChip(matched);
       }
-      
+
       const briefInp = document.getElementById('enqBrief');
       if (briefInp && !briefInp.value.trim()) {
-        briefInp.value = 'Interested in booking the ' + (pkgName.split('(')[0].trim()) + '. Looking to discuss concepts and production.';
+        briefInp.value = 'Interested in discussing the ' + pkgName.split('(')[0].trim() + ' for our upcoming product campaign.';
       }
-      
+
       const contactSection = document.getElementById('contact');
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth' });
@@ -5437,7 +5967,17 @@ document.addEventListener('keydown', e => {
     });
   });
 
-  // Wire up Modal Inquire button
+  // FAQ Accordion Toggle
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!wasActive) item.classList.add('active');
+    });
+  });
+
+  // Modal Inquire Button
   const modalInquire = document.getElementById('modalInquireBtn');
   if (modalInquire) {
     modalInquire.addEventListener('click', () => {
@@ -5446,7 +5986,7 @@ document.addEventListener('keydown', e => {
       const cat = document.getElementById('modalCat')?.textContent || '';
       const briefInp = document.getElementById('enqBrief');
       if (briefInp && title) {
-        briefInp.value = 'Interested in creating campaign video similar to: "' + title + '" (' + cat + '). Please provide hook options and quote.';
+        briefInp.value = 'Interested in creating campaign video concepts similar to: "' + title + '" (' + cat + ').';
       }
       if (modal && modal.classList.contains('open')) {
         modal.classList.remove('open');
@@ -5465,113 +6005,167 @@ document.addEventListener('keydown', e => {
     });
   }
 
-  // Real-time input error removal
-  ['enqName', 'enqBrand', 'enqPhone', 'enqBrief'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener('input', () => {
-        if (el.value.trim()) {
-          el.classList.remove('error');
-        }
-      });
-    }
-  });
+  // Enquiry Form Handler (Direct WhatsApp Connection + Dynamic Receipt)
+  const form = document.getElementById('enquiryForm');
+  const successCard = document.getElementById('enquirySuccessCard');
 
-  // Form Submission
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Honeypot bot protection
-    const honeypot = document.getElementById('enqHoneypot');
-    if (honeypot && honeypot.value) return;
-
-    const nameInp = document.getElementById('enqName');
-    const brandInp = document.getElementById('enqBrand');
-    const phoneInp = document.getElementById('enqPhone');
-    const emailInp = document.getElementById('enqEmail');
-    const briefInp = document.getElementById('enqBrief');
-    const urgentInp = document.getElementById('enqUrgent');
-
-    let hasError = false;
-    [nameInp, brandInp, phoneInp, briefInp].forEach(inp => {
-      if (!inp) return;
-      inp.classList.remove('error');
-      if (!inp.value.trim()) {
-        inp.classList.add('error');
-        hasError = true;
+  if (form && successCard) {
+    // Error clearing on input
+    ['enqName', 'enqBrand', 'enqPhone', 'enqBrief'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', () => {
+          if (el.value.trim()) el.classList.remove('error');
+        });
       }
     });
 
-    if (hasError) {
-      const firstErr = form.querySelector('.error');
-      if (firstErr) firstErr.focus();
-      return;
-    }
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    const name = nameInp.value.trim();
-    const brand = brandInp.value.trim();
-    const phone = phoneInp.value.trim();
-    const email = emailInp ? emailInp.value.trim() : '';
-    const budget = budgetInput ? budgetInput.value : 'Growth Accelerator Package (₹25,000 - 16 Videos)';
-    const brief = briefInp.value.trim();
-    const isUrgent = urgentInp ? urgentInp.checked : false;
+      const honeypot = document.getElementById('enqHoneypot');
+      if (honeypot && honeypot.value) return;
 
-    // Ref ID
-    const refCode = 'FLIX-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+      const nameInp = document.getElementById('enqName');
+      const brandInp = document.getElementById('enqBrand');
+      const phoneInp = document.getElementById('enqPhone');
+      const emailInp = document.getElementById('enqEmail');
+      const productUrlInp = document.getElementById('enqProductUrl');
+      const targetMarketInp = document.getElementById('enqTargetMarket');
+      const briefInp = document.getElementById('enqBrief');
+      const urgentInp = document.getElementById('enqUrgent');
 
-    // Populate Receipt
-    const refEl = document.getElementById('receiptRefId');
-    const brandEl = document.getElementById('receiptClientBrand');
-    const budgetEl = document.getElementById('receiptBudgetVal');
-    const urgentEl = document.getElementById('receiptUrgencyVal');
-    const waBtn = document.getElementById('receiptEmergencyWaBtn');
+      let hasError = false;
+      [nameInp, brandInp, phoneInp, briefInp].forEach(inp => {
+        if (!inp) return;
+        inp.classList.remove('error');
+        if (!inp.value.trim()) {
+          inp.classList.add('error');
+          hasError = true;
+        }
+      });
 
-    if (refEl) refEl.textContent = 'REF: ' + refCode;
-    if (brandEl) brandEl.textContent = name + ' · ' + brand;
-    if (budgetEl) budgetEl.textContent = budget.split('(')[0].trim() + (budget.includes('₹') ? ' (' + budget.split('(')[1].split(')')[0] + ')' : '');
-    if (urgentEl) {
-      urgentEl.textContent = isUrgent ? 'Priority Rush (48h–72h Turnaround)' : 'Standard Production (4–6h Review)';
-      urgentEl.style.color = isUrgent ? '#ff5c47' : '#34d399';
-    }
+      if (hasError) {
+        const firstErr = form.querySelector('.error');
+        if (firstErr) firstErr.focus();
+        return;
+      }
 
-    // Pre-filled WhatsApp Text
-    const waText = 'Hi FlixLabs! I just submitted campaign brief [' + refCode + '] for my brand *' + brand + '* (' + name + ').\n' +
-      'Package: ' + budget + '\n' +
-      'Priority: ' + (isUrgent ? 'PRIORITY RUSH 48h-72h' : 'Standard 4-6h Review') + '\n' +
-      (email ? 'Email: ' + email + '\n' : '') +
-      'Phone: ' + phone + '\n' +
-      'Brief: ' + brief.slice(0, 160) + (brief.length > 160 ? '...' : '') + '\n\n' +
-      'Can we discuss creative angles and timeline?';
+      const name = nameInp.value.trim();
+      const brand = brandInp.value.trim();
+      const phone = phoneInp.value.trim();
+      const email = emailInp ? emailInp.value.trim() : '';
+      const productUrl = productUrlInp ? productUrlInp.value.trim() : '';
+      const targetMarket = targetMarketInp ? targetMarketInp.value.trim() : '';
+      const budget = budgetInput ? budgetInput.value : 'Growth Accelerator Package';
+      const brief = briefInp.value.trim();
+      const isUrgent = urgentInp ? urgentInp.checked : false;
 
-    if (waBtn) {
-      waBtn.href = 'https://wa.me/' + STUDIO_WHATSAPP + '?text=' + encodeURIComponent(waText);
-    }
+      // Dynamic Ref Code based on current timestamp
+      const refCode = 'FLIX-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
 
-    // Animate transition
-    form.style.display = 'none';
-    successCard.style.display = 'flex';
-    successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
+      // Populate Genuine Animated Receipt UI
+      const refEl = document.getElementById('receiptRefId');
+      const brandEl = document.getElementById('receiptClientBrand');
+      const budgetEl = document.getElementById('receiptBudgetVal');
+      const urgentEl = document.getElementById('receiptUrgencyVal');
+      const waBtn = document.getElementById('receiptEmergencyWaBtn');
 
-  // Reset to submit another brief
-  const resetBtn = document.getElementById('receiptNewEnquiryBtn');
-  if (resetBtn) {
-    resetBtn.addEventListener('click', () => {
-      form.reset();
-      // restore default package
-      const defaultChip = document.querySelector('#packageChipsGrid .pkg-chip[data-package*="25,000"]');
-      if (defaultChip) selectPackageChip(defaultChip);
-      form.style.display = 'block';
-      successCard.style.display = 'none';
-      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setTimeout(() => {
-        const nameField = document.getElementById('enqName');
-        if (nameField) nameField.focus();
-      }, 400);
+      if (refEl) refEl.textContent = 'REF: ' + refCode;
+      if (brandEl) brandEl.textContent = name + ' · ' + brand;
+      if (budgetEl) budgetEl.textContent = budget.split('(')[0].trim() + (budget.includes('₹') ? ' (' + budget.split('(')[1].split(')')[0] + ')' : (budget.includes('
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      if (drawer && drawer.classList.contains('active')) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
     });
   }
 
-  // Mobile Glass Drawer Navigation Controller
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeDrawer);
+  }
+
+  if (drawer) {
+    drawer.addEventListener('click', (e) => {
+      if (e.target === drawer) {
+        closeDrawer();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDrawer();
+  });
+
+  // Dynamic Frosted Glass Elevation on Scroll
+  const navHeader = document.querySelector('.nav');
+  function handleNavScroll() {
+    if (!navHeader) return;
+    if (window.scrollY > 16) {
+      navHeader.classList.add('nav-scrolled');
+    } else {
+      navHeader.classList.remove('nav-scrolled');
+    }
+  }
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  handleNavScroll();
+})();
+
+</script>
+</body>
+</html>) ? ' (' + budget.split('(')[1].split(')')[0] + ')' : ''));
+      if (urgentEl) {
+        urgentEl.textContent = isUrgent ? 'Priority Rush (48h–72h Turnaround)' : 'Standard Production (4–6h Review)';
+        urgentEl.style.color = isUrgent ? '#ff5c47' : '#34d399';
+      }
+
+      // Pre-filled WhatsApp Text with full details
+      const waText = 
+        'Hi FlixLabs! I just submitted campaign brief [' + refCode + '] for my brand *' + brand + '* (' + name + ').\n\n' +
+        '• Package / Tier: ' + budget + '\n' +
+        '• Priority: ' + (isUrgent ? 'PRIORITY RUSH (48h–72h)' : 'Standard Production (4–6h Review)') + '\n' +
+        (email ? '• Business Email: ' + email + '\n' : '') +
+        '• Phone / WhatsApp: ' + phone + '\n' +
+        (productUrl ? '• Website / Store: ' + productUrl + '\n' : '') +
+        (targetMarket ? '• Target Audience: ' + targetMarket + '\n' : '') +
+        '• Project Brief:\n' + brief + '\n\n' +
+        'Can we discuss creative angles and delivery timeline?';
+
+      if (waBtn) {
+        waBtn.href = 'https://wa.me/' + STUDIO_WHATSAPP + '?text=' + encodeURIComponent(waText);
+      }
+
+      // Transition to Receipt Card
+      form.style.display = 'none';
+      successCard.style.display = 'block';
+      successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Automatically open WhatsApp in new tab
+      window.open('https://wa.me/' + STUDIO_WHATSAPP + '?text=' + encodeURIComponent(waText), '_blank');
+    });
+
+    // Reset button
+    const resetBtn = document.getElementById('receiptNewEnquiryBtn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        form.reset();
+        renderPackageChips();
+        form.style.display = 'block';
+        successCard.style.display = 'none';
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+          const nameField = document.getElementById('enqName');
+          if (nameField) nameField.focus();
+        }, 400);
+      });
+    }
+  }
+
+  // Mobile Drawer Controller
   const toggleBtn = document.getElementById('mobileMenuToggle');
   const drawer = document.getElementById('mobileDrawer');
   const closeBtn = document.getElementById('mobileDrawerClose');
