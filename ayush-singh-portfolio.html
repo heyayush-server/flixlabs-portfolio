@@ -4,8 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; media-src 'self' data: blob:; connect-src 'self' https://wa.me; frame-src 'self'; object-src 'none'; base-uri 'self';">
-<meta name="description" content="FlixLabs — AI UGC Video Ads for Ecommerce Brands. Creator-style product ads built around compelling hooks, product demonstrations, and polished short-form creative.">
-<title>FlixLabs — AI UGC Video Ads for Ecommerce Brands</title>
+<!-- Primary SEO -->
+<meta name="description" content="FlixLabs | AI UGC Video Ads for Jewellery and Fashion Brands. Creator-style product ads built around compelling hooks, luxury detail demonstrations, and platform-native short-form creative.">
+<title>FlixLabs | AI UGC Video Ads for Jewellery and Fashion Brands</title>
+
+<!-- Favicon & Brand Icons -->
+<link rel="icon" type="image/png" href="assets/flixlabs-icon.png">
+<link rel="apple-touch-icon" href="assets/flixlabs-icon.png">
+
+<!-- Open Graph / Social Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="FlixLabs | AI UGC Video Ads for Jewellery and Fashion Brands">
+<meta property="og:description" content="AI UGC video ads and creator-style product reels for modern jewellery and fashion ecommerce brands. 48–72h turnaround.">
+<meta property="og:image" content="assets/flixlabs-logo.png">
+<meta property="og:url" content="https://ayush-portfolio-roan-omega.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FlixLabs | AI UGC Video Ads for Jewellery and Fashion Brands">
+<meta name="twitter:description" content="AI UGC video ads and creator-style product reels for modern jewellery and fashion ecommerce brands. 48–72h turnaround.">
+<meta name="twitter:image" content="assets/flixlabs-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -42,6 +58,315 @@ body {
 a { color: inherit; text-decoration: none; }
 img, video { max-width: 100%; display: block; content-visibility: auto; }
 .wrap { width: min(var(--max), calc(100% - 48px)); margin: auto; }
+
+/* ===================================================
+   FLIXLABS BRAND LOGO & KEYFRAME ANIMATIONS
+   =================================================== */
+.brand-logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 9px;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
+  animation: logoSoftFloat 3.6s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.brand-flix:hover .brand-logo-img {
+  transform: scale(1.08) rotate(3deg);
+  filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.35));
+}
+@keyframes logoSoftFloat {
+  0% { transform: translateY(0px); filter: drop-shadow(0 2px 5px rgba(0,0,0,0.06)); }
+  100% { transform: translateY(-2px); filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.25)); }
+}
+
+.intro-brand-logo-img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  animation: introLogoPulse 1.2s ease-in-out infinite alternate;
+  box-shadow: 0 0 35px rgba(16, 185, 129, 0.35);
+}
+@keyframes introLogoPulse {
+  0% { transform: scale(0.96); filter: brightness(0.95); }
+  100% { transform: scale(1.04); filter: brightness(1.1); }
+}
+
+/* Primary Email & Booking Button in Nav */
+.btn-nav-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font: 700 13px/1 'Manrope', sans-serif;
+  color: var(--ink);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-nav-email:hover {
+  background: var(--teal-light);
+  border-color: var(--teal);
+  color: var(--teal-dark);
+}
+.btn-nav-book-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  font: 700 13px/1 'Manrope', sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-nav-book-link:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+}
+
+/* FREE SAMPLE SECTION */
+.free-sample-section {
+  padding: 40px 0 50px;
+}
+.free-sample-card {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 36px;
+  padding: 40px 44px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7faf9 100%);
+  border: 1.5px solid #d1fae5;
+  border-radius: 24px;
+  box-shadow: 0 12px 36px rgba(16, 185, 129, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+.free-sample-title {
+  font: 800 28px/1.25 'Manrope', sans-serif;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  margin: 12px 0 12px;
+}
+.free-sample-sub {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--slate);
+  margin-bottom: 20px;
+}
+.free-sample-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--teal-dark);
+}
+.free-sample-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+}
+.btn-sample-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font: 800 14px/1 'Manrope', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+.btn-sample-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.4);
+}
+.sample-success-msg {
+  padding: 12px 16px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  color: #065f46;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* ABOUT FOUNDER SECTION */
+.about-section {
+  padding: 50px 0 60px;
+}
+.about-card-clean {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 48px;
+  box-shadow: 0 10px 30px rgba(11, 17, 24, 0.04);
+  align-items: center;
+}
+.about-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.founder-photo-circle {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border: 3px dashed #94a3b8;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+.founder-photo-circle:hover {
+  border-color: var(--teal);
+  background: #ecfdf5;
+}
+.founder-circle-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+}
+.founder-photo-circle:hover .founder-circle-inner {
+  color: var(--teal-dark);
+}
+.photo-placeholder-lbl {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.founder-badge-pill {
+  font: 800 11px/1.2 'Manrope', sans-serif;
+  color: var(--teal-dark);
+  background: var(--teal-light);
+  padding: 6px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+.about-title {
+  font: 800 32px/1.2 'Manrope', sans-serif;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  margin: 6px 0 12px;
+}
+.about-lead {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.about-bio {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--slate);
+  margin-bottom: 24px;
+}
+.about-values-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+.about-val-item strong {
+  display: block;
+  font: 700 14px/1.2 'Manrope', sans-serif;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.about-val-item span {
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.5;
+}
+.about-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.btn-about-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: var(--ink);
+  color: #ffffff;
+  border-radius: 12px;
+  font: 800 13.5px/1 'Manrope', sans-serif;
+  transition: all 0.2s ease;
+}
+.btn-about-primary:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+}
+.btn-about-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 12px;
+  font: 700 13.5px/1 'Manrope', sans-serif;
+  transition: all 0.2s ease;
+}
+.btn-about-email:hover {
+  border-color: var(--teal);
+  color: var(--teal-dark);
+}
+
+@media (max-width: 860px) {
+  .about-card-clean {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+    gap: 28px;
+    text-align: center;
+  }
+  .about-values-row {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .about-actions-row {
+    justify-content: center;
+  }
+  .free-sample-card {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 24px;
+  }
+}
+
 
 /* CINEMATIC FILM INTRO CURTAIN */
 .film-intro-curtain {
@@ -1697,182 +2022,6 @@ body.drawer-open {
 }
 .empty-state.show { display: block; }
 
-/* ===================================================
-   TESTIMONIALS SECTION (5-STARS, GOOGLE BADGE & VERIFIED INDIAN FOUNDERS)
-   =================================================== */
-.testimonials-section {
-  padding: 60px 0 54px;
-  border-top: 1px solid var(--line);
-  background: #ffffff;
-}
-.testimonials-header-wrap {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 32px;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-/* Official Google Reviews Badge */
-.google-rating-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  padding: 12px 20px;
-  background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(11, 17, 24, 0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.google-rating-badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(11, 17, 24, 0.08);
-  border-color: #cbd5e1;
-}
-.google-logo-box {
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-}
-.google-badge-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.google-stars-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.google-score {
-  font: 900 15.5px/1 'Manrope', sans-serif;
-  color: var(--ink);
-}
-.stars-gold-list {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-.google-tag {
-  font: 800 9.5px 'Manrope', sans-serif;
-  background: #eff6ff;
-  color: #2563eb;
-  padding: 2.5px 7px;
-  border-radius: 5px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.google-sub {
-  font-size: 11.5px;
-  color: #64748b;
-  font-weight: 500;
-}
-
-/* 4 Testimonials Grid */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-.tm-card {
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1.5px solid rgba(226, 232, 240, 0.9);
-  border-radius: 20px;
-  padding: 26px 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .25s ease, border-color .25s ease;
-  box-shadow: 0 8px 24px -6px rgba(11, 17, 24, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95);
-}
-.tm-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(11, 17, 24, 0.09);
-  border-color: rgba(16, 185, 129, 0.45);
-}
-.tm-top-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 14px;
-}
-.tm-metric-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #ecfdf5;
-  color: #047857;
-  font-size: 11.5px;
-  font-weight: 800;
-  padding: 3.5px 11px;
-  border-radius: 100px;
-}
-.tm-stars-row {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  color: #f59e0b;
-}
-.tm-quote {
-  font-size: 13.5px;
-  line-height: 1.6;
-  color: #334155;
-  margin-bottom: 20px;
-  flex: 1;
-}
-.tm-author-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-top: 1px solid #f1f5f9;
-  padding-top: 14px;
-}
-.tm-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid #ffffff;
-  box-shadow: 0 3px 10px rgba(11, 17, 24, 0.12);
-  flex-shrink: 0;
-}
-.tm-avatar img { width: 100%; height: 100%; object-fit: cover; }
-.tm-meta {
-  flex: 1;
-}
-.tm-meta strong {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font: 800 13.5px 'Manrope', sans-serif;
-  color: var(--ink);
-  line-height: 1.2;
-}
-.tm-meta span {
-  display: block;
-  font-size: 11px;
-  color: #64748b;
-  margin-top: 2px;
-}
-.google-verified-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 10px;
-  font-weight: 700;
-  color: #059669;
-  background: #ecfdf5;
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-top: 4px;
-}
-
 /* Mobile Load More Reels */
 .load-more-wrap {
   display: none;
@@ -1931,10 +2080,7 @@ body.drawer-open {
 }
 
 @media (max-width: 1024px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
+  
   .packages-grid-compact {
     gap: 16px;
   }
@@ -2228,24 +2374,10 @@ body.drawer-open {
   }
 
   /* --- TESTIMONIALS SECTION --- */
-  .testimonials-section {
-    padding: 32px 0 28px !important;
-  }
-  .testimonials-header-wrap {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 14px !important;
-  }
-  .google-rating-badge {
-    width: 100% !important;
-    justify-content: flex-start !important;
-    padding: 10px 14px !important;
-    border-radius: 14px !important;
-  }
-  .testimonials-grid {
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-  }
+  
+  
+  
+  
   .tm-card {
     padding: 20px 16px !important;
     border-radius: 18px !important;
@@ -2639,11 +2771,7 @@ body.drawer-open {
   align-items: center;
   gap: 6px;
 }
-.verified-svg {
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
-}
+
 .wa-director-role {
   font-size: 12px;
   color: #94a3b8;
@@ -3690,9 +3818,10 @@ video::-webkit-media-controls-volume-slider {
 <!-- FILM INTRO PRELOADER CURTAIN -->
 <div class="film-intro-curtain" id="filmCurtain">
   <div class="intro-brand-box">
+    <img src="assets/flixlabs-icon.png" alt="FlixLabs" class="intro-brand-logo-img">
     <div class="intro-logo-text">
       <strong>FlixLabs</strong>
-      <span>AI Video Studio · Production Reel</span>
+      <span>AI Video Studio · Jewellery &amp; Fashion Ads</span>
     </div>
   </div>
   <div class="intro-film-bar"><div class="intro-film-fill"></div></div>
@@ -3702,6 +3831,7 @@ video::-webkit-media-controls-volume-slider {
 <header class="nav" id="top">
   <div class="wrap nav-inner">
     <a class="brand-flix" href="#top" aria-label="FlixLabs AI Video Studio">
+      <img src="assets/flixlabs-icon.png" alt="FlixLabs Logo" class="brand-logo-img">
       <div class="brand-text">
         <strong>FlixLabs</strong>
         <span>AI Video Studio</span>
@@ -3711,31 +3841,41 @@ video::-webkit-media-controls-volume-slider {
     <nav class="nav-links" aria-label="Primary Navigation">
       <a href="#featuredSection">Featured</a>
       <a href="#packagesSection">Packages</a>
+      <a href="#freeSampleSection">Free Sample</a>
+      <a href="#aboutSection">About</a>
+      <a href="#allFilms">Portfolio</a>
       <a href="#howItWorks">How It Works</a>
       <a href="#faqSection">FAQ</a>
-      <a href="#allFilms">Portfolio</a>
-      <a href="#contact">Get in Touch</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <div class="nav-actions">
-      <!-- Currency Switcher Toggle (INR / USD) -->
+      <!-- Currency Switcher Toggle (Default USD with INR Option) -->
       <div class="currency-toggle-pill" id="navCurrencyToggle" role="group" aria-label="Currency Selector">
-        <button type="button" class="curr-pill-btn active" data-curr="INR" title="India (INR ₹)">₹ INR</button>
-        <button type="button" class="curr-pill-btn" data-curr="USD" title="United States (USD $)">$ USD</button>
+        <button type="button" class="curr-pill-btn active" data-curr="USD" title="United States (USD $)">$ USD</button>
+        <button type="button" class="curr-pill-btn" data-curr="INR" title="India (INR ₹)">₹ INR</button>
       </div>
 
-      <!-- Quick WhatsApp Button (Shows full number on desktop, clean icon/text on mobile) -->
-      <a class="btn-nav-wa" href="https://wa.me/919454083266?text=Hi%20FlixLabs!%20I'm%20interested%20in%20video%20packages%20for%20my%20brand." target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp (+91 9454083266)">
-        <svg class="wa-nav-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-        </svg>
-        <span class="btn-nav-wa-text">WhatsApp (9454083266)</span>
-        <span class="btn-nav-wa-short-text">WhatsApp Desk</span>
-        <span class="btn-nav-wa-mobile-text">WhatsApp</span>
+      <!-- Primary Contact: Work Email -->
+      <a class="btn-nav-email" href="mailto:flixlabs@gmail.com" title="Email FlixLabs (flixlabs@gmail.com)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        <span>flixlabs@gmail.com</span>
       </a>
 
-      <!-- Desktop Get in Touch Button -->
-      <a class="btn-nav-book" href="#contact">Get in Touch</a>
+      <!-- Primary Booking Link -->
+      <a class="btn-nav-book-link" href="[BOOKING_URL]" target="_blank" rel="noopener noreferrer" title="Book a Strategy Call">
+        <span>Book Call</span>
+      </a>
+
+      <!-- Secondary Contact: WhatsApp with full international code -->
+      <a class="btn-nav-wa" href="https://wa.me/919454083266?text=Hi%20FlixLabs!%20I'm%20interested%20in%20video%20packages%20for%20my%20brand." target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp (+91 9454083266)">
+        <svg class="wa-nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+        <span class="btn-nav-wa-text">+91 9454083266</span>
+        <span class="btn-nav-wa-short-text">WhatsApp</span>
+        <span class="btn-nav-wa-mobile-text">WhatsApp</span>
+      </a>
 
       <!-- Mobile Glass Drawer Toggle Button -->
       <button class="btn-mobile-toggle" id="mobileMenuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
@@ -3752,6 +3892,7 @@ video::-webkit-media-controls-volume-slider {
   <div class="mobile-drawer-card">
     <div class="mobile-drawer-header">
       <a class="brand-flix" href="#top" onclick="closeMobileDrawer()">
+        <img src="assets/flixlabs-icon.png" alt="FlixLabs Logo" class="brand-logo-img">
         <div class="brand-text">
           <strong>FlixLabs</strong>
           <span>AI Video Studio</span>
@@ -3777,7 +3918,21 @@ video::-webkit-media-controls-volume-slider {
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
         </span>
         <span class="drawer-label">Video Packages</span>
-        <span class="drawer-sub">₹15k · ₹25k · ₹50k</span>
+        <span class="drawer-sub">$250 · $500 · $1,000</span>
+      </a>
+      <a href="#freeSampleSection" onclick="closeMobileDrawer()">
+        <span class="drawer-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        </span>
+        <span class="drawer-label">Free Sample Hook</span>
+        <span class="drawer-badge" style="background:#ecfdf5;color:#065f46;">Complimentary</span>
+      </a>
+      <a href="#aboutSection" onclick="closeMobileDrawer()">
+        <span class="drawer-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </span>
+        <span class="drawer-label">About Founder</span>
+        <span class="drawer-sub">Ayush Pratap Singh</span>
       </a>
       <a href="#allFilms" onclick="closeMobileDrawer()">
         <span class="drawer-icon">
@@ -3786,26 +3941,12 @@ video::-webkit-media-controls-volume-slider {
         <span class="drawer-label">Portfolio Archive</span>
         <span class="drawer-badge">51 Films</span>
       </a>
-      <a href="#attractSection" onclick="closeMobileDrawer()">
-        <span class="drawer-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-        </span>
-        <span class="drawer-label">UGC Video Ad Bento</span>
-        <span class="drawer-sub">Formats</span>
-      </a>
-      <a href="#testimonialsSection" onclick="closeMobileDrawer()">
-        <span class="drawer-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        </span>
-        <span class="drawer-label">Client Reviews</span>
-        <span class="drawer-badge gold">5.0 Google</span>
-      </a>
       <a href="#contact" onclick="closeMobileDrawer()">
         <span class="drawer-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
         </span>
         <span class="drawer-label">Get in Touch</span>
-        <span class="drawer-badge green">Active Now</span>
+        <span class="drawer-badge">Direct Line</span>
       </a>
     </nav>
     <div class="mobile-drawer-footer">
@@ -3815,8 +3956,8 @@ video::-webkit-media-controls-volume-slider {
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
           </div>
           <div>
-            <strong>Direct Studio WhatsApp</strong>
-            <span>+91 9454083266 (Active Now)</span>
+            <strong>Studio WhatsApp</strong>
+            <span>+91 9454083266</span>
           </div>
         </div>
         <span class="drawer-wa-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
@@ -3844,7 +3985,7 @@ video::-webkit-media-controls-volume-slider {
         <h1 class="hero-h1">
           AI UGC Video Ads for<br>
           <span class="hero-underline-brush">
-            Ecommerce Brands
+            Jewellery &amp; Fashion
             <svg class="brush-svg-line" viewBox="0 0 340 18" fill="none" preserveAspectRatio="none">
               <path d="M4 11C75 4 175 6 336 12C260 14 140 16 28 15" stroke="#10b981" stroke-width="5" stroke-linecap="round"/>
             </svg>
@@ -3852,16 +3993,16 @@ video::-webkit-media-controls-volume-slider {
         </h1>
 
         <p class="hero-tagline">
-          Creator-style product ads built around compelling hooks, product demonstrations, and polished short-form creative. Flix Labs turns product details and brand assets into AI-assisted video advertising concepts tailored to ecommerce audiences and social platforms.
+          Creator-style product ads built around compelling hooks, luxury detail demonstrations, and polished short-form creative. FlixLabs turns jewellery pieces, couture, and fashion collections into high-impact AI-assisted video concepts tailored for Meta, TikTok, and YouTube Shorts.
         </p>
 
         <div class="hero-buttons-row">
-          <a href="#contact" class="btn-hero-dark">
-            <span>Discuss a Video Campaign</span>
+          <a href="[BOOKING_URL]" target="_blank" rel="noopener noreferrer" class="btn-hero-dark">
+            <span>Book Strategy Call</span>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
-          <a href="#featuredSection" class="btn-hero-light">
-            <span>Explore Our Work</span>
+          <a href="#freeSampleSection" class="btn-hero-light">
+            <span>Request Free Sample</span>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
           </a>
         </div>
@@ -3872,9 +4013,10 @@ video::-webkit-media-controls-volume-slider {
             AI-ASSISTED PRODUCTION
           </span>
           <span>·</span>
-          <span>HIGH-CONVERTING HOOKS</span>
+          <span>ENGAGING HOOK CONCEPTS</span>
           <span>·</span>
-          <span>100% COMMERCIAL RIGHTS</span>
+          <!-- TODO (Ayush): Confirm commercial licenses for all AI generation tools used (Runway, Kling, Midjourney, Luma, ElevenLabs) before signing commercial brand contracts -->
+          <span>COMMERCIAL USAGE RIGHTS INCLUDED*</span>
         </div>
       </div>
 
@@ -3899,8 +4041,8 @@ video::-webkit-media-controls-volume-slider {
             <span class="fanned-live-badge">Auto-play</span>
           </div>
           <div class="fanned-caption">
-            <strong>Real creators.</strong>
-            <span>Real results.</span>
+            <strong>AI Creator Style.</strong>
+            <span>Platform-Native.</span>
           </div>
         </div>
 
@@ -3939,8 +4081,8 @@ video::-webkit-media-controls-volume-slider {
             <span class="fanned-live-badge">Auto-play</span>
           </div>
           <div class="fanned-caption">
-            <strong>Engineered for</strong>
-            <span>Direct conversion.</span>
+            <strong>Structured for</strong>
+            <span>Social Attention.</span>
           </div>
         </div>
       </div>
@@ -3954,20 +4096,20 @@ video::-webkit-media-controls-volume-slider {
   <section class="live-counter-section reveal-init" id="counterBanner">
     <div class="live-counter-grid" style="grid-template-columns: repeat(4, 1fr);">
       <div class="counter-box">
-        <div class="counter-number"><span class="counter-val" data-target="51">0</span><span class="counter-accent">+</span></div>
-        <div class="counter-label">Creative Library Assets</div>
+        <div class="counter-number">9:16 <span class="counter-accent">&amp;</span> 16:9</div>
+        <div class="counter-label">Vertical Reels &amp; Landscape Formats</div>
       </div>
       <div class="counter-box">
-        <div class="counter-number"><span class="counter-val" data-target="100">0</span><span class="counter-accent">%</span></div>
-        <div class="counter-label">Commercial Ad Rights</div>
+        <div class="counter-number">48–72<span class="counter-accent">h</span></div>
+        <div class="counter-label">Standard Batch Turnaround</div>
       </div>
       <div class="counter-box">
-        <div class="counter-number">48<span class="counter-accent">h</span></div>
-        <div class="counter-label">Rush Turnaround Available</div>
+        <div class="counter-number">51 <span class="counter-accent">Films</span></div>
+        <div class="counter-label">In-House Concept Work Archive</div>
       </div>
       <div class="counter-box">
-        <div class="counter-number">9:16<span class="counter-accent">&amp;</span>16:9</div>
-        <div class="counter-label">Ad-Ready Video Formats</div>
+        <div class="counter-number">Meta <span class="counter-accent">&amp;</span> TikTok</div>
+        <div class="counter-label">Built to Platform Specifications</div>
       </div>
     </div>
   </section>
@@ -4001,21 +4143,21 @@ video::-webkit-media-controls-volume-slider {
     <div class="section-header-compact">
       <div class="sec-badge">PRODUCTION PACKAGES</div>
       <h2 class="sec-title">Predictable Pricing. Ad-Ready Batches.</h2>
-      <p class="sec-desc">Defined deliverables, rapid turnaround, and 100% commercial usage rights included in every package.</p>
+      <p class="sec-desc">Defined deliverables, 48–72h standard turnaround, and commercial usage rights included, subject to the licenses of the tools used.</p>
       
       <!-- Country / Currency Selector -->
       <div class="pricing-currency-switch" id="pricingCurrencySwitch" role="group" aria-label="Select Country Pricing">
-        <button type="button" class="curr-switch-btn active" data-curr="INR">
-          <span class="curr-flag">🇮🇳</span> India (INR ₹)
-        </button>
-        <button type="button" class="curr-switch-btn" data-curr="USD">
+        <button type="button" class="curr-switch-btn active" data-curr="USD">
           <span class="curr-flag">🇺🇸</span> United States (USD $)
+        </button>
+        <button type="button" class="curr-switch-btn" data-curr="INR">
+          <span class="curr-flag">🇮🇳</span> India (INR ₹)
         </button>
       </div>
     </div>
 
     <!-- INDIA PRICING (INR) -->
-    <div class="packages-grid-compact" id="packagesGridINR">
+    <div class="packages-grid-compact" id="packagesGridINR" style="display:none;">
       
       <!-- PACKAGE 1: STARTER TRIAL -->
       <article class="pkg-card-clean pkg-starter">
@@ -4095,7 +4237,7 @@ video::-webkit-media-controls-volume-slider {
     </div>
 
     <!-- UNITED STATES PRICING (USD) -->
-    <div class="packages-grid-compact" id="packagesGridUSD" style="display:none;">
+    <div class="packages-grid-compact" id="packagesGridUSD" style="display:grid;">
       
       <!-- PACKAGE 1: STARTER -->
       <article class="pkg-card-clean pkg-starter">
@@ -4176,6 +4318,103 @@ video::-webkit-media-controls-volume-slider {
   </section>
 
   <!-- ===================================================
+       FREE SAMPLE / COMPLIMENTARY CONCEPT HOOK REQUEST
+       =================================================== -->
+  <section class="free-sample-section reveal-init" id="freeSampleSection">
+    <div class="free-sample-card">
+      <div class="free-sample-left">
+        <div class="sec-badge">TEST BEFORE YOU COMMIT</div>
+        <h2 class="free-sample-title">Request a Free 5–10s AI UGC Concept Hook for Your Brand</h2>
+        <p class="free-sample-sub">
+          Share your product link and brand name. We will generate a complimentary AI video hook concept so you can evaluate visual fidelity, talent aesthetics, and pacing before ordering a full package. Zero obligation.
+        </p>
+        <div class="free-sample-perks">
+          <span>✓ 100% Complimentary demonstration hook</span>
+          <span>✓ Tailored to your specific jewellery or apparel product</span>
+          <span>✓ Delivered to your inbox within 24–48 hours</span>
+        </div>
+      </div>
+      <div class="free-sample-right">
+        <form id="freeSampleForm" class="free-sample-form">
+          <div class="form-field-wrap">
+            <label for="sampleBrand">Brand / Store Name <span class="req">*</span></label>
+            <input type="text" id="sampleBrand" name="brand" class="form-input-styled" placeholder="e.g. Lumina Jewellery" required>
+          </div>
+          <div class="form-field-wrap">
+            <label for="sampleUrl">Website or Product URL <span class="req">*</span></label>
+            <input type="url" id="sampleUrl" name="url" class="form-input-styled" placeholder="https://yourbrand.com/products/ring" required>
+          </div>
+          <div class="form-field-wrap">
+            <label for="sampleEmail">Work Email <span class="req">*</span></label>
+            <input type="email" id="sampleEmail" name="email" class="form-input-styled" placeholder="founder@yourbrand.com" required>
+          </div>
+          <button type="submit" class="btn-sample-submit" id="sampleSubmitBtn">
+            <span>Request Free Concept Sample</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <div id="sampleSuccessMsg" class="sample-success-msg" style="display:none;">
+            ✓ Thank you! We received your product details and will email your free AI concept hook within 24–48 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       ABOUT THE FOUNDER SECTION (HONEST, TRANSPARENT BACKGROUND)
+       =================================================== -->
+  <section class="about-section reveal-init" id="aboutSection">
+    <div class="about-card-clean">
+      <div class="about-avatar-col">
+        <!-- Circular placeholder for founder photo ("Add a Circle will insert later") -->
+        <div class="founder-photo-circle" title="Ayush Pratap Singh - Photo to be inserted">
+          <div class="founder-circle-inner">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="photo-placeholder-lbl">Photo</span>
+          </div>
+        </div>
+        <div class="founder-badge-pill">FOUNDER &amp; AI VIDEO CREATOR</div>
+      </div>
+      <div class="about-content-col">
+        <div class="sec-badge">MEET THE FOUNDER</div>
+        <h2 class="about-title">Ayush Pratap Singh</h2>
+        <p class="about-lead">
+          AI Video Specialist and Visual Creator producing modern short-form advertising creative for jewellery, fashion, and direct-to-consumer ecommerce brands.
+        </p>
+        <p class="about-bio">
+          I founded FlixLabs to provide ecommerce brands with high-impact, platform-native video creative without the extensive delays or budget requirements of traditional commercial shoots. I work hands-on with generative video models (Runway Gen-3, Kling, Midjourney), combining precision prompting, sound engineering, and commercial video editing to produce engaging social video ads structured for Meta, TikTok, and YouTube Shorts.
+        </p>
+        <div class="about-values-row">
+          <div class="about-val-item">
+            <strong>Honest Capability &amp; Transparency</strong>
+            <span>All films displayed in this portfolio are AI concept work created to showcase production quality, lighting, and pacing — not commissioned client campaigns.</span>
+          </div>
+          <div class="about-val-item">
+            <strong>Jewellery &amp; Fashion Focus</strong>
+            <span>Specialized workflows for metal luster, gemstone reflections, fabric flow, and realistic digital model styling.</span>
+          </div>
+        </div>
+        <div class="about-actions-row">
+          <a href="[BOOKING_URL]" target="_blank" rel="noopener noreferrer" class="btn-about-primary">
+            <span>Book Call with Ayush</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="mailto:flixlabs@gmail.com" class="btn-about-email">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            <span>flixlabs@gmail.com</span>
+          </a>
+          <a href="https://wa.me/919454083266" target="_blank" rel="noopener noreferrer" class="btn-about-email" style="color:#059669;">
+            <span>WhatsApp: +91 9454083266</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
        UGC CONVERSION BENTO GRID
        =================================================== -->
   <section class="attract-section reveal-init" id="attractSection">
@@ -4183,9 +4422,9 @@ video::-webkit-media-controls-volume-slider {
       <div style="text-align:center;">
         <div class="ugc-badge-pill">
           <span class="ugc-badge-dot"></span>
-          <span>CREATIVE THAT CONVERTS</span>
+          <span>PLATFORM-NATIVE AD FORMATS</span>
         </div>
-        <h2 class="ugc-convert-title">UGC Video Ads That<br>Turn Views Into Sales</h2>
+        <h2 class="ugc-convert-title">AI UGC Video Ads Structured<br>for Social Commerce</h2>
         <p class="ugc-convert-sub">Scroll-stopping creatives built for performance, not just aesthetics.</p>
         <div class="ugc-green-dash"></div>
       </div>
@@ -4245,19 +4484,19 @@ video::-webkit-media-controls-volume-slider {
             <div class="ugc-icon-box blue">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
             </div>
-            <h3 class="ugc-card-title">E-commerce Product Videos</h3>
-            <p class="ugc-card-desc">Show the value. Make buying easy.</p>
+            <h3 class="ugc-card-title">Jewellery &amp; Product Videos</h3>
+            <p class="ugc-card-desc">Macro sparkle. Refined luxury aesthetics.</p>
           </div>
           <div class="ugc-card-visual">
             <div class="ugc-product-showcase">
               <div class="ugc-product-main-view">
-                <img src="assets/product_sneaker_mockup.jpg" alt="E-commerce Product Video" loading="lazy">
+                <img src="assets/portfolio/thumbs/648304148_1791789423902849.jpg" alt="Diamond Ring Macro Showcase" loading="lazy">
                 <div class="ugc-play-bubble">▶</div>
               </div>
               <div class="ugc-product-thumbs">
-                <div class="ugc-pthumb"><img src="assets/product_sneaker_mockup.jpg" alt="Angle 1" loading="lazy"></div>
-                <div class="ugc-pthumb"><img src="assets/portfolio/thumbs/1015025976_1791789375735186.jpg" alt="Angle 2" loading="lazy"></div>
-                <div class="ugc-pthumb"><img src="assets/portfolio/thumbs/648304148_1791789423902849.jpg" alt="Angle 3" loading="lazy"></div>
+                <div class="ugc-pthumb"><img src="assets/portfolio/thumbs/648304148_1791789423902849.jpg" alt="Diamond Ring Macro" loading="lazy"></div>
+                <div class="ugc-pthumb"><img src="assets/portfolio/thumbs/1025116091_1791789373210638.jpg" alt="Kundan Nath Macro" loading="lazy"></div>
+                <div class="ugc-pthumb"><img src="assets/portfolio/thumbs/914785054_1791789438141531.jpg" alt="Tennis Bracelet" loading="lazy"></div>
               </div>
             </div>
           </div>
@@ -4314,19 +4553,22 @@ video::-webkit-media-controls-volume-slider {
        =================================================== -->
   <section class="portfolio-header-clean reveal-init">
     <div>
-      <div class="sec-badge">PRODUCTION ARCHIVE</div>
-      <h2 class="sec-title">Selected Commercial Work</h2>
-      <p class="sec-desc">Hover to preview with sound. Click any film for specs &amp; creative brief.</p>
+      <div class="sec-badge">AI CONCEPT ARCHIVE</div>
+      <h2 class="sec-title">AI Video Concepts &amp; Samples</h2>
+      <p class="sec-desc">Hover to preview with sound. Click any film for specs and concept details.</p>
+      <p class="portfolio-disclaimer" style="font-size:13.5px;color:var(--slate);margin-top:6px;background:#f8fafc;padding:6px 14px;border-radius:8px;border:1px solid var(--line);display:inline-block;">
+        <strong>Transparency Note:</strong> All films shown are AI-generated sample / concept work demonstrating studio capability, not commissioned client campaigns.
+      </p>
     </div>
 
-    <!-- Category Navigation Bar -->
+    <!-- Category Navigation Bar (Defaulted to Jewellery & Fashion) -->
     <nav class="category-nav-bar" aria-label="Filter portfolio by category">
-      <button class="cat-pill active" data-cat="all">
+      <button class="cat-pill active" data-cat="jewellery">Jewellery &amp; Luxury</button>
+      <button class="cat-pill" data-cat="fashion">Fashion &amp; Apparel</button>
+      <button class="cat-pill" data-cat="all">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         <span>All Films (51)</span>
       </button>
-      <button class="cat-pill" data-cat="fashion">Fashion &amp; Luxury</button>
-      <button class="cat-pill" data-cat="jewellery">Jewellery &amp; Luxury</button>
       <button class="cat-pill" data-cat="beauty">Beauty &amp; Skincare</button>
       <button class="cat-pill" data-cat="ugc">Creator UGC</button>
       <button class="cat-pill" data-cat="avatar">AI Avatars</button>
@@ -4360,7 +4602,7 @@ video::-webkit-media-controls-volume-slider {
     <div class="section-bar">
       <div>
         <h2>16:9 Widescreen Commercials</h2>
-        <p>Broadcast-grade landscape video ads &amp; brand showreels.</p>
+        <p>High-definition landscape video ads &amp; brand showreels.</p>
       </div>
     </div>
     <div class="widescreen-grid" id="widescreenGrid">
@@ -4415,7 +4657,7 @@ video::-webkit-media-controls-volume-slider {
     <div class="section-bar">
       <div>
         <h2>Complete Library (51 Films)</h2>
-        <p>Curated AI commercials, UGC testimonials &amp; product reels.</p>
+        <p>Curated AI concept commercials, product demos &amp; creator-style reels.</p>
       </div>
       <div>
         <a class="btn-nav-book" href="#contact">Request Custom Brief</a>
@@ -4462,7 +4704,7 @@ video::-webkit-media-controls-volume-slider {
         <div class="hiw-card">
           <span class="hiw-step-pill">STEP 02</span>
           <h3 class="hiw-card-title">Hook &amp; Angle Scripting</h3>
-          <p class="hiw-card-desc">We map out high-converting 3-second opening hooks, problem-solution angles, and platform-native ad scripts.</p>
+          <p class="hiw-card-desc">We map out engaging 3-second opening hooks, problem-solution angles, and platform-native ad scripts.</p>
         </div>
 
         <div class="hiw-card">
@@ -4509,7 +4751,27 @@ video::-webkit-media-controls-volume-slider {
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
-            <p>Yes. Every deliverable comes with 100% full commercial usage rights with zero recurring licensing fees. You can run them across Meta (Instagram Reels / Facebook Ads), TikTok Ads, YouTube Shorts, and Amazon product detail pages.</p>
+            <p>Videos are built strictly to platform technical specifications (safe zones, audio-video codecs, and vertical/landscape dimensions for Meta, TikTok, and YouTube Shorts). However, final ad approval is decided solely by each platform according to their advertising guidelines and policies.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Are the people in the videos real?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>No. The talent and creators featured in our video ads are AI-generated. We produce product demonstrations, styling showcases, and creator-style ads without hiring traditional on-camera actors. Importantly, we do not fabricate fake customer reviews or generate fake customer testimonials.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>What are the commercial usage rights for the deliverables?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Commercial usage rights are included for all deliverables, subject to the commercial licensing terms of the underlying AI generation tools used in production. There are no recurring agency royalties.</p>
           </div>
         </div>
 
@@ -4539,7 +4801,7 @@ video::-webkit-media-controls-volume-slider {
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
-            <p>Yes. Testing multiple opening 3-second hooks while keeping the product body consistent is the proven playbook for finding scalable winning creatives. Our Growth and custom packages include multiple agreed hook variations specifically built for A/B split testing.</p>
+            <p>Yes. Testing multiple opening 3-second hooks while keeping the product body consistent is an effective strategy for testing creative variations across social feeds. Our Growth and custom packages include multiple agreed hook variations specifically built for A/B split testing.</p>
           </div>
         </div>
 
@@ -4571,16 +4833,27 @@ video::-webkit-media-controls-volume-slider {
       <div class="enquiry-left">
         <div class="live-beacon">
           <span class="beacon-dot"></span>
-          <span>DIRECT PRODUCTION DESK · ACTIVE NOW</span>
+          <span>DIRECT STUDIO CONTACT</span>
         </div>
 
         <h2 class="enquiry-headline">
-          Let’s build video ads that <span class="text-gradient-emerald">actually convert.</span>
+          Let’s build engaging video ads for <span class="text-gradient-emerald">your brand.</span>
         </h2>
         
         <p class="enquiry-subtext">
-          Lock in your batch production or submit your campaign brief. Initial video angles and hook concepts delivered within <strong>4 to 6 business hours</strong>.
+          Lock in your batch production or submit your campaign brief below. Direct communication, transparent deliverables, and fast turnaround.
         </p>
+
+        <!-- Direct Contact Actions: Email & Booking Link -->
+        <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;">
+          <a href="mailto:flixlabs@gmail.com" class="btn-about-email" style="background:#ffffff;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            <span>Email: flixlabs@gmail.com</span>
+          </a>
+          <a href="[BOOKING_URL]" target="_blank" rel="noopener noreferrer" class="btn-about-primary" style="background:#0b1118;color:#fff;">
+            <span>Schedule Call [BOOKING_URL]</span>
+          </a>
+        </div>
 
         <!-- Trust Badges Strip -->
         <div class="enquiry-trust-strip">
@@ -4594,8 +4867,8 @@ video::-webkit-media-controls-volume-slider {
           <div class="trust-pill">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             <div>
-              <strong>100% Commercial</strong>
-              <span>Full copyright + raw 4K</span>
+              <strong>Commercial Rights</strong>
+              <span>Included with deliverables</span>
             </div>
           </div>
           <div class="trust-pill">
@@ -4612,24 +4885,23 @@ video::-webkit-media-controls-volume-slider {
           <div class="wa-direct-top">
             <div class="wa-desk-badge">
               <span class="wa-beacon-dot"></span>
-              <span class="wa-badge-text">LIVE STUDIO DISPATCH</span>
+              <span class="wa-badge-text">STUDIO DESK</span>
             </div>
             <div>
               <div class="wa-director-name">
-                Direct WhatsApp Desk
-                <svg class="verified-svg" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                WhatsApp Direct Desk
               </div>
-              <div class="wa-director-role">Instant Creative Support · <strong>Avg 15m reply</strong></div>
+              <div class="wa-director-role">+91 9454083266 · Direct Production Inquiries</div>
             </div>
           </div>
           
           <p class="wa-direct-desc">
-            Skip the email queue for instant creative consultations, custom scope inquiries, and rush batch reservations.
+            Direct chat for creative consultations, project questions, and video concept reviews.
           </p>
 
           <a class="wa-btn-luxury" href="https://wa.me/919454083266?text=Hi%20FlixLabs!%20I'm%20interested%20in%20video%20production%20packages%20for%20my%20brand." target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            <span>Chat on WhatsApp (+91 9454083266)</span>
+            <span>Message on WhatsApp (+91 9454083266)</span>
             <svg class="arrow-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
         </div>
@@ -4715,7 +4987,7 @@ video::-webkit-media-controls-volume-slider {
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                 Your Name <span class="req">*</span>
               </label>
-              <input type="text" id="enqName" name="name" class="form-input-styled" placeholder="e.g. Rahul Mehta" required>
+              <input type="text" id="enqName" name="name" class="form-input-styled" placeholder="Your Full Name" required>
             </div>
             
             <div class="form-field-wrap">
@@ -4723,7 +4995,7 @@ video::-webkit-media-controls-volume-slider {
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
                 Brand / Store Name <span class="req">*</span>
               </label>
-              <input type="text" id="enqBrand" name="brand" class="form-input-styled" placeholder="e.g. Aura Naturals" required>
+              <input type="text" id="enqBrand" name="brand" class="form-input-styled" placeholder="e.g. Lumina Jewellery" required>
             </div>
           </div>
 
@@ -4741,7 +5013,7 @@ video::-webkit-media-controls-volume-slider {
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 Work Email <span class="opt">(Optional)</span>
               </label>
-              <input type="email" id="enqEmail" name="email" class="form-input-styled" placeholder="rahul@mybrand.com">
+              <input type="email" id="enqEmail" name="email" class="form-input-styled" placeholder="founder@yourbrand.com">
             </div>
           </div>
 
@@ -4796,32 +5068,32 @@ video::-webkit-media-controls-volume-slider {
             </div>
             <div>
               <h3 class="success-title">Brief Submitted Successfully!</h3>
-              <div class="success-ref-pill" id="receiptRefId">REF: FLIX-2026-9481</div>
+              <div class="success-ref-pill" id="receiptRefId">CONFIRMATION</div>
             </div>
           </div>
 
           <div class="success-summary-box">
             <div class="summary-item">
-              <span class="summary-lbl">Client &amp; Brand:</span>
-              <strong class="summary-val" id="receiptClientBrand">Rahul Mehta · Aura Naturals</strong>
+              <span class="summary-lbl">Brand / Contact:</span>
+              <strong class="summary-val" id="receiptClientBrand">—</strong>
             </div>
             <div class="summary-item">
-              <span class="summary-lbl">Selected Tier:</span>
-              <strong class="summary-val text-emerald" id="receiptBudgetVal">Growth Accelerator (₹25,000)</strong>
+              <span class="summary-lbl">Selected Package:</span>
+              <strong class="summary-val text-emerald" id="receiptBudgetVal">—</strong>
             </div>
             <div class="summary-item">
-              <span class="summary-lbl">Production Priority:</span>
-              <strong class="summary-val" id="receiptUrgencyVal">Standard Review (4–6h)</strong>
+              <span class="summary-lbl">Turnaround:</span>
+              <strong class="summary-val" id="receiptUrgencyVal">Standard 48h–72h Delivery</strong>
             </div>
           </div>
 
           <p class="success-instruction">
-            FlixLabs has received your brief and is generating initial angle concepts. Connect directly on WhatsApp with your pre-filled brief:
+            Thank you! FlixLabs has received your campaign details. Connect directly on WhatsApp with your submitted brief for fast coordination:
           </p>
 
           <a class="wa-btn-luxury pulse-wa" id="receiptEmergencyWaBtn" href="#" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            <span>Open Direct WhatsApp Desk (+91 9454083266)</span>
+            <span>Open WhatsApp Desk (+91 9454083266)</span>
             <svg class="arrow-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
 
@@ -4871,8 +5143,8 @@ video::-webkit-media-controls-volume-slider {
     <div class="modal-details">
       <div>
         <span class="modal-cat-tag" id="modalCat">Fashion &amp; Luxury</span>
-        <h3 id="modalTitle">Campaign Title</h3>
-        <p class="modal-desc" id="modalDesc">Creative direction and visual concept description.</p>
+        <h3 id="modalTitle">AI Video Concept</h3>
+        <p class="modal-desc" id="modalDesc">AI-generated concept work showcasing product motion, macro textures, and creator pacing.</p>
         
         <div class="modal-specs-grid">
           <div class="spec-item"><small>Industry</small><strong id="modalIndustry">Fashion</strong></div>
@@ -4899,13 +5171,17 @@ video::-webkit-media-controls-volume-slider {
 <!-- Footer -->
 <footer class="footer">
   <div class="wrap footer-inner">
-    <div>© 2026 FlixLabs. AI Video &amp; Creative Studio. WhatsApp: +91 9454083266. All rights reserved.</div>
+    <div>
+      <strong>© 2026 FlixLabs.</strong> AI Video Studio for Jewellery &amp; Fashion. Founder: Ayush Pratap Singh · <a href="mailto:flixlabs@gmail.com" style="text-decoration:underline;">flixlabs@gmail.com</a> · WhatsApp: +91 9454083266.
+    </div>
     <div class="footer-links">
-      <a href="#allFilms">Portfolio</a>
+      <a href="#featuredSection">Featured</a>
       <a href="#packagesSection">Packages</a>
-      <a href="#attractSection">UGC Ads</a>
-      <a href="#testimonialsSection">Testimonials</a>
-      <a href="#contact">Get in Touch</a>
+      <a href="#freeSampleSection">Free Sample</a>
+      <a href="#aboutSection">About</a>
+      <a href="#allFilms">Portfolio</a>
+      <a href="[BOOKING_URL]" target="_blank" rel="noopener noreferrer">Book Call</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </footer>
@@ -5074,7 +5350,7 @@ if (counterSec) counterObserver.observe(counterSec);
   });
 })();
 
-const PORTFOLIO_DATA = [{"file":"1003016778_1791789378443713.mp4","title":"Royal Heritage Bridal Lehenga & Emerald Choker","category":"fashion","industry":"Fashion & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Bridal","Couture","Jewellery","Heritage","Indian Wedding"],"desc":"Cinematic royal bridal campaign featuring handcrafted velvet embroidery, emerald jewellery, and palace ambiance.","thumb":"assets/portfolio/thumbs/1003016778_1791789378443713.jpg","src":"assets/portfolio/1003016778_1791789378443713.mp4"},{"file":"1005987106_1791789407532581.mp4","title":"Ivory Gold Couture & Maang Tikka Ritual","category":"fashion","industry":"Fashion & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Bridal","Ivory Couture","Gold Jewellery","Wedding Story"],"desc":"Intimate wedding preparation visual showing bridal jewellery placement in soft architectural morning light.","thumb":"assets/portfolio/thumbs/1005987106_1791789407532581.jpg","src":"assets/portfolio/1005987106_1791789407532581.mp4"},{"file":"1015025976_1791789375735186.mp4","title":"Aura Flow Activewear Movement","category":"fashion","industry":"Fitness & Apparel","format":"Product Film","aspect":"9:16","duration":"8s","tags":["Activewear","Athleisure","Fitness","Movement"],"desc":"Seamless studio athletic wear showcase emphasizing contour fit, breathability, and mindful posture.","thumb":"assets/portfolio/thumbs/1015025976_1791789375735186.jpg","src":"assets/portfolio/1015025976_1791789375735186.mp4"},{"file":"1025116091_1791789373210638.mp4","title":"Handcrafted Kundan Pearl Nath Close-Up","category":"jewellery","industry":"Jewellery & Luxury","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Nath","Pearl Jewellery","Macro Focus","Bridal Detail"],"desc":"High-definition macro detail of traditional bridal nose ring with pearls and ruby floral settings.","thumb":"assets/portfolio/thumbs/1025116091_1791789373210638.jpg","src":"assets/portfolio/1025116091_1791789373210638.mp4"},{"file":"1038197401_1791789431663923.mp4","title":"Morning Routine Dewy Serum Application","category":"beauty","industry":"Beauty & Skincare","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Skincare Routine","Serum Bottle","Bathrobe Aesthetic","D2C"],"desc":"Creator-led skincare morning regimen demo showcasing product texture, hydration barrier, and skin glow.","thumb":"assets/portfolio/thumbs/1038197401_1791789431663923.jpg","src":"assets/portfolio/1038197401_1791789431663923.mp4"},{"file":"1062639834_1791789379429436.mp4","title":"Effortless Linen Loungewear Everyday Look","category":"fashion","industry":"Fashion & Lifestyle","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Linen Wear","Lifestyle","Casual Chic","Summer Drop"],"desc":"Natural lifestyle creator showcasing relaxed linen coordinates in daylight modern apartment.","thumb":"assets/portfolio/thumbs/1062639834_1791789379429436.jpg","src":"assets/portfolio/1062639834_1791789379429436.mp4"},{"file":"128668584_1791789398079868.mp4","title":"Banarasi Royal Blue Silk Brocade Weave","category":"fashion","industry":"Textiles & Couture","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Silk Saree","Textile Macro","Zari Embroidery","Handloom"],"desc":"Slow-motion macro texture film of royal sapphire silk featuring intricate gold zari floral motifs.","thumb":"assets/portfolio/thumbs/128668584_1791789398079868.jpg","src":"assets/portfolio/128668584_1791789398079868.mp4"},{"file":"150052268_1791789406341517.mp4","title":"Minimalist Trenchcoat Architectural Runway","category":"fashion","industry":"High Fashion","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Outerwear","Trenchcoat","Architectural","Minimalist"],"desc":"Monochrome architectural editorial showing draped structured trenchcoat walking through glass modern spaces.","thumb":"assets/portfolio/thumbs/150052268_1791789406341517.jpg","src":"assets/portfolio/150052268_1791789406341517.mp4"},{"file":"18532995_1791789426382838.mp4","title":"Skyline Executive AI Presenter Pitch","category":"avatar","industry":"Corporate & Tech","format":"AI Avatar","aspect":"9:16","duration":"8s","tags":["AI Presenter","Corporate","Financial Tech","Spokesperson"],"desc":"Hyper-realistic executive spokesperson presenting enterprise solutions with downtown skyscraper view.","thumb":"assets/portfolio/thumbs/18532995_1791789426382838.jpg","src":"assets/portfolio/18532995_1791789426382838.mp4"},{"file":"189895571_1791789387284318.mp4","title":"Native Phone-Camera Selfie Review","category":"ugc","industry":"Consumer D2C","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Selfie Hook","TikTok Format","Native Feed","Authentic Review"],"desc":"Raw native UI phone-camera hook creating instant authenticity for high-converting social paid ads.","thumb":"assets/portfolio/thumbs/189895571_1791789387284318.jpg","src":"assets/portfolio/189895571_1791789387284318.mp4"},{"file":"192186587_1791789392692329.mp4","title":"Golden Hour Satin Evening Gowns Trio","category":"fashion","industry":"Evening Wear","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Evening Gowns","Satin","Golden Hour","Party Collection"],"desc":"Glamorous trio of emerald, champagne and black satin slips walking into sunset rooftop party.","thumb":"assets/portfolio/thumbs/192186587_1791789392692329.jpg","src":"assets/portfolio/192186587_1791789392692329.mp4"},{"file":"229779830_1791789415179319.mp4","title":"Executive AI Talent Modern Office Story","category":"avatar","industry":"Corporate & Tech","format":"AI Avatar","aspect":"9:16","duration":"8s","tags":["AI Presenter","Virtual Spokesperson","B2B SaaS","Corporate"],"desc":"Natural delivery female presenter in tailored suit delivering product introduction for B2B brands.","thumb":"assets/portfolio/thumbs/229779830_1791789415179319.jpg","src":"assets/portfolio/229779830_1791789415179319.mp4"},{"file":"233234970_1791789400399066.mp4","title":"Crimson Palace Arch Bridal Portrait","category":"fashion","industry":"Fashion & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Bridal","Heritage Arch","Red Lehenga","Luxury Couture"],"desc":"Framed architectural composition of bride in crimson bridal wear standing under carved sandstone archways.","thumb":"assets/portfolio/thumbs/233234970_1791789400399066.jpg","src":"assets/portfolio/233234970_1791789400399066.mp4"},{"file":"338689278_1791789370672910.mp4","title":"Mirrored Reflection Bridal Gold Reveal","category":"jewellery","industry":"Jewellery & Luxury","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Gold Jewellery","Mirror Shot","Traditional Bride","Heritage"],"desc":"Artistic double-mirror reflection focusing on ornate gold temple jewellery layers and red Banarasi drape.","thumb":"assets/portfolio/thumbs/338689278_1791789370672910.jpg","src":"assets/portfolio/338689278_1791789370672910.mp4"},{"file":"356774144_1791789421910696.mp4","title":"Polki Kundan Gold Kada Bangle Fitting","category":"jewellery","industry":"Jewellery & Luxury","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Kada Bangle","Kundan Jewellery","Macro Detail","Handmade"],"desc":"Tender close-up of ceremonial gold bangle fitting illuminated by soft candlelight.","thumb":"assets/portfolio/thumbs/356774144_1791789421910696.jpg","src":"assets/portfolio/356774144_1791789421910696.mp4"},{"file":"392036597_1791782731131649.mp4","title":"Studio Skincare Presenter Mastercut","category":"brand","industry":"Beauty & Skincare","format":"Product Commercial","aspect":"16:9","duration":"4s","tags":["Commercial","Serum","Studio Lighting","Presenter"],"desc":"Clean wide commercial master shot of presenter holding skincare product with soft studio interior.","thumb":"assets/portfolio/thumbs/392036597_1791782731131649.jpg","src":"assets/portfolio/392036597_1791782731131649.mp4"},{"file":"398255620_1791789390811645.mp4","title":"Full-Length Mirror Outfit Of The Day Check","category":"ugc","industry":"Fashion & Lifestyle","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["OOTD","Mirror Selfie","Summer Fit","Casual Wear"],"desc":"Viral TikTok style mirror outfit check displaying styling versatility of minimalist wardrobe essentials.","thumb":"assets/portfolio/thumbs/398255620_1791789390811645.jpg","src":"assets/portfolio/398255620_1791789390811645.mp4"},{"file":"448484360_1791789430789662.mp4","title":"Hydra-Dew Glass Skin Dropper Application","category":"beauty","industry":"Beauty & Skincare","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Glass Skin","Serum Dropper","Hydration","Beauty Close-Up"],"desc":"Ultra-macro beauty shot demonstrating glass skin radiance and viscous serum glide across the cheek.","thumb":"assets/portfolio/thumbs/448484360_1791789430789662.jpg","src":"assets/portfolio/448484360_1791789430789662.mp4"},{"file":"465091365_1791789389101710.mp4","title":"Knit Cardigan Daily Dressing Morning Ritual","category":"ugc","industry":"Apparel & Lifestyle","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Knitwear","Earring Hook","Cosy Aesthetic","Lifestyle D2C"],"desc":"Warm relatable creator getting ready at mirror putting on delicate gold earrings in cream knit cardigan.","thumb":"assets/portfolio/thumbs/465091365_1791789389101710.jpg","src":"assets/portfolio/465091365_1791789389101710.mp4"},{"file":"486994959_1791789383239799.mp4","title":"Luxury Perfume Mist Floral Fragrance Hook","category":"beauty","industry":"Fragrance & Beauty","format":"Product Film","aspect":"9:16","duration":"8s","tags":["Perfume","Fragrance Mist","Sensory Visual","D2C Luxury"],"desc":"Sensory visual capturing fine atomized perfume mist sprayed in slow motion with warm room lighting.","thumb":"assets/portfolio/thumbs/486994959_1791789383239799.jpg","src":"assets/portfolio/486994959_1791789383239799.mp4"},{"file":"522375655_1791789394439578.mp4","title":"Handcrafted Silk Kurta Groom Elegance","category":"fashion","industry":"Menswear & Wedding","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Menswear","Sherwani","Groom Wear","Heritage Palace"],"desc":"Refined royal groom portrait in ivory silk kurta with delicate tone-on-tone thread embroidery.","thumb":"assets/portfolio/thumbs/522375655_1791789394439578.jpg","src":"assets/portfolio/522375655_1791789394439578.mp4"},{"file":"529060394_1791780680947632.mp4","title":"Modern Living Room Creator Video Ad","category":"ugc","industry":"Home & Lifestyle","format":"UGC Ad","aspect":"16:9","duration":"4s","tags":["Living Room","Lifestyle Creator","UGC Video","Storytelling"],"desc":"Conversational wide creator ad setup with warm interior shelving and organic houseplants.","thumb":"assets/portfolio/thumbs/529060394_1791780680947632.jpg","src":"assets/portfolio/529060394_1791780680947632.mp4"},{"file":"536621126_1791789409361664.mp4","title":"Charcoal Power Suit Confident Runway Walk","category":"fashion","industry":"Women's Workwear","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Power Suit","Tailoring","Workwear","Street Runway"],"desc":"Dynamic low-angle runway strut of tailored charcoal two-piece pant suit outside corporate glass headquarters.","thumb":"assets/portfolio/thumbs/536621126_1791789409361664.jpg","src":"assets/portfolio/536621126_1791789409361664.mp4"},{"file":"538006068_1791789428405320.mp4","title":"Avant-Garde Cyber Couture Runway Showcase","category":"fashion","industry":"High Fashion","format":"Runway Film","aspect":"9:16","duration":"8s","tags":["Runway","Avant-Garde","Futuristic","High Fashion"],"desc":"Futuristic iridescent runway presentation exploring geometric silhouettes and ambient lavender runway lights.","thumb":"assets/portfolio/thumbs/538006068_1791789428405320.jpg","src":"assets/portfolio/538006068_1791789428405320.mp4"},{"file":"609586045_1791789416239583.mp4","title":"Bespoke Corporate AI Spokesperson","category":"avatar","industry":"Corporate & Tech","format":"AI Avatar","aspect":"9:16","duration":"8s","tags":["AI Spokesperson","Corporate","Finance","Leadership"],"desc":"Professional executive in bespoke dark navy suit communicating brand trust and financial stability.","thumb":"assets/portfolio/thumbs/609586045_1791789416239583.jpg","src":"assets/portfolio/609586045_1791789416239583.mp4"},{"file":"6140405_1791789385631044.mp4","title":"Berry Lip Souffle Vanity Swatch Demo","category":"beauty","industry":"Cosmetics & Makeup","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Lip Tint","Makeup Vanity","Product Swatch","D2C Cosmetics"],"desc":"Backstage vanity mirror product demonstration applying velvet berry lip balm directly to camera.","thumb":"assets/portfolio/thumbs/6140405_1791789385631044.jpg","src":"assets/portfolio/6140405_1791789385631044.mp4"},{"file":"630911033_1791789369902570.mp4","title":"Pearl Choker Layering & Chikankari Kurta","category":"fashion","industry":"Fashion & Jewellery","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Pearl Haar","Chikankari","Ivory Kurta","Luxury Festive"],"desc":"Multi-strand freshwater pearl necklace showcased against delicate ivory Chikankari embroidered festive kurta.","thumb":"assets/portfolio/thumbs/630911033_1791789369902570.jpg","src":"assets/portfolio/630911033_1791789369902570.mp4"},{"file":"648304148_1791789423902849.mp4","title":"Solitaire Diamond Engagement Ring Macro","category":"jewellery","industry":"Fine Jewellery","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Diamond Ring","Macro Refraction","Fine Jewellery","Bridal"],"desc":"360-degree rotation of brilliant-cut solitaire diamond ring revealing fire, symmetry, and platinum prong detail.","thumb":"assets/portfolio/thumbs/648304148_1791789423902849.jpg","src":"assets/portfolio/648304148_1791789423902849.mp4"},{"file":"690444140_1791789380325076.mp4","title":"Mindful Morning Awakening & Soft Loungewear","category":"ugc","industry":"Wellness & Loungewear","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Morning Routine","Wellness","Loungewear","Self Care"],"desc":"Calm bedroom morning awakening sequence featuring breathable organic cotton co-ords in natural daylight.","thumb":"assets/portfolio/thumbs/690444140_1791789380325076.jpg","src":"assets/portfolio/690444140_1791789380325076.mp4"},{"file":"711838982_1791789367204598.mp4","title":"Traditional South Indian Kasavu Gold Temple Mala","category":"jewellery","industry":"Jewellery & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Temple Jewellery","Kasavu Saree","Gold Mala","South Indian"],"desc":"Intricate Lakshmi coin necklace and antique temple gold mala worn on classic crimson Kanjivaram silk saree.","thumb":"assets/portfolio/thumbs/711838982_1791789367204598.jpg","src":"assets/portfolio/711838982_1791789367204598.mp4"},{"file":"714108181_1791780684906371.mp4","title":"Brand Spokesperson Product Explainer Master","category":"avatar","industry":"Consumer Health","format":"Product Commercial","aspect":"16:9","duration":"6s","tags":["Commercial","Healthcare","Explainer","Studio"],"desc":"Wide commercial shot of trusted spokesperson communicating key product differentiation in home setting.","thumb":"assets/portfolio/thumbs/714108181_1791780684906371.jpg","src":"assets/portfolio/714108181_1791780684906371.mp4"},{"file":"738473110_1791789404622041.mp4","title":"Antique Gold Goddess Choker & Ruby Pearls","category":"jewellery","industry":"Fine Jewellery","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Temple Jewellery","Antique Gold","Ruby Pearl","Macro Focus"],"desc":"Museum-grade close-up of antique gold choker featuring sculptured deity figures and suspended natural pearls.","thumb":"assets/portfolio/thumbs/738473110_1791789404622041.jpg","src":"assets/portfolio/738473110_1791789404622041.mp4"},{"file":"765383045_1791789402513133.mp4","title":"Crimson Kanjivaram Saree Temple Corridor Walk","category":"fashion","industry":"Textiles & Luxury","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Kanjivaram Silk","Temple Corridor","Royal Saree","Traditional"],"desc":"Majestic full-length slow walk down stone temple pillars showcasing rich gold pallu and flowing crimson silk.","thumb":"assets/portfolio/thumbs/765383045_1791789402513133.jpg","src":"assets/portfolio/765383045_1791789402513133.mp4"},{"file":"786722950_1791789434018747.mp4","title":"Wool Overcoat Back Silhouette & Movement","category":"fashion","industry":"High Fashion","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Overcoat","Tailoring","Architectural","Brutalist"],"desc":"Sleek back silhouette and walking movement of tailored charcoal wool coat set against minimalist concrete.","thumb":"assets/portfolio/thumbs/786722950_1791789434018747.jpg","src":"assets/portfolio/786722950_1791789434018747.mp4"},{"file":"792453715_1791782728364995.mp4","title":"Split-Screen Skincare Creator & Dropper Hook","category":"beauty","industry":"Beauty & Skincare","format":"UGC Ad","aspect":"16:9","duration":"4s","tags":["Split Screen","Serum Dropper","UGC Hook","Performance Ad"],"desc":"High-converting split-screen layout pairing creator reaction with macro golden serum dropper on bare skin.","thumb":"assets/portfolio/thumbs/792453715_1791782728364995.jpg","src":"assets/portfolio/792453715_1791782728364995.mp4"},{"file":"796929918_1791789420206695.mp4","title":"FLIX LABS 3D Holographic Agency Showreel","category":"brand","industry":"Creative Studio","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Showreel","3D Motion","Holographic","Agency Branding"],"desc":"Metallic bronze 3D Flix Labs emblem surrounded by glowing performance data, ticker charts and particles.","thumb":"assets/portfolio/thumbs/796929918_1791789420206695.jpg","src":"assets/portfolio/796929918_1791789420206695.mp4"},{"file":"827158599_1791789413672069.mp4","title":"Cinema Camera Robotic Rig Behind-The-Scenes","category":"brand","industry":"Production Studio","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["BTS","Camera Rig","Studio Tech","Cinematic Setup"],"desc":"Behind-the-scenes look at high-precision cinema camera rig and professional studio lighting in motion.","thumb":"assets/portfolio/thumbs/827158599_1791789413672069.jpg","src":"assets/portfolio/827158599_1791789413672069.mp4"},{"file":"834108934_1791789417473357.mp4","title":"Glass Bottle Peptide Serum Radiant Glow","category":"beauty","industry":"Beauty & Skincare","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Glass Skin","Serum Bottle","Radiance","Skincare Demo"],"desc":"Beaming natural skincare model presenting frosted glass peptide serum bottle with dewy skin finish.","thumb":"assets/portfolio/thumbs/834108934_1791789417473357.jpg","src":"assets/portfolio/834108934_1791789417473357.mp4"},{"file":"914785054_1791789438141531.mp4","title":"Pear-Cut Diamond Tennis Bracelet Macro Sparkle","category":"jewellery","industry":"Fine Jewellery","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Tennis Bracelet","Pear Diamond","Macro Sparkle","Fine Jewellery"],"desc":"Macro lighting sweep across pear-shaped bezel-set diamond bracelet showing optical brilliance and fire.","thumb":"assets/portfolio/thumbs/914785054_1791789438141531.jpg","src":"assets/portfolio/914785054_1791789438141531.mp4"},{"file":"934423229_1791789434994533.mp4","title":"Architectural Concrete Trenchcoat Model Walk","category":"fashion","industry":"High Fashion","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Trenchcoat","Architectural","Editorial","Modernism"],"desc":"Full-figure editorial model walk in stone trenchcoat through brutalist concrete geometry.","thumb":"assets/portfolio/thumbs/934423229_1791789434994533.jpg","src":"assets/portfolio/934423229_1791789434994533.mp4"},{"file":"955111829_1791789410733995.mp4","title":"Botanical Wellness Unboxing & Creator Hook","category":"ugc","industry":"Organic & Wellness","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Unboxing","Organic Botanical","Creator Hook","D2C Packaging"],"desc":"Warm smiling creator in organic linen dress presenting botanical herbal packaging directly to customer.","thumb":"assets/portfolio/thumbs/955111829_1791789410733995.jpg","src":"assets/portfolio/955111829_1791789410733995.mp4"},{"file":"988024536_1791789436841629.mp4","title":"Emerald Green Festive Silk Saree & Jhumkas","category":"fashion","industry":"Festive Couture","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Silk Saree","Emerald Green","Jhumkas","Festive Campaign"],"desc":"Palace courtyard portrait of model in emerald green handwoven silk saree with traditional jhumka earrings.","thumb":"assets/portfolio/thumbs/988024536_1791789436841629.jpg","src":"assets/portfolio/988024536_1791789436841629.mp4"},{"file":"998761038_1791789395783025.mp4","title":"Oversized Boyfriend Blazer Contemporary Walk","category":"fashion","industry":"Contemporary Apparel","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Oversized Blazer","Street Style","Contemporary","Loft Studio"],"desc":"City loft studio shoot of model in relaxed oversized black blazer paired with tailored shorts.","thumb":"assets/portfolio/thumbs/998761038_1791789395783025.jpg","src":"assets/portfolio/998761038_1791789395783025.mp4"},{"file":"VN20261012_111529.mp4","title":"Flix Labs Hero Commercial: The Serum Story","category":"brand","industry":"Beauty Commercial","format":"Hero Showreel","aspect":"16:9","duration":"34s","tags":["Hero Commercial","Presenter-led","Macro Dropper","Flix Showreel"],"desc":"Flagship 34-second studio commercial combining presenter storytelling with macro product cinematography.","thumb":"assets/portfolio/thumbs/VN20261012_111529.jpg","src":"assets/portfolio/VN20261012_111529.mp4"},{"file":"fashion_apparel_16_9.mp4","title":"Fashion & Apparel Commercial Widescreen","category":"fashion","industry":"Fashion & Luxury","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Modern Saree","Indo-Western","Contemporary","16:9"],"desc":"Mix of modern saree drapes, Indo-western, and contemporary western wear.","thumb":"assets/covers/fashion_apparel_16_9.jpg","src":"assets/covers/fashion_apparel_16_9.mp4"},{"file":"jewellery_luxury_16_9.mp4","title":"Jewellery & Luxury Heritage Commercial","category":"jewellery","industry":"Jewellery & Luxury","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Gold Necklace","Traditional","Contemporary Jewellery","16:9"],"desc":"Elegant Indian models highlighting traditional and contemporary jewellery.","thumb":"assets/covers/jewellery_luxury_16_9.jpg","src":"assets/covers/jewellery_luxury_16_9.mp4"},{"file":"cosmetics_makeup_16_9.mp4","title":"Cosmetics & Festive Makeup Commercial","category":"beauty","industry":"Cosmetics & Makeup","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Indian Skin Tones","Beauty Aesthetic","Festive Makeup","16:9"],"desc":"Indian skin tones with local beauty aesthetic and rich festive pigments.","thumb":"assets/covers/cosmetics_makeup_16_9.jpg","src":"assets/covers/cosmetics_makeup_16_9.mp4"},{"file":"skincare_wellness_16_9.mp4","title":"Skincare & Sunscreen Routine Showcase","category":"beauty","industry":"Beauty & Skincare","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Sunscreen","Glowing Skin","Modern Wellness","16:9"],"desc":"Sunscreen application, glowing skin texture, and modern wellness aesthetic.","thumb":"assets/covers/skincare_wellness_16_9.jpg","src":"assets/covers/skincare_wellness_16_9.mp4"},{"file":"food_beverage_16_9.mp4","title":"Food & Beverage Refreshing Commercial","category":"brand","industry":"Food & Beverage","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Beverage","Refreshing Splash","Thums Up Vibes","16:9"],"desc":"Refreshing, high-energy visuals featuring classic Indian staples like Thums Up and Frooti vibes.","thumb":"assets/covers/food_beverage_16_9.jpg","src":"assets/covers/food_beverage_16_9.mp4"},{"file":"consumer_tech_home_16_9.mp4","title":"Consumer Tech & Smart Home Devices","category":"brand","industry":"Consumer Electronics","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Smart Home","Smartphones","Modern Electronics","16:9"],"desc":"High-demand modern consumer electronics (smartphones, sleek ceiling fans, smart home devices).","thumb":"assets/covers/consumer_tech_home_16_9.jpg","src":"assets/covers/consumer_tech_home_16_9.mp4"},{"file":"ecommerce_d2c_16_9.mp4","title":"New-Age E-Commerce Unboxing Commercial","category":"ugc","industry":"D2C & E-Commerce","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Unboxing","Fast-Moving Trends","D2C Lighting","16:9"],"desc":"Fast-moving consumer trends with vibrant commercial lighting.","thumb":"assets/covers/ecommerce_d2c_16_9.jpg","src":"assets/covers/ecommerce_d2c_16_9.mp4"}];
+const PORTFOLIO_DATA = [{"file":"1003016778_1791789378443713.mp4","title":"Royal Heritage Bridal Lehenga & Emerald Choker","category":"fashion","industry":"Fashion & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Bridal","Couture","Jewellery","Heritage","Indian Wedding"],"desc":"Cinematic royal bridal campaign featuring handcrafted velvet embroidery, emerald jewellery, and palace ambiance.","thumb":"assets/portfolio/thumbs/1003016778_1791789378443713.jpg","src":"assets/portfolio/1003016778_1791789378443713.mp4"},{"file":"1025116091_1791789373210638.mp4","title":"Handcrafted Kundan Pearl Nath Close-Up","category":"jewellery","industry":"Jewellery & Luxury","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Nath","Pearl Jewellery","Macro Focus","Bridal Detail"],"desc":"High-definition macro detail of traditional bridal nose ring with pearls and ruby floral settings.","thumb":"assets/portfolio/thumbs/1025116091_1791789373210638.jpg","src":"assets/portfolio/1025116091_1791789373210638.mp4"},{"file":"648304148_1791789423902849.mp4","title":"Solitaire Diamond Engagement Ring Macro","category":"jewellery","industry":"Fine Jewellery","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Diamond Ring","Macro Refraction","Fine Jewellery","Bridal"],"desc":"360-degree rotation of brilliant-cut solitaire diamond ring revealing fire, symmetry, and platinum prong detail.","thumb":"assets/portfolio/thumbs/648304148_1791789423902849.jpg","src":"assets/portfolio/648304148_1791789423902849.mp4"},{"file":"1005987106_1791789407532581.mp4","title":"Ivory Gold Couture & Maang Tikka Ritual","category":"fashion","industry":"Fashion & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Bridal","Ivory Couture","Gold Jewellery","Wedding Story"],"desc":"Intimate wedding preparation visual showing bridal jewellery placement in soft architectural morning light.","thumb":"assets/portfolio/thumbs/1005987106_1791789407532581.jpg","src":"assets/portfolio/1005987106_1791789407532581.mp4"},{"file":"1015025976_1791789375735186.mp4","title":"Aura Flow Activewear Movement","category":"fashion","industry":"Fitness & Apparel","format":"Product Film","aspect":"9:16","duration":"8s","tags":["Activewear","Athleisure","Fitness","Movement"],"desc":"Seamless studio athletic wear showcase emphasizing contour fit, breathability, and mindful posture.","thumb":"assets/portfolio/thumbs/1015025976_1791789375735186.jpg","src":"assets/portfolio/1015025976_1791789375735186.mp4"},{"file":"1038197401_1791789431663923.mp4","title":"Morning Routine Dewy Serum Application","category":"beauty","industry":"Beauty & Skincare","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Skincare Routine","Serum Bottle","Bathrobe Aesthetic","D2C"],"desc":"Creator-led skincare morning regimen demo showcasing product texture, hydration barrier, and skin glow.","thumb":"assets/portfolio/thumbs/1038197401_1791789431663923.jpg","src":"assets/portfolio/1038197401_1791789431663923.mp4"},{"file":"1062639834_1791789379429436.mp4","title":"Effortless Linen Loungewear Everyday Look","category":"fashion","industry":"Fashion & Lifestyle","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Linen Wear","Lifestyle","Casual Chic","Summer Drop"],"desc":"Natural lifestyle creator showcasing relaxed linen coordinates in daylight modern apartment.","thumb":"assets/portfolio/thumbs/1062639834_1791789379429436.jpg","src":"assets/portfolio/1062639834_1791789379429436.mp4"},{"file":"128668584_1791789398079868.mp4","title":"Banarasi Royal Blue Silk Brocade Weave","category":"fashion","industry":"Textiles & Couture","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Silk Saree","Textile Macro","Zari Embroidery","Handloom"],"desc":"Slow-motion macro texture film of royal sapphire silk featuring intricate gold zari floral motifs.","thumb":"assets/portfolio/thumbs/128668584_1791789398079868.jpg","src":"assets/portfolio/128668584_1791789398079868.mp4"},{"file":"150052268_1791789406341517.mp4","title":"Minimalist Trenchcoat Architectural Runway","category":"fashion","industry":"High Fashion","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Outerwear","Trenchcoat","Architectural","Minimalist"],"desc":"Monochrome architectural editorial showing draped structured trenchcoat walking through glass modern spaces.","thumb":"assets/portfolio/thumbs/150052268_1791789406341517.jpg","src":"assets/portfolio/150052268_1791789406341517.mp4"},{"file":"18532995_1791789426382838.mp4","title":"Skyline Executive AI Presenter Pitch","category":"avatar","industry":"Corporate & Tech","format":"AI Avatar","aspect":"9:16","duration":"8s","tags":["AI Presenter","Corporate","Financial Tech","Spokesperson"],"desc":"Hyper-realistic executive spokesperson presenting enterprise solutions with downtown skyscraper view.","thumb":"assets/portfolio/thumbs/18532995_1791789426382838.jpg","src":"assets/portfolio/18532995_1791789426382838.mp4"},{"file":"189895571_1791789387284318.mp4","title":"Native Phone-Camera Selfie Review","category":"ugc","industry":"Consumer D2C","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Selfie Hook","TikTok Format","Native Feed","Authentic Review"],"desc":"Raw native UI phone-camera hook creating instant authenticity for platform-native social paid ads.","thumb":"assets/portfolio/thumbs/189895571_1791789387284318.jpg","src":"assets/portfolio/189895571_1791789387284318.mp4"},{"file":"192186587_1791789392692329.mp4","title":"Golden Hour Satin Evening Gowns Trio","category":"fashion","industry":"Evening Wear","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Evening Gowns","Satin","Golden Hour","Party Collection"],"desc":"Glamorous trio of emerald, champagne and black satin slips walking into sunset rooftop party.","thumb":"assets/portfolio/thumbs/192186587_1791789392692329.jpg","src":"assets/portfolio/192186587_1791789392692329.mp4"},{"file":"229779830_1791789415179319.mp4","title":"Executive AI Talent Modern Office Story","category":"avatar","industry":"Corporate & Tech","format":"AI Avatar","aspect":"9:16","duration":"8s","tags":["AI Presenter","Virtual Spokesperson","B2B SaaS","Corporate"],"desc":"Natural delivery female presenter in tailored suit delivering product introduction for B2B brands.","thumb":"assets/portfolio/thumbs/229779830_1791789415179319.jpg","src":"assets/portfolio/229779830_1791789415179319.mp4"},{"file":"233234970_1791789400399066.mp4","title":"Crimson Palace Arch Bridal Portrait","category":"fashion","industry":"Fashion & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Bridal","Heritage Arch","Red Lehenga","Luxury Couture"],"desc":"Framed architectural composition of bride in crimson bridal wear standing under carved sandstone archways.","thumb":"assets/portfolio/thumbs/233234970_1791789400399066.jpg","src":"assets/portfolio/233234970_1791789400399066.mp4"},{"file":"338689278_1791789370672910.mp4","title":"Mirrored Reflection Bridal Gold Reveal","category":"jewellery","industry":"Jewellery & Luxury","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Gold Jewellery","Mirror Shot","Traditional Bride","Heritage"],"desc":"Artistic double-mirror reflection focusing on ornate gold temple jewellery layers and red Banarasi drape.","thumb":"assets/portfolio/thumbs/338689278_1791789370672910.jpg","src":"assets/portfolio/338689278_1791789370672910.mp4"},{"file":"356774144_1791789421910696.mp4","title":"Polki Kundan Gold Kada Bangle Fitting","category":"jewellery","industry":"Jewellery & Luxury","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Kada Bangle","Kundan Jewellery","Macro Detail","Handmade"],"desc":"Tender close-up of ceremonial gold bangle fitting illuminated by soft candlelight.","thumb":"assets/portfolio/thumbs/356774144_1791789421910696.jpg","src":"assets/portfolio/356774144_1791789421910696.mp4"},{"file":"392036597_1791782731131649.mp4","title":"Studio Skincare Presenter Mastercut","category":"brand","industry":"Beauty & Skincare","format":"Product Commercial","aspect":"16:9","duration":"4s","tags":["Commercial","Serum","Studio Lighting","Presenter"],"desc":"Clean wide commercial master shot of presenter holding skincare product with soft studio interior.","thumb":"assets/portfolio/thumbs/392036597_1791782731131649.jpg","src":"assets/portfolio/392036597_1791782731131649.mp4"},{"file":"398255620_1791789390811645.mp4","title":"Full-Length Mirror Outfit Of The Day Check","category":"ugc","industry":"Fashion & Lifestyle","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["OOTD","Mirror Selfie","Summer Fit","Casual Wear"],"desc":"Viral TikTok style mirror outfit check displaying styling versatility of minimalist wardrobe essentials.","thumb":"assets/portfolio/thumbs/398255620_1791789390811645.jpg","src":"assets/portfolio/398255620_1791789390811645.mp4"},{"file":"448484360_1791789430789662.mp4","title":"Hydra-Dew Glass Skin Dropper Application","category":"beauty","industry":"Beauty & Skincare","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Glass Skin","Serum Dropper","Hydration","Beauty Close-Up"],"desc":"Ultra-macro beauty shot demonstrating glass skin radiance and viscous serum glide across the cheek.","thumb":"assets/portfolio/thumbs/448484360_1791789430789662.jpg","src":"assets/portfolio/448484360_1791789430789662.mp4"},{"file":"465091365_1791789389101710.mp4","title":"Knit Cardigan Daily Dressing Morning Ritual","category":"ugc","industry":"Apparel & Lifestyle","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Knitwear","Earring Hook","Cosy Aesthetic","Lifestyle D2C"],"desc":"Warm relatable creator getting ready at mirror putting on delicate gold earrings in cream knit cardigan.","thumb":"assets/portfolio/thumbs/465091365_1791789389101710.jpg","src":"assets/portfolio/465091365_1791789389101710.mp4"},{"file":"486994959_1791789383239799.mp4","title":"Luxury Perfume Mist Floral Fragrance Hook","category":"beauty","industry":"Fragrance & Beauty","format":"Product Film","aspect":"9:16","duration":"8s","tags":["Perfume","Fragrance Mist","Sensory Visual","D2C Luxury"],"desc":"Sensory visual capturing fine atomized perfume mist sprayed in slow motion with warm room lighting.","thumb":"assets/portfolio/thumbs/486994959_1791789383239799.jpg","src":"assets/portfolio/486994959_1791789383239799.mp4"},{"file":"522375655_1791789394439578.mp4","title":"Handcrafted Silk Kurta Groom Elegance","category":"fashion","industry":"Menswear & Wedding","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Menswear","Sherwani","Groom Wear","Heritage Palace"],"desc":"Refined royal groom portrait in ivory silk kurta with delicate tone-on-tone thread embroidery.","thumb":"assets/portfolio/thumbs/522375655_1791789394439578.jpg","src":"assets/portfolio/522375655_1791789394439578.mp4"},{"file":"529060394_1791780680947632.mp4","title":"Modern Living Room Creator Video Ad","category":"ugc","industry":"Home & Lifestyle","format":"UGC Ad","aspect":"16:9","duration":"4s","tags":["Living Room","Lifestyle Creator","UGC Video","Storytelling"],"desc":"Conversational wide creator ad setup with warm interior shelving and organic houseplants.","thumb":"assets/portfolio/thumbs/529060394_1791780680947632.jpg","src":"assets/portfolio/529060394_1791780680947632.mp4"},{"file":"536621126_1791789409361664.mp4","title":"Charcoal Power Suit Confident Runway Walk","category":"fashion","industry":"Women's Workwear","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Power Suit","Tailoring","Workwear","Street Runway"],"desc":"Dynamic low-angle runway strut of tailored charcoal two-piece pant suit outside corporate glass headquarters.","thumb":"assets/portfolio/thumbs/536621126_1791789409361664.jpg","src":"assets/portfolio/536621126_1791789409361664.mp4"},{"file":"538006068_1791789428405320.mp4","title":"Avant-Garde Cyber Couture Runway Showcase","category":"fashion","industry":"High Fashion","format":"Runway Film","aspect":"9:16","duration":"8s","tags":["Runway","Avant-Garde","Futuristic","High Fashion"],"desc":"Futuristic iridescent runway presentation exploring geometric silhouettes and ambient lavender runway lights.","thumb":"assets/portfolio/thumbs/538006068_1791789428405320.jpg","src":"assets/portfolio/538006068_1791789428405320.mp4"},{"file":"609586045_1791789416239583.mp4","title":"Bespoke Corporate AI Spokesperson","category":"avatar","industry":"Corporate & Tech","format":"AI Avatar","aspect":"9:16","duration":"8s","tags":["AI Spokesperson","Corporate","Finance","Leadership"],"desc":"Professional executive in bespoke dark navy suit communicating brand trust and financial stability.","thumb":"assets/portfolio/thumbs/609586045_1791789416239583.jpg","src":"assets/portfolio/609586045_1791789416239583.mp4"},{"file":"6140405_1791789385631044.mp4","title":"Berry Lip Souffle Vanity Swatch Demo","category":"beauty","industry":"Cosmetics & Makeup","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Lip Tint","Makeup Vanity","Product Swatch","D2C Cosmetics"],"desc":"Backstage vanity mirror product demonstration applying velvet berry lip balm directly to camera.","thumb":"assets/portfolio/thumbs/6140405_1791789385631044.jpg","src":"assets/portfolio/6140405_1791789385631044.mp4"},{"file":"630911033_1791789369902570.mp4","title":"Pearl Choker Layering & Chikankari Kurta","category":"fashion","industry":"Fashion & Jewellery","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Pearl Haar","Chikankari","Ivory Kurta","Luxury Festive"],"desc":"Multi-strand freshwater pearl necklace showcased against delicate ivory Chikankari embroidered festive kurta.","thumb":"assets/portfolio/thumbs/630911033_1791789369902570.jpg","src":"assets/portfolio/630911033_1791789369902570.mp4"},{"file":"690444140_1791789380325076.mp4","title":"Mindful Morning Awakening & Soft Loungewear","category":"ugc","industry":"Wellness & Loungewear","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Morning Routine","Wellness","Loungewear","Self Care"],"desc":"Calm bedroom morning awakening sequence featuring breathable organic cotton co-ords in natural daylight.","thumb":"assets/portfolio/thumbs/690444140_1791789380325076.jpg","src":"assets/portfolio/690444140_1791789380325076.mp4"},{"file":"711838982_1791789367204598.mp4","title":"Traditional South Indian Kasavu Gold Temple Mala","category":"jewellery","industry":"Jewellery & Luxury","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Temple Jewellery","Kasavu Saree","Gold Mala","South Indian"],"desc":"Intricate Lakshmi coin necklace and antique temple gold mala worn on classic crimson Kanjivaram silk saree.","thumb":"assets/portfolio/thumbs/711838982_1791789367204598.jpg","src":"assets/portfolio/711838982_1791789367204598.mp4"},{"file":"714108181_1791780684906371.mp4","title":"Brand Spokesperson Product Explainer Master","category":"avatar","industry":"Consumer Health","format":"Product Commercial","aspect":"16:9","duration":"6s","tags":["Commercial","Healthcare","Explainer","Studio"],"desc":"Wide commercial shot of trusted spokesperson communicating key product differentiation in home setting.","thumb":"assets/portfolio/thumbs/714108181_1791780684906371.jpg","src":"assets/portfolio/714108181_1791780684906371.mp4"},{"file":"738473110_1791789404622041.mp4","title":"Antique Gold Goddess Choker & Ruby Pearls","category":"jewellery","industry":"Fine Jewellery","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Temple Jewellery","Antique Gold","Ruby Pearl","Macro Focus"],"desc":"Museum-grade close-up of antique gold choker featuring sculptured deity figures and suspended natural pearls.","thumb":"assets/portfolio/thumbs/738473110_1791789404622041.jpg","src":"assets/portfolio/738473110_1791789404622041.mp4"},{"file":"765383045_1791789402513133.mp4","title":"Crimson Kanjivaram Saree Temple Corridor Walk","category":"fashion","industry":"Textiles & Luxury","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Kanjivaram Silk","Temple Corridor","Royal Saree","Traditional"],"desc":"Majestic full-length slow walk down stone temple pillars showcasing rich gold pallu and flowing crimson silk.","thumb":"assets/portfolio/thumbs/765383045_1791789402513133.jpg","src":"assets/portfolio/765383045_1791789402513133.mp4"},{"file":"786722950_1791789434018747.mp4","title":"Wool Overcoat Back Silhouette & Movement","category":"fashion","industry":"High Fashion","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Overcoat","Tailoring","Architectural","Brutalist"],"desc":"Sleek back silhouette and walking movement of tailored charcoal wool coat set against minimalist concrete.","thumb":"assets/portfolio/thumbs/786722950_1791789434018747.jpg","src":"assets/portfolio/786722950_1791789434018747.mp4"},{"file":"792453715_1791782728364995.mp4","title":"Split-Screen Skincare Creator & Dropper Hook","category":"beauty","industry":"Beauty & Skincare","format":"UGC Ad","aspect":"16:9","duration":"4s","tags":["Split Screen","Serum Dropper","UGC Hook","Performance Ad"],"desc":"platform-native split-screen layout pairing creator reaction with macro golden serum dropper on bare skin.","thumb":"assets/portfolio/thumbs/792453715_1791782728364995.jpg","src":"assets/portfolio/792453715_1791782728364995.mp4"},{"file":"796929918_1791789420206695.mp4","title":"FLIX LABS 3D Holographic Agency Showreel","category":"brand","industry":"Creative Studio","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Showreel","3D Motion","Holographic","Agency Branding"],"desc":"Metallic bronze 3D Flix Labs emblem surrounded by glowing performance data, ticker charts and particles.","thumb":"assets/portfolio/thumbs/796929918_1791789420206695.jpg","src":"assets/portfolio/796929918_1791789420206695.mp4"},{"file":"827158599_1791789413672069.mp4","title":"Cinema Camera Robotic Rig Behind-The-Scenes","category":"brand","industry":"Production Studio","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["BTS","Camera Rig","Studio Tech","Cinematic Setup"],"desc":"Behind-the-scenes look at high-precision cinema camera rig and professional studio lighting in motion.","thumb":"assets/portfolio/thumbs/827158599_1791789413672069.jpg","src":"assets/portfolio/827158599_1791789413672069.mp4"},{"file":"834108934_1791789417473357.mp4","title":"Glass Bottle Peptide Serum Radiant Glow","category":"beauty","industry":"Beauty & Skincare","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Glass Skin","Serum Bottle","Radiance","Skincare Demo"],"desc":"Beaming natural skincare model presenting frosted glass peptide serum bottle with dewy skin finish.","thumb":"assets/portfolio/thumbs/834108934_1791789417473357.jpg","src":"assets/portfolio/834108934_1791789417473357.mp4"},{"file":"914785054_1791789438141531.mp4","title":"Pear-Cut Diamond Tennis Bracelet Macro Sparkle","category":"jewellery","industry":"Fine Jewellery","format":"Macro Product Film","aspect":"9:16","duration":"8s","tags":["Tennis Bracelet","Pear Diamond","Macro Sparkle","Fine Jewellery"],"desc":"Macro lighting sweep across pear-shaped bezel-set diamond bracelet showing optical brilliance and fire.","thumb":"assets/portfolio/thumbs/914785054_1791789438141531.jpg","src":"assets/portfolio/914785054_1791789438141531.mp4"},{"file":"934423229_1791789434994533.mp4","title":"Architectural Concrete Trenchcoat Model Walk","category":"fashion","industry":"High Fashion","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Trenchcoat","Architectural","Editorial","Modernism"],"desc":"Full-figure editorial model walk in stone trenchcoat through brutalist concrete geometry.","thumb":"assets/portfolio/thumbs/934423229_1791789434994533.jpg","src":"assets/portfolio/934423229_1791789434994533.mp4"},{"file":"955111829_1791789410733995.mp4","title":"Botanical Wellness Unboxing & Creator Hook","category":"ugc","industry":"Organic & Wellness","format":"UGC Ad","aspect":"9:16","duration":"8s","tags":["Unboxing","Organic Botanical","Creator Hook","D2C Packaging"],"desc":"Warm smiling creator in organic linen dress presenting botanical herbal packaging directly to customer.","thumb":"assets/portfolio/thumbs/955111829_1791789410733995.jpg","src":"assets/portfolio/955111829_1791789410733995.mp4"},{"file":"988024536_1791789436841629.mp4","title":"Emerald Green Festive Silk Saree & Jhumkas","category":"fashion","industry":"Festive Couture","format":"Editorial Ad","aspect":"9:16","duration":"8s","tags":["Silk Saree","Emerald Green","Jhumkas","Festive Campaign"],"desc":"Palace courtyard portrait of model in emerald green handwoven silk saree with traditional jhumka earrings.","thumb":"assets/portfolio/thumbs/988024536_1791789436841629.jpg","src":"assets/portfolio/988024536_1791789436841629.mp4"},{"file":"998761038_1791789395783025.mp4","title":"Oversized Boyfriend Blazer Contemporary Walk","category":"fashion","industry":"Contemporary Apparel","format":"Brand Film","aspect":"9:16","duration":"8s","tags":["Oversized Blazer","Street Style","Contemporary","Loft Studio"],"desc":"City loft studio shoot of model in relaxed oversized black blazer paired with tailored shorts.","thumb":"assets/portfolio/thumbs/998761038_1791789395783025.jpg","src":"assets/portfolio/998761038_1791789395783025.mp4"},{"file":"VN20261012_111529.mp4","title":"Flix Labs Hero Commercial: The Serum Story","category":"brand","industry":"Beauty Commercial","format":"Hero Showreel","aspect":"16:9","duration":"34s","tags":["Hero Commercial","Presenter-led","Macro Dropper","Flix Showreel"],"desc":"Flagship 34-second studio commercial combining presenter storytelling with macro product cinematography.","thumb":"assets/portfolio/thumbs/VN20261012_111529.jpg","src":"assets/portfolio/VN20261012_111529.mp4"},{"file":"fashion_apparel_16_9.mp4","title":"Fashion & Apparel Commercial Widescreen","category":"fashion","industry":"Fashion & Luxury","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Modern Saree","Indo-Western","Contemporary","16:9"],"desc":"Mix of modern saree drapes, Indo-western, and contemporary western wear.","thumb":"assets/covers/fashion_apparel_16_9.jpg","src":"assets/covers/fashion_apparel_16_9.mp4"},{"file":"jewellery_luxury_16_9.mp4","title":"Jewellery & Luxury Heritage Commercial","category":"jewellery","industry":"Jewellery & Luxury","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Gold Necklace","Traditional","Contemporary Jewellery","16:9"],"desc":"Elegant Indian models highlighting traditional and contemporary jewellery.","thumb":"assets/covers/jewellery_luxury_16_9.jpg","src":"assets/covers/jewellery_luxury_16_9.mp4"},{"file":"cosmetics_makeup_16_9.mp4","title":"Cosmetics & Festive Makeup Commercial","category":"beauty","industry":"Cosmetics & Makeup","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Indian Skin Tones","Beauty Aesthetic","Festive Makeup","16:9"],"desc":"Indian skin tones with local beauty aesthetic and rich festive pigments.","thumb":"assets/covers/cosmetics_makeup_16_9.jpg","src":"assets/covers/cosmetics_makeup_16_9.mp4"},{"file":"skincare_wellness_16_9.mp4","title":"Skincare & Sunscreen Routine Showcase","category":"beauty","industry":"Beauty & Skincare","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Sunscreen","Glowing Skin","Modern Wellness","16:9"],"desc":"Sunscreen application, glowing skin texture, and modern wellness aesthetic.","thumb":"assets/covers/skincare_wellness_16_9.jpg","src":"assets/covers/skincare_wellness_16_9.mp4"},{"file":"food_beverage_16_9.mp4","title":"Food & Beverage Refreshing Commercial","category":"brand","industry":"Food & Beverage","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Beverage","Refreshing Splash","Thums Up Vibes","16:9"],"desc":"Refreshing, high-energy visuals featuring classic Indian staples like Thums Up and Frooti vibes.","thumb":"assets/covers/food_beverage_16_9.jpg","src":"assets/covers/food_beverage_16_9.mp4"},{"file":"consumer_tech_home_16_9.mp4","title":"Consumer Tech & Smart Home Devices","category":"brand","industry":"Consumer Electronics","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Smart Home","Smartphones","Modern Electronics","16:9"],"desc":"High-demand modern consumer electronics (smartphones, sleek ceiling fans, smart home devices).","thumb":"assets/covers/consumer_tech_home_16_9.jpg","src":"assets/covers/consumer_tech_home_16_9.mp4"},{"file":"ecommerce_d2c_16_9.mp4","title":"New-Age E-Commerce Unboxing Commercial","category":"ugc","industry":"D2C & E-Commerce","format":"16:9 Landscape Commercial","aspect":"16:9","duration":"6s","tags":["Unboxing","Fast-Moving Trends","D2C Lighting","16:9"],"desc":"Fast-moving consumer trends with vibrant commercial lighting.","thumb":"assets/covers/ecommerce_d2c_16_9.jpg","src":"assets/covers/ecommerce_d2c_16_9.mp4"}];
 
 const CATEGORY_LABELS = {
   fashion: 'Fashion & Apparel',
@@ -5087,15 +5363,15 @@ const CATEGORY_LABELS = {
 
 // 9 Highlight Featured UGC & Ecommerce Video Reels
 const FEATURED_FILES = [
-  '792453715_1791782728364995.mp4', // Split-Screen Skincare Creator & Dropper Hook (UGC Ad)
-  '1038197401_1791789431663923.mp4', // Morning Routine Dewy Serum Application (UGC Ad)
-  '955111829_1791789410733995.mp4',  // Botanical Wellness Unboxing & Creator Hook (UGC Ad)
-  '189895571_1791789387284318.mp4',  // Native Phone-Camera Selfie Review (UGC Ad)
-  '6140405_1791789385631044.mp4',    // Berry Lip Souffle Vanity Swatch Demo (UGC Ad)
-  '834108934_1791789417473357.mp4',  // Glass Bottle Peptide Serum Radiant Glow (UGC Ad)
-  '448484360_1791789430789662.mp4',  // Hydra-Dew Glass Skin Dropper Application (Macro Product Film)
-  '529060394_1791780680947632.mp4',  // Modern Living Room Creator Video Ad (UGC Ad)
-  '1015025976_1791789375735186.mp4'  // Aura Flow Activewear Movement (Product Film)
+  '1003016778_1791789378443713.mp4', // Royal Heritage Bridal Lehenga & Emerald Choker (Fashion & Jewellery)
+  '1025116091_1791789373210638.mp4', // Handcrafted Kundan Pearl Nath Close-Up (Jewellery)
+  '648304148_1791789423902849.mp4',  // Solitaire Diamond Engagement Ring Macro (Jewellery)
+  '711838982_1791789367204598.mp4',  // Traditional South Indian Kasavu Gold Temple Mala (Jewellery)
+  '1005987106_1791789407532581.mp4', // Ivory Gold Couture & Maang Tikka Ritual (Fashion)
+  '738473110_1791789404622041.mp4',  // Antique Gold Goddess Choker & Ruby Pearls (Jewellery)
+  '765383045_1791789402513133.mp4',  // Crimson Kanjivaram Saree Temple Corridor Walk (Fashion)
+  '914785054_1791789438141531.mp4',  // Pear-Cut Diamond Tennis Bracelet Macro Sparkle (Jewellery)
+  '1038197401_1791789431663923.mp4'  // Morning Routine Dewy Serum Application (UGC Ad)
 ];
 
 // Populate Featured Reels
@@ -5142,7 +5418,7 @@ PORTFOLIO_DATA.forEach(item => {
       <img class="poster-img" src="${item.thumb}" alt="${item.title}" loading="lazy">
       <video data-src="${item.src}" muted loop playsinline preload="none"></video>
       <div class="pcard-shade"></div>
-      <span class="pcard-badge-cat">${CATEGORY_LABELS[item.category] || item.category}</span>
+      <span class="pcard-badge-cat">${CATEGORY_LABELS[item.category] || item.category} · AI Concept</span>
       <span class="pcard-badge-aspect">${item.aspect}</span>
       <div class="pcard-play-hint">▶</div>
       <div class="pcard-progress"><div class="pcard-progress-fill"></div></div>
@@ -5287,7 +5563,7 @@ const resultCountText = document.getElementById('resultCountText');
 const emptyState = document.getElementById('emptyState');
 const emptyResetBtn = document.getElementById('emptyResetBtn');
 
-let currentCategory = 'all';
+let currentCategory = 'jewellery';
 let currentSearch = '';
 let currentFormat = 'all';
 
@@ -5422,7 +5698,8 @@ function applyFilters() {
   updateMobileReelsVisibility();
 }
 
-// Initial Mobile Check
+// Initial Filter & Mobile Check (Default to Jewellery & Fashion)
+applyFilters();
 setTimeout(updateMobileReelsVisibility, 200);
 
 // Cinematic Inspection Modal Logic
@@ -5678,7 +5955,7 @@ document.addEventListener('keydown', e => {
 // FlixLabs Studio Enquiry Suite, Country-Based Pricing & Currency Engine
 (function initFlixLabsCommerce() {
   const STUDIO_WHATSAPP = '919454083266';
-  let activeCurrency = 'INR';
+  let activeCurrency = 'USD';
 
   const ICONS = {
     lightning: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>',
@@ -6154,6 +6431,31 @@ document.addEventListener('keydown', e => {
   window.addEventListener('scroll', handleNavScroll, { passive: true });
   handleNavScroll();
 })();
+
+
+  // Free Sample Form Handler
+  const sampleForm = document.getElementById('freeSampleForm');
+  if (sampleForm) {
+    sampleForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const brand = document.getElementById('sampleBrand')?.value.trim();
+      const url = document.getElementById('sampleUrl')?.value.trim();
+      const email = document.getElementById('sampleEmail')?.value.trim();
+      const msg = document.getElementById('sampleSuccessMsg');
+      const btn = document.getElementById('sampleSubmitBtn');
+
+      if (!brand || !url || !email) return;
+
+      if (btn) btn.disabled = true;
+      if (msg) msg.style.display = 'block';
+
+      // Send to WhatsApp as direct notification backup
+      const waSampleText = 'Hi Ayush! I would like to request a Free AI UGC Concept Hook for my brand *' + brand + '* (' + email + '). Website: ' + url;
+      setTimeout(() => {
+        window.open('https://wa.me/919454083266?text=' + encodeURIComponent(waSampleText), '_blank');
+      }, 500);
+    });
+  }
 
 </script>
 </body>
